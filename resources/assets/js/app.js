@@ -12,11 +12,13 @@ Vue.component('Myfooter', require('./components/Myfooter.vue'));
 
 import MyPatients from './components/Mypatients.vue'
 import MyIndex from './components/Myindex.vue';
+import MySearch from './components/Mysearch.vue';
+
 
 const routes = [
-  { path: '/index', component: MyIndex },
-  { path: '/patients', component: MyPatients },
-
+  { path: '/', component: MyIndex },
+  { path: '/search', component: MySearch },
+  { path: '/search/patients', component: MyPatients },
 ]
 
 const router = new VueRouter({

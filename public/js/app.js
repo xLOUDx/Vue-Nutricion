@@ -12054,6 +12054,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Mypatients_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_Mypatients_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Myindex_vue__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Myindex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_Myindex_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Mysearch_vue__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Mysearch_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_Mysearch_vue__);
 
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]);
@@ -12068,7 +12070,8 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Myfooter', __webpack_requ
 
 
 
-var routes = [{ path: '/index', component: __WEBPACK_IMPORTED_MODULE_3__components_Myindex_vue___default.a }, { path: '/patients', component: __WEBPACK_IMPORTED_MODULE_2__components_Mypatients_vue___default.a }];
+
+var routes = [{ path: '/', component: __WEBPACK_IMPORTED_MODULE_3__components_Myindex_vue___default.a }, { path: '/search', component: __WEBPACK_IMPORTED_MODULE_4__components_Mysearch_vue___default.a }, { path: '/search/patients', component: __WEBPACK_IMPORTED_MODULE_2__components_Mypatients_vue___default.a }];
 
 var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
   routes: routes // short for `routes: routes`
@@ -43618,7 +43621,7 @@ var render = function() {
   return _c(
     "nav",
     {
-      staticClass: "navbar",
+      staticClass: "navbar ",
       attrs: { role: "navigation", "aria-label": "main navigation" }
     },
     [
@@ -43631,13 +43634,13 @@ var render = function() {
           [
             _c(
               "router-link",
-              { staticClass: "navbar-item", attrs: { to: "/index" } },
+              { staticClass: "navbar-item", attrs: { to: "/" } },
               [_vm._v("Inicio")]
             ),
             _vm._v(" "),
             _c(
               "router-link",
-              { staticClass: "navbar-item", attrs: { to: "/patients" } },
+              { staticClass: "navbar-item", attrs: { to: "/search" } },
               [_vm._v("Pacientes")]
             ),
             _vm._v(" "),
@@ -43662,7 +43665,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "a",
-      { staticClass: "navbar-item", attrs: { href: "https://bulma.io" } },
+      { staticClass: "navbar-item", attrs: { href: "http://127.0.0.1:8000/" } },
       [_c("h1", { staticClass: "subtitle is-4" }, [_vm._v(" Nutrición ")])]
     )
   },
@@ -43904,6 +43907,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
@@ -43922,37 +43944,85 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("nav", { staticClass: "level" }, [
-      _c("div", { staticClass: "level-item has-text-centered" }, [
-        _c("div", [
-          _c("p", { staticClass: "heading" }, [_vm._v("Tweets")]),
+    return _c("div", { staticClass: "tile is-ancestor" }, [
+      _c("div", { staticClass: "tile is-vertical is-8" }, [
+        _c("div", { staticClass: "tile" }, [
+          _c("div", { staticClass: "tile is-parent is-vertical" }, [
+            _c(
+              "article",
+              { staticClass: "tile is-child notification is-primary" },
+              [
+                _c("p", { staticClass: "title" }, [_vm._v("Vertical...")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "subtitle" }, [_vm._v("Top tile")])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "article",
+              { staticClass: "tile is-child notification is-warning" },
+              [
+                _c("p", { staticClass: "title" }, [_vm._v("...tiles")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "subtitle" }, [_vm._v("Bottom tile")])
+              ]
+            )
+          ]),
           _vm._v(" "),
-          _c("p", { staticClass: "title" }, [_vm._v("3,456")])
+          _c("div", { staticClass: "tile is-parent" }, [
+            _c(
+              "article",
+              { staticClass: "tile is-child notification is-info" },
+              [
+                _c("p", { staticClass: "title" }, [_vm._v("Middle tile")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "subtitle" }, [_vm._v("With an image")]),
+                _vm._v(" "),
+                _c("figure", { staticClass: "image is-4by3" }, [
+                  _c("img", {
+                    attrs: {
+                      src: "https://bulma.io/images/placeholders/640x480.png"
+                    }
+                  })
+                ])
+              ]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "tile is-parent" }, [
+          _c(
+            "article",
+            { staticClass: "tile is-child notification is-danger" },
+            [
+              _c("p", { staticClass: "title" }, [_vm._v("Wide tile")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "subtitle" }, [
+                _vm._v("Aligned with the right tile")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "content" })
+            ]
+          )
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "level-item has-text-centered" }, [
-        _c("div", [
-          _c("p", { staticClass: "heading" }, [_vm._v("Following")]),
-          _vm._v(" "),
-          _c("p", { staticClass: "title" }, [_vm._v("123")])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "level-item has-text-centered" }, [
-        _c("div", [
-          _c("p", { staticClass: "heading" }, [_vm._v("Followers")]),
-          _vm._v(" "),
-          _c("p", { staticClass: "title" }, [_vm._v("456K")])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "level-item has-text-centered" }, [
-        _c("div", [
-          _c("p", { staticClass: "heading" }, [_vm._v("Likes")]),
-          _vm._v(" "),
-          _c("p", { staticClass: "title" }, [_vm._v("789")])
-        ])
+      _c("div", { staticClass: "tile is-parent" }, [
+        _c(
+          "article",
+          { staticClass: "tile is-child notification is-success" },
+          [
+            _c("div", { staticClass: "content" }, [
+              _c("p", { staticClass: "title" }, [_vm._v("Tall tile")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "subtitle" }, [
+                _vm._v("With even more content")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "content" })
+            ])
+          ]
+        )
       ])
     ])
   }
@@ -44052,7 +44122,7 @@ exports = module.exports = __webpack_require__(50)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -44382,6 +44452,234 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
@@ -44457,12 +44755,12 @@ var staticRenderFns = [
       _c("div", { staticClass: "tabs" }, [
         _c("ul", [
           _c("li", { staticClass: "is-active" }, [
-            _c("a", [_vm._v("Pictures")])
+            _c("a", [_vm._v("Evaluación")])
           ]),
           _vm._v(" "),
-          _c("li", [_c("a", [_vm._v("Music")])]),
+          _c("li", [_c("a", [_vm._v("Observaciones")])]),
           _vm._v(" "),
-          _c("li", [_c("a", [_vm._v("Videos")])])
+          _c("li", [_c("a", [_vm._v("Otro")])])
         ])
       ]),
       _vm._v(" "),
@@ -44492,13 +44790,426 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("hr"),
       _vm._v(" "),
-      _c("div", { staticClass: "columns" }, [
-        _c("div", { staticClass: "column is-two-thirds notification" }, [
-          _c("h1", [_vm._v("info aqui")])
+      _c("div", { staticClass: "tile is-ancestor" }, [
+        _c("div", { staticClass: "tile is-vertical is-8" }, [
+          _c("div", { staticClass: "tile" }, [
+            _c("div", { staticClass: "tile is-parent is-vertical" }, [
+              _c("article", { staticClass: "tile is-child notification " }, [
+                _c(
+                  "table",
+                  {
+                    staticClass:
+                      "table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
+                  },
+                  [
+                    _c("thead", [
+                      _c("tr", [
+                        _c("th", [_vm._v("Fecha")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Peso")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("IMC")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Ansiedad")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Ejercicio")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Digestión")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Liquidos")])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tbody", [
+                      _c("tr", [
+                        _c("th", [_vm._v("1")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("th", [_vm._v("2")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("th", [_vm._v("3")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("th", [_vm._v("4")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("th", [_vm._v("5")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")])
+                      ])
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("article", { staticClass: "tile is-child notification" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass:
+                      "table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
+                  },
+                  [
+                    _c("thead", [
+                      _c("tr", [
+                        _c("th", [_vm._v("Edad")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Talla/T2 ")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Peso deseado")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("%Mg normal")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Kg/ Km")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Proyección de tratamiento")])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tbody", [
+                      _c("tr", [
+                        _c("th", [_vm._v("1")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("th", [_vm._v("2")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("th", [_vm._v("3")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("th", [_vm._v("4")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("th", [_vm._v("5")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("aksdfjasdf")])
+                      ])
+                    ])
+                  ]
+                )
+              ])
+            ])
+          ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "column is-primary is-bold" }, [
-          _c("h1", [_vm._v("info aqui")])
+        _c("div", { staticClass: "tile is-parent" }, [
+          _c(
+            "article",
+            { staticClass: "tile is-child notification is-success" },
+            [
+              _c("div", { staticClass: "content" }, [
+                _c("p", { staticClass: "title" }, [_vm._v("Anotaciones")]),
+                _vm._v(" "),
+                _c("div", { staticClass: "content" }, [
+                  _c("textarea", {
+                    staticClass: "textarea",
+                    attrs: {
+                      rows: "20",
+                      placeholder: "Escriba aqui sus anotaciones"
+                    }
+                  })
+                ])
+              ])
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "tile is-parent" }, [
+        _c("article", { staticClass: "tile is-child notification" }, [
+          _c(
+            "table",
+            {
+              staticClass:
+                "table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
+            },
+            [
+              _c("thead", [
+                _c("tr", [
+                  _c("th", [_vm._v("Fecha")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("SE")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("TRI")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("BI")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("SI")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Total")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("%Mg")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Cintura")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Cadera")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Muslo")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Braq")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("muñeca")])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tbody", [
+                _c("tr", [
+                  _c("th", [_vm._v("1")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("th", [_vm._v("2")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("th", [_vm._v("3")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("th", [_vm._v("4")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("th", [_vm._v("5")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("aksdfjasdf")])
+                ])
+              ])
+            ]
+          )
         ])
       ])
     ])
@@ -44510,6 +45221,163 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-e1140f9e", module.exports)
+  }
+}
+
+/***/ }),
+/* 75 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(76)
+}
+var normalizeComponent = __webpack_require__(3)
+/* script */
+var __vue_script__ = __webpack_require__(78)
+/* template */
+var __vue_template__ = __webpack_require__(79)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Mysearch.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-65e7b18b", Component.options)
+  } else {
+    hotAPI.reload("data-v-65e7b18b", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 76 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(77);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(71)("d6735142", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-65e7b18b\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Mysearch.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-65e7b18b\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Mysearch.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 77 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(50)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 78 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "field is-grouped" }, [
+        _c("p", { staticClass: "control is-expanded" }, [
+          _c("input", {
+            staticClass: "input",
+            attrs: { type: "text", placeholder: "Buscar paciente" }
+          })
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "control" }, [
+          _c("a", { staticClass: "button is-info" }, [
+            _vm._v("\n        Buscar paciente\n      ")
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-65e7b18b", module.exports)
   }
 }
 
