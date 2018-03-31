@@ -9,6 +9,8 @@ window.Vue = require('vue');
 
 Vue.component('Myheader', require('./components/Myheader.vue'));
 Vue.component('Myfooter', require('./components/Myfooter.vue'));
+Vue.component('Add_1', require('./components/Add-1.vue'));
+
 
 import MyPatients from './components/Mypatients.vue'
 import MyIndex from './components/Myindex.vue';

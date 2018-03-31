@@ -1,24 +1,43 @@
 <template lang="html">
 
-  <nav class="navbar " role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="http://127.0.0.1:8000/">
-        <h1 class="subtitle is-4" > Nutrición </h1>
-      </a>
-
-      <div class="navbar-menu is-active">
-        <router-link to="/" class="navbar-item">Inicio</router-link>
-        <router-link to="/search" class="navbar-item">Pacientes</router-link>
-        <router-link to="/config" class="navbar-item">Config</router-link>
+  <section class="hero is-primary is-small">
+  <!-- Hero head: will stick at the top -->
+  <div class="hero-head">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item">
+            <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
+          </a>
+          <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-end">
+            <div class="navbar-menu is-active">
+              <router-link to="/" class="navbar-item">Inicio</router-link>
+              <router-link to="/search" class="navbar-item">Pacientes</router-link>
+              <router-link to="/config" class="navbar-item">Config</router-link>
+            </div>
+          </div>
+        </div>
       </div>
+    </nav>
+  </div>
 
-      <div class="navbar-burger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        Nutrición
+      </h1>
     </div>
-  </nav>
+  </div>
+
+</section>
 
 </template>
 
