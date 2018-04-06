@@ -14,7 +14,8 @@ class PatientsTableSeeder extends Seeder
       DB::table('patients')->insert([
           'binnacle_id' => '1',
           'name' => 'juan',
-          'last_name' => 'toledo',
+          'last_name_pat' => 'toledo',
+          'last_name_mat' => 'ortega',
           'email' => 'juan@gmail.com',
           'run' => '11111111-1',
           'address' => 'candelarias',
@@ -25,13 +26,15 @@ class PatientsTableSeeder extends Seeder
           'size' => '27',
           'acept_size' => '24',
           't2' => '28',
-          'imc_25' => '50'
+          'imc_25' => '50',
+          'sra' => 'Juana'
           // 'password' => bcrypt('123'),
       ]);
       DB::table('patients')->insert([
           'binnacle_id' => '2',
           'name' => 'pedro',
-          'last_name' => 'saavedra',
+          'last_name_pat' => 'saavedra',
+          'last_name_mat' => 'reyes',
           'email' => 'pedro@gmail.com',
           'run' => '22111111-1',
           'address' => 'pajatiros',
@@ -42,13 +45,15 @@ class PatientsTableSeeder extends Seeder
           'size' => '227',
           'acept_size' => '224',
           't2' => '288',
-          'imc_25' => '550'
+          'imc_25' => '550',
+          'sra' => 'Matilda'
           // 'password' => bcrypt('123'),
       ]);
       DB::table('patients')->insert([
           'binnacle_id' => '3',
           'name' => 'roberto',
-          'last_name' => 'mandarin',
+          'last_name_pat' => 'jackson',
+          'last_name_mat' => 'martines',
           'email' => 'rob@gmail.com',
           'run' => '11121111-1',
           'address' => 'cocodrilos',
@@ -59,7 +64,8 @@ class PatientsTableSeeder extends Seeder
           'size' => '222',
           'acept_size' => '2224',
           't2' => '1238',
-          'imc_25' => '520'
+          'imc_25' => '520',
+          'sra' => 'Roberta'
           // 'password' => bcrypt('123'),
       ]);
     }

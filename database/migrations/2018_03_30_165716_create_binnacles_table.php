@@ -27,12 +27,12 @@ class CreateBinnaclesTable extends Migration
             $table->string('desired_weight', 25);
             $table->string('mg_normal', 25);
             $table->string('kg_km', 25);
-            $table->string('projection_treatment', 50);
+            $table->string('projection_treatment', 200);
 
-            $table->string('se', 25);
-            $table->string('tri', 25);
-            $table->string('bi', 25);
-            $table->string('si', 25);
+            $table->float('se', 25);
+            $table->float('tri', 25);
+            $table->float('bi', 25);
+            $table->float('si', 25);
             $table->string('total', 25);
             $table->string('mg', 25);
             $table->string('waist', 25);
@@ -41,7 +41,8 @@ class CreateBinnaclesTable extends Migration
             $table->string('braq', 25);
             $table->string('wrist', 25);
 
-            $table->timestamps();
+            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamp('created_at')->useCurrent();
         });
 
     }

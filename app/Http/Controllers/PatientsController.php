@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PatientRequest;
 use App\Patients;
 use Illuminate\Http\Request;
+
 
 class PatientsController extends Controller
 {
@@ -15,6 +17,10 @@ class PatientsController extends Controller
     public function index()
     {
       return view('welcome');
+    }
+
+    public function getData(){
+      return Patients::orderBy('name', 'DESC')->get();
     }
 
     /**
@@ -33,9 +39,28 @@ class PatientsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PatientRequest $request)
     {
-        //
+      $patient = new Patients;
+
+      $patient->name = $request->name;
+      $patient->last_name_pat = $request->last_name_pat;
+      $patient->last_name_mat = $request->last_name_mat;
+      $patient->email = $request->email;
+      $patient->run = $request->run;
+      $patient->prevision = $request->prevision;
+      $patient->address = $request->address;
+      $patient->job = $request->job;
+      $patient->phone = $request->phone;
+      $patient->age = $request->age;
+      $patient->size = $request->size;
+      $patient->acept_size = $request->acept_size;
+      $patient->t2 = $request->t2;
+      $patient->imc_25 = $request->imc_25;
+      $patient->sra = $request->sra;
+
+      $patient->save();
+
     }
 
     /**

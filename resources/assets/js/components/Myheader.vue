@@ -1,14 +1,11 @@
 <template lang="html">
 
-  <section class="hero is-primary is-small">
+  <section class="hero is-warning is-small">
   <!-- Hero head: will stick at the top -->
   <div class="hero-head">
     <nav class="navbar">
       <div class="container">
         <div class="navbar-brand">
-          <a class="navbar-item">
-            <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
-          </a>
           <span class="navbar-burger burger" data-target="navbarMenuHeroA">
             <span></span>
             <span></span>
@@ -31,8 +28,11 @@
   <!-- Hero content: will be in the middle -->
   <div class="hero-body">
     <div class="container has-text-centered">
-      <h1 class="title">
-        Nutrición
+      <h1 class="title is-1"
+        style="font: 400 100px/1.3 'Oleo Script', Helvetica, sans-serif;
+          color: #900C3F;
+          text-shadow: 4px 4px 0px rgba(0,0,0,0.1);">
+            Nutrición
       </h1>
     </div>
   </div>

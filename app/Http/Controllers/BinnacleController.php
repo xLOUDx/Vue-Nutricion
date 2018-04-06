@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BinnacleRequest;
 use App\Binnacle;
 use Illuminate\Http\Request;
 
@@ -15,6 +16,10 @@ class BinnacleController extends Controller
     public function index()
     {
         //
+    }
+
+    public function getData(){
+      return Binnacle::all();
     }
 
     /**
@@ -33,9 +38,34 @@ class BinnacleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BinnacleRequest $request)
     {
-        //
+        $binnacle = new Binnacle;
+
+        $binnacle->weight = $request->weight;
+        $binnacle->imc  = $request->imc;
+        $binnacle->anxiety = $request->anxiety;
+        $binnacle->exercise  = $request->exercise;
+        $binnacle->digestion  = $request->digestion;
+        $binnacle->liquids  = $request->liquids;
+        $binnacle->size_t2  = $request->size_t2;
+        $binnacle->desired_weight  = $request->desired_weight;
+        $binnacle->mg_normal  = $request->mg_normal;
+        $binnacle->kg_km  = $request->kg_km;
+        $binnacle->projection_treatment  = $request->projection_treatment;
+        $binnacle->se  = $request->se;
+        $binnacle->tri  = $request->tri;
+        $binnacle->bi  = $request->bi;
+        $binnacle->si  = $request->si;
+        $binnacle->total  = $request->total;
+        $binnacle->mg  = $request->mg;
+        $binnacle->waist  = $request->waist;
+        $binnacle->hip  = $request->hip;
+        $binnacle->thigh  = $request->thigh;
+        $binnacle->braq  = $request->braq;
+        $binnacle->wrist = $request->wrist;
+
+        $binnacle->save();
     }
 
     /**
