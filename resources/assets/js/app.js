@@ -20,10 +20,10 @@ import Mycomment from './components/Mycomment.vue'
 
 
 const routes = [
-  { path: '/', component: MyIndex },
-  { path: '/search', component: MySearch },
-  { path: '/search/patients', component: MyPatients },
-  { path: '/search/patients/comments', component: Mycomment }
+  { name:'MyIndex', path: '/', component: MyIndex },
+  { name:'MySearch', path: '/search', component: MySearch, props: true },
+  { name:'MyPatients', path: '/search/:iden/patients', component: MyPatients, props: true },
+  { name:'Mycomment', path: '/search/patients/comments', component: Mycomment }
 ]
 
 const router = new VueRouter({

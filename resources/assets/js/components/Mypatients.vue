@@ -169,6 +169,7 @@
 <script>
 import moment from 'moment'
 export default {
+  props:['iden'],
   data(){
     return{
       AddActive: '',
@@ -182,6 +183,9 @@ export default {
 
       },
     }
+  },
+  created(){
+    console.log(this.iden)
   },
   mounted(){
     axios.post('/getData')

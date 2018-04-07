@@ -1,4 +1,6 @@
 <template lang="html">
+
+
   <nav class="panel column is-offset-2 is-8">
 
     <p class="panel-heading field is-grouped is-grouped-centered">
@@ -18,7 +20,7 @@
         </span>
       </p>
     </div>
-    <a class="panel-block is-active" v-for="item, key in patient" @click="details" >
+    <a class="panel-block is-active" v-for="item, key in patient" @click="details(item.id)" >
       <span class="panel-icon">
         <i class="fas fa-address-card fa-1x"></i>
       </span>
@@ -42,6 +44,9 @@ export default {
   data(){
     return{
       AddActive: '',
+      lists: {
+
+      },
       errors:{
 
       },
@@ -62,9 +67,9 @@ export default {
     close(){
       this.AddActive = '';
     },
-    details(){
-      console.log('esta biemm')
-    }
+    details(iden){
+        this.$router.push({ name: 'MyPatients', params: { iden: iden }});
+    },
   }
 }
 </script>

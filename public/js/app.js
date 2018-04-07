@@ -28462,7 +28462,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Add-2', __webpack_require
 
 
 
-var routes = [{ path: '/', component: __WEBPACK_IMPORTED_MODULE_3__components_Myindex_vue___default.a }, { path: '/search', component: __WEBPACK_IMPORTED_MODULE_4__components_Mysearch_vue___default.a }, { path: '/search/patients', component: __WEBPACK_IMPORTED_MODULE_2__components_Mypatients_vue___default.a }, { path: '/search/patients/comments', component: __WEBPACK_IMPORTED_MODULE_5__components_Mycomment_vue___default.a }];
+var routes = [{ name: 'MyIndex', path: '/', component: __WEBPACK_IMPORTED_MODULE_3__components_Myindex_vue___default.a }, { name: 'MySearch', path: '/search', component: __WEBPACK_IMPORTED_MODULE_4__components_Mysearch_vue___default.a, props: true }, { name: 'MyPatients', path: '/search/:iden/patients', component: __WEBPACK_IMPORTED_MODULE_2__components_Mypatients_vue___default.a, props: true }, { name: 'Mycomment', path: '/search/patients/comments', component: __WEBPACK_IMPORTED_MODULE_5__components_Mycomment_vue___default.a }];
 
 var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
   routes: routes // short for `routes: routes`
@@ -61710,7 +61710,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
       axios.post('/search', this.$data.list).then(function (response) {
         _this.close();
-        _this.$parent.patient.push(_this.$data.patient);
+        _this.$parent.patient.push(_this.$data.list);
       }).catch(function (error) {
         return _this.errors = error.response.data.errors;
       });
@@ -62619,6 +62619,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['iden'],
   data: function data() {
     return {
       AddActive: '',
@@ -62626,6 +62627,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       errors: {},
       patient: {}
     };
+  },
+  created: function created() {
+    console.log(this.iden);
   },
   mounted: function mounted() {
     var _this = this;
@@ -63625,11 +63629,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       AddActive: '',
+      lists: {},
       errors: {},
       patient: {}
     };
@@ -63651,8 +63658,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     close: function close() {
       this.AddActive = '';
     },
-    details: function details() {
-      console.log('esta biemm');
+    details: function details(iden) {
+      this.$router.push({ name: 'MyPatients', params: { iden: iden } });
     }
   }
 });
@@ -63691,7 +63698,14 @@ var render = function() {
       _vm._l(_vm.patient, function(item, key) {
         return _c(
           "a",
-          { staticClass: "panel-block is-active", on: { click: _vm.details } },
+          {
+            staticClass: "panel-block is-active",
+            on: {
+              click: function($event) {
+                _vm.details(item.id)
+              }
+            }
+          },
           [_vm._m(1, true), _vm._v("\n    " + _vm._s(item.name) + "\n  ")]
         )
       }),
