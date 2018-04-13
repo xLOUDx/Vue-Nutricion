@@ -10,6 +10,10 @@ Vue.component('Myheader', require('./components/Myheader.vue'));
 Vue.component('Myfooter', require('./components/Myfooter.vue'));
 Vue.component('Add-1', require('./components/Add-1.vue'));
 Vue.component('Add-2', require('./components/Add-2.vue'));
+Vue.component('Mycomponent-1', require('./components/Mycomponent-1.vue'));
+Vue.component('Mycomponent-2', require('./components/Mycomponent-2.vue'));
+
+
 
 
 

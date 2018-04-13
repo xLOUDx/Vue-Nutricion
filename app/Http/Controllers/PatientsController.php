@@ -19,8 +19,15 @@ class PatientsController extends Controller
       return view('welcome');
     }
 
-    public function getData(){
-      return Patients::orderBy('name', 'DESC')->get();
+    public function getData(Request $request){
+
+      if($request->iden == TRUE){
+        return Patients::where('id', $request->iden)->get();
+      }
+      else {
+        return Patients::orderBy('name', 'DESC')->get();
+      }
+
     }
 
     /**

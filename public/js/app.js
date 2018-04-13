@@ -28503,6 +28503,8 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Myheader', __webpack_requ
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Myfooter', __webpack_require__(167));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Add-1', __webpack_require__(170));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Add-2', __webpack_require__(173));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Mycomponent-1', __webpack_require__(206));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Mycomponent-2', __webpack_require__(209));
 
 
 
@@ -62606,8 +62608,6 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
 //
 //
 //
@@ -62651,156 +62651,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['iden'],
   data: function data() {
     return {
       AddActive: '',
-      lists: {},
       errors: {},
       patient: {}
     };
   },
-  created: function created() {
-    console.log(this.iden);
-  },
   mounted: function mounted() {
     var _this = this;
 
-    axios.post('/getData').then(function (response) {
+    axios.post('/getData', { iden: this.iden }).then(function (response) {
       return _this.lists = response.data;
     }).catch(function (error) {
       return _this.errors = error.response.data.errors;
     });
 
-    axios.post('/getDataPatient').then(function (response) {
+    axios.post('/getDataPatient', { iden: this.iden }).then(function (response) {
       return _this.patient = response.data;
     }).catch(function (error) {
       return _this.errors = error.response.data.errors;
@@ -62808,15 +62678,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
 
   methods: {
-    openAdd: function openAdd() {
-      this.AddActive = 'is-active';
-    },
     close: function close() {
       this.AddActive = '';
-    },
-    moment: function moment(date) {
-      __WEBPACK_IMPORTED_MODULE_0_moment___default.a.locale('es');
-      return __WEBPACK_IMPORTED_MODULE_0_moment___default()(date);
     }
   }
 });
@@ -63103,226 +62966,109 @@ var render = function() {
     [
       _c("hr"),
       _vm._v(" "),
-      _c("p", { staticClass: "subtitle is-2" }, [
-        _c("strong", [
-          _vm._v(
-            "\n         " +
-              _vm._s(_vm.patient.name) +
-              " " +
-              _vm._s(_vm.patient.last_name_pat) +
-              " " +
-              _vm._s(_vm.patient.last_name_mat) +
-              "\n       "
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "notification" }, [
-        _c("h6", { staticClass: "is-pulled-left" }, [
-          _c("strong", [_vm._v("Run: ")]),
-          _vm._v(" " + _vm._s(_vm.patient.run) + " ")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field is-grouped is-grouped-centered" }, [
-          _c("h6", { staticClass: "is-pulled-left" }, [
-            _c("strong", [_vm._v("Fono: ")]),
-            _vm._v(" " + _vm._s(_vm.patient.phone) + " ")
-          ]),
-          _vm._v(" "),
-          _c("br")
-        ]),
-        _vm._v(" "),
-        _c("h6", { staticClass: "is-pulled-left" }, [
-          _c("strong", [_vm._v("Dirección:")]),
-          _vm._v(" " + _vm._s(_vm.patient.phone) + " ")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field is-grouped is-grouped-centered" }, [
-          _c("h6", { staticClass: "is-pulled-left" }, [
-            _c("strong", [_vm._v(" Previsión: ")]),
-            _vm._v(" " + _vm._s(_vm.patient.prevision) + " ")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("h6", { staticClass: "is-pulled-left" }, [
-          _c("strong", [_vm._v(" Ocupación: ")]),
-          _vm._v(" " + _vm._s(_vm.patient.job) + " ")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field is-grouped is-grouped-centered" }, [
-          _c("h6", { staticClass: "is-pulled-left" }, [
-            _c("strong", [_vm._v(" Mail: ")]),
-            _vm._v(" " + _vm._s(_vm.patient.email) + " ")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("br"),
-        _vm._v(" "),
-        _vm._m(0),
-        _vm._v(" "),
-        _c("br"),
-        _vm._v(" "),
-        _c("br")
-      ]),
-      _vm._v(" "),
-      _vm._m(1),
-      _vm._v(" "),
-      _c("div", { staticClass: "columns notification" }, [
-        _vm._m(2),
-        _vm._v(" "),
-        _c("div", [
-          _c("p", [
-            _c("strong", [_vm._v(" Edad: ")]),
-            _vm._v(" " + _vm._s(_vm.patient.age) + " ")
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _c("strong", [_vm._v(" Talla: ")]),
-            _vm._v("  " + _vm._s(_vm.patient.size) + "  t"),
-            _c("sup", [_vm._v("2")]),
-            _vm._v(": " + _vm._s(_vm.patient.t2) + " ")
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _c("strong", [_vm._v(" Peso aceptable: ")]),
-            _vm._v(" " + _vm._s(_vm.patient.acept_size))
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _c("strong", [_vm._v(" IMC 25: ")]),
-            _vm._v(" " + _vm._s(_vm.patient.imc_25) + " ")
+      _vm._l(_vm.patient, function(item, key) {
+        return _c("p", { staticClass: "subtitle is-2" }, [
+          _c("strong", [
+            _vm._v(
+              "\n       " +
+                _vm._s(item.name) +
+                " " +
+                _vm._s(item.last_name_pat) +
+                " " +
+                _vm._s(item.last_name_mat) +
+                "\n     "
+            )
           ])
         ])
-      ]),
+      }),
       _vm._v(" "),
-      _c("hr"),
-      _vm._v(" "),
-      _c("div", { staticClass: "field is-grouped is-grouped-centered" }, [
-        _c("p", { staticClass: "control" }, [
-          _c(
-            "a",
-            { staticClass: "button is-success", on: { click: _vm.openAdd } },
-            [_c("i", { staticClass: "fas fa-plus-square fa-2x" })]
-          )
+      _vm._l(_vm.patient, function(item, key) {
+        return _c("div", { staticClass: "notification columns" }, [
+          _c("div", { staticClass: "column is-two-fifths is-horizontal" }, [
+            _c("h6", { staticClass: "is-pulled-left" }, [
+              _c("strong", [_vm._v("Fono: ")]),
+              _vm._v(" " + _vm._s(item.phone) + " ")
+            ]),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c("h6", { staticClass: "is-pulled-left" }, [
+              _c("strong", [_vm._v("Previsión: ")]),
+              _vm._v(" " + _vm._s(item.prevision) + " ")
+            ]),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c("h6", { staticClass: "is-pulled-left" }, [
+              _c("strong", [_vm._v("Mail: ")]),
+              _vm._v(" " + _vm._s(item.email) + " ")
+            ]),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c("p"),
+            _c("h6", { staticClass: "is-pulled-left" }, [
+              _c("strong", [_vm._v("Sra: ")]),
+              _vm._v(" " + _vm._s(item.sra))
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "column is-horizontal" }, [
+            _c("h6", { staticClass: "is-pulled-left" }, [
+              _c("strong", [_vm._v("Run: ")]),
+              _vm._v(" " + _vm._s(item.run) + " ")
+            ]),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c("h6", { staticClass: "is-pulled-left" }, [
+              _c("strong", [_vm._v("Dirección:")]),
+              _vm._v(" " + _vm._s(item.phone) + " ")
+            ]),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c("h6", { staticClass: "is-pulled-left" }, [
+              _c("strong", [_vm._v(" Ocupación: ")]),
+              _vm._v(" " + _vm._s(item.job) + " ")
+            ]),
+            _vm._v(" "),
+            _c("br")
+          ])
         ])
-      ]),
+      }),
       _vm._v(" "),
-      _vm._m(3),
+      _vm._m(0),
       _vm._v(" "),
-      _c("div", { staticClass: "tile is-parent" }, [
-        _c("article", { staticClass: "tile is-child notification" }, [
-          _c(
-            "table",
-            {
-              staticClass:
-                "table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
-            },
-            [
-              _vm._m(4),
-              _vm._v(" "),
-              _vm._l(_vm.lists, function(item, key) {
-                return _c("tbody", [
-                  _c("tr", [
-                    _c("th", [
-                      _vm._v(
-                        _vm._s(
-                          _vm.moment(item.created_at).format("MMMM Do YYYY")
-                        )
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.weight))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.imc))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.anxiety))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.exercise))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.digestion))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.liquids))])
-                  ])
-                ])
-              })
+      _c("br"),
+      _vm._v(" "),
+      _c(
+        "div",
+        { attrs: { id: "app" } },
+        [
+          _c("Mycomponent-1", {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.FALSE,
+                expression: "FALSE"
+              }
             ],
-            2
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "tile is-parent" }, [
-        _c("article", { staticClass: "tile is-child notification" }, [
-          _c(
-            "table",
-            {
-              staticClass:
-                "table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
-            },
-            [
-              _vm._m(5),
-              _vm._v(" "),
-              _vm._l(_vm.lists, function(item, key) {
-                return _c("tbody", [
-                  _c("tr", [
-                    _c("th", [
-                      _vm._v(
-                        _vm._s(
-                          _vm.moment(item.created_at).format("MMMM Do YYYY")
-                        )
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.se))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.tri))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.bi))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.si))]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "is-success" }, [
-                      _c("strong", [_vm._v(_vm._s(item.total))])
-                    ]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.mg))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.waist))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.hip))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.thigh))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.braq))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.wrist))])
-                  ])
-                ])
-              })
-            ],
-            2
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("Add-1", {
-        attrs: { openmodal: _vm.AddActive },
-        on: { closeRequest: _vm.close }
-      })
+            attrs: { iden: this.iden }
+          }),
+          _vm._v(" "),
+          _c("Mycomponent-2")
+        ],
+        1
+      )
     ],
-    1
+    2
   )
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h6", { staticClass: "is-pulled-left" }, [
-      _c("strong", [_vm._v(" Sra: ")]),
-      _vm._v(" #la cantante")
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -63336,135 +63082,6 @@ var staticRenderFns = [
         _c("li", [_c("a", [_vm._v("Observaciones")])]),
         _vm._v(" "),
         _c("li", [_c("a", [_vm._v("Otro")])])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "column is-three-quarters " }, [
-      _c("p", { staticClass: "subtitle is-4" }, [
-        _vm._v("Evaluación periodica")
-      ]),
-      _vm._v(" "),
-      _c("h6", [_c("strong", [_vm._v(" Referencia: ")])])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "tile is-parent" }, [
-      _c("article", { staticClass: "tile is-child notification" }, [
-        _c(
-          "table",
-          {
-            staticClass:
-              "table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
-          },
-          [
-            _c("thead", [
-              _c("tr", [
-                _c("th", [_vm._v("Edad")]),
-                _vm._v(" "),
-                _c("th", [_vm._v("Talla/T2 ")]),
-                _vm._v(" "),
-                _c("th", [_vm._v("Peso deseado")]),
-                _vm._v(" "),
-                _c("th", [_vm._v("%Mg normal")]),
-                _vm._v(" "),
-                _c("th", [_vm._v("Kg/ Km")]),
-                _vm._v(" "),
-                _c("th", [_vm._v("Proyección de tratamiento")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("tbody", [
-              _c("tr", [
-                _c("th", [_vm._v("1")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("aksdfjasdf")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("aksdfjasdf")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("aksdfjasdf")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("aksdfjasdf")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("aksdfjasdf")])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("th", [_vm._v("2")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("aksdfjasdf")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("aksdfjasdf")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("aksdfjasdf")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("aksdfjasdf")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("aksdfjasdf")])
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("thead", [
-      _c("tr", [
-        _c("th", [_vm._v("Fecha")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Peso")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("IMC")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Ansiedad")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Ejercicio")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Digestión")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Liquidos")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("thead", [
-      _c("tr", [
-        _c("th", [_vm._v("Fecha")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("SE")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("TRI")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("BI")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("SI")]),
-        _vm._v(" "),
-        _c("th", { staticClass: "is-success" }, [_vm._v("Total")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("%Mg")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Cintura")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Cadera")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Muslo")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Braq")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("muñeca")])
       ])
     ])
   }
@@ -63938,6 +63555,1812 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 203 */,
+/* 204 */,
+/* 205 */,
+/* 206 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(2)
+/* script */
+var __vue_script__ = __webpack_require__(207)
+/* template */
+var __vue_template__ = __webpack_require__(208)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Mycomponent-1.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-3b93db0e", Component.options)
+  } else {
+    hotAPI.reload("data-v-3b93db0e", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 207 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['iden'],
+  data: function data() {
+    return {
+      AddActive: '',
+      lists: {},
+      errors: {},
+      patient: {}
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    // console.log('holaaa  ' + this.iden)
+
+    axios.post('/getData', { iden: this.iden }).then(function (response) {
+      return _this.lists = response.data;
+    }).catch(function (error) {
+      return _this.errors = error.response.data.errors;
+    });
+
+    axios.post('/getDataPatient', { iden: this.iden }).then(function (response) {
+      return _this.patient = response.data;
+    }).catch(function (error) {
+      return _this.errors = error.response.data.errors;
+    });
+  },
+
+  methods: {
+    openAdd: function openAdd() {
+      this.AddActive = 'is-active';
+    },
+    close: function close() {
+      this.AddActive = '';
+    },
+    moment: function moment(date) {
+      __WEBPACK_IMPORTED_MODULE_0_moment___default.a.locale('es');
+      return __WEBPACK_IMPORTED_MODULE_0_moment___default()(date);
+    }
+  }
+});
+
+/***/ }),
+/* 208 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "container" },
+    [
+      _vm._l(_vm.patient, function(item) {
+        return _c("div", { staticClass: "columns notification" }, [
+          _vm._m(0, true),
+          _vm._v(" "),
+          _c("div", [
+            _c("p", [
+              _c("strong", [_vm._v(" Edad: ")]),
+              _vm._v(" " + _vm._s(item.age) + " ")
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _c("strong", [_vm._v(" Talla: ")]),
+              _vm._v("  " + _vm._s(item.size) + "  t"),
+              _c("sup", [_vm._v("2")]),
+              _vm._v(": " + _vm._s(item.t2) + " ")
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _c("strong", [_vm._v(" Peso aceptable: ")]),
+              _vm._v(" " + _vm._s(item.acept_size))
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _c("strong", [_vm._v(" IMC 25: ")]),
+              _vm._v(" " + _vm._s(item.imc_25) + " ")
+            ])
+          ])
+        ])
+      }),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
+      _c("div", { staticClass: "tile is-parent" }, [
+        _c("article", { staticClass: "tile is-child notification" }, [
+          _c(
+            "table",
+            {
+              staticClass:
+                "table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
+            },
+            [
+              _vm._m(2),
+              _vm._v(" "),
+              _vm._l(_vm.lists, function(item, key) {
+                return _c("tbody", [
+                  _c("tr", [
+                    _c("th", [
+                      _vm._v(
+                        _vm._s(
+                          _vm.moment(item.created_at).format("MMMM Do YYYY")
+                        )
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.weight))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.imc))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.anxiety))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.exercise))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.digestion))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.liquids))])
+                  ])
+                ])
+              })
+            ],
+            2
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "tile is-parent" }, [
+        _c("article", { staticClass: "tile is-child notification" }, [
+          _c(
+            "table",
+            {
+              staticClass:
+                "table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
+            },
+            [
+              _vm._m(3),
+              _vm._v(" "),
+              _vm._l(_vm.lists, function(item, key) {
+                return _c("tbody", [
+                  _c("tr", [
+                    _c("th", [
+                      _vm._v(
+                        _vm._s(
+                          _vm.moment(item.created_at).format("MMMM Do YYYY")
+                        )
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.se))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.tri))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.bi))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.si))]),
+                    _vm._v(" "),
+                    _c("td", { staticClass: "is-success" }, [
+                      _c("strong", [_vm._v(_vm._s(item.total))])
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.mg))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.waist))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.hip))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.thigh))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.braq))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.wrist))])
+                  ])
+                ])
+              })
+            ],
+            2
+          )
+        ])
+      ])
+    ],
+    2
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "column is-three-quarters " }, [
+      _c("p", { staticClass: "subtitle is-4" }, [
+        _vm._v("Evaluación periodica")
+      ]),
+      _vm._v(" "),
+      _c("h6", [_c("strong", [_vm._v(" Referencia: ")])])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "tile is-parent" }, [
+      _c("article", { staticClass: "tile is-child notification" }, [
+        _c(
+          "table",
+          {
+            staticClass:
+              "table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
+          },
+          [
+            _c("thead", [
+              _c("tr", [
+                _c("th", [_vm._v("Edad")]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Talla/T2 ")]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Peso deseado")]),
+                _vm._v(" "),
+                _c("th", [_vm._v("%Mg normal")]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Kg/ Km")]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Proyección de tratamiento")])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tbody", [
+              _c("tr", [
+                _c("th", [_vm._v("1")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("aksdfjasdf")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("aksdfjasdf")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("aksdfjasdf")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("aksdfjasdf")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("aksdfjasdf")])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("th", [_vm._v("2")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("aksdfjasdf")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("aksdfjasdf")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("aksdfjasdf")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("aksdfjasdf")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("aksdfjasdf")])
+              ])
+            ])
+          ]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("Fecha")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Peso")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("IMC")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Ansiedad")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Ejercicio")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Digestión")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Liquidos")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("Fecha")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("SE")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("TRI")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("BI")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("SI")]),
+        _vm._v(" "),
+        _c("th", { staticClass: "is-success" }, [_vm._v("Total")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("%Mg")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Cintura")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Cadera")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Muslo")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Braq")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("muñeca")])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-3b93db0e", module.exports)
+  }
+}
+
+/***/ }),
+/* 209 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(2)
+/* script */
+var __vue_script__ = __webpack_require__(212)
+/* template */
+var __vue_template__ = __webpack_require__(213)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Mycomponent-2.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-3ba1f28f", Component.options)
+  } else {
+    hotAPI.reload("data-v-3ba1f28f", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 210 */,
+/* 211 */,
+/* 212 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['openmodal'],
+  data: function data() {
+    return {
+      list: {
+        weight: '',
+        imc: '',
+        anxiety: '',
+        exercise: '',
+        digestion: '',
+        liquids: '',
+        size_t2: '',
+        desired_weight: '',
+        mg_normal: '',
+        kg_km: '',
+        projection_treatment: '',
+        se: '',
+        tri: '',
+        bi: '',
+        si: '',
+        total: '',
+        mg: '',
+        waist: '',
+        hip: '',
+        thigh: '',
+        braq: '',
+        wrist: ''
+      },
+
+      errors: {}
+    };
+  },
+
+  methods: {
+    save: function save() {
+      var _this = this;
+
+      axios.post('/search/patients', this.$data.list).then(function (response) {
+        _this.close();
+        _this.$parent.lists.push(_this.$data.list);
+      }).catch(function (error) {
+        return _this.errors = error.response.data.errors;
+      });
+    }
+  }
+});
+
+/***/ }),
+/* 213 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "columns notification" }, [
+      _c("div", { staticClass: "column is-half" }, [
+        _c("div", { staticClass: "field is-horizontal" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "field-body" }, [
+            _c("div", { staticClass: "field" }, [
+              _c("div", { staticClass: "control" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.list.weight,
+                      expression: "list.weight"
+                    }
+                  ],
+                  staticClass: "input",
+                  class: { "is-danger": _vm.errors.weight },
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.list.weight },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.list, "weight", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "icon is-small is-right" }, [
+                  _vm.errors.weight
+                    ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                    : _vm._e()
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.weight
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.weight[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field is-horizontal" }, [
+          _vm._m(1),
+          _vm._v(" "),
+          _c("div", { staticClass: "field-body" }, [
+            _c("div", { staticClass: "field" }, [
+              _c("div", { staticClass: "control" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.list.imc,
+                      expression: "list.imc"
+                    }
+                  ],
+                  staticClass: "input",
+                  class: { "is-danger": _vm.errors.imc },
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.list.imc },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.list, "imc", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "icon is-small is-right" }, [
+                  _vm.errors.imc
+                    ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                    : _vm._e()
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.imc
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.imc[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field is-horizontal" }, [
+          _vm._m(2),
+          _vm._v(" "),
+          _c("div", { staticClass: "field-body" }, [
+            _c("div", { staticClass: "field" }, [
+              _c("div", { staticClass: "control" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.list.anxiety,
+                      expression: "list.anxiety"
+                    }
+                  ],
+                  staticClass: "input",
+                  class: { "is-danger": _vm.errors.anxiety },
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.list.anxiety },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.list, "anxiety", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "icon is-small is-right" }, [
+                  _vm.errors.anxiety
+                    ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                    : _vm._e()
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.anxiety
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.anxiety[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field is-horizontal" }, [
+          _vm._m(3),
+          _vm._v(" "),
+          _c("div", { staticClass: "field-body" }, [
+            _c("div", { staticClass: "field" }, [
+              _c("div", { staticClass: "control" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.list.digestion,
+                      expression: "list.digestion"
+                    }
+                  ],
+                  staticClass: "input",
+                  class: { "is-danger": _vm.errors.digestion },
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.list.digestion },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.list, "digestion", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "icon is-small is-right" }, [
+                  _vm.errors.digestion
+                    ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                    : _vm._e()
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.digestion
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.digestion[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field is-horizontal" }, [
+          _vm._m(4),
+          _vm._v(" "),
+          _c("div", { staticClass: "field-body" }, [
+            _c("div", { staticClass: "field" }, [
+              _c("div", { staticClass: "control" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.list.exercise,
+                      expression: "list.exercise"
+                    }
+                  ],
+                  staticClass: "input",
+                  class: { "is-danger": _vm.errors.exercise },
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.list.exercise },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.list, "exercise", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "icon is-small is-right" }, [
+                  _vm.errors.exercise
+                    ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                    : _vm._e()
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.exercise
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.exercise[0]))
+              ])
+            : _vm._e()
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "column notification" }, [
+        _c("div", { staticClass: "field is-horizontal" }, [
+          _vm._m(5),
+          _vm._v(" "),
+          _c("div", { staticClass: "field-body" }, [
+            _c("div", { staticClass: "field" }, [
+              _c("div", { staticClass: "control" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.list.liquids,
+                      expression: "list.liquids"
+                    }
+                  ],
+                  staticClass: "input",
+                  class: { "is-danger": _vm.errors.liquids },
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.list.liquids },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.list, "liquids", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "icon is-small is-right" }, [
+                  _vm.errors.liquids
+                    ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                    : _vm._e()
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.liquids
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.liquids[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field is-horizontal" }, [
+          _vm._m(6),
+          _vm._v(" "),
+          _c("div", { staticClass: "field-body" }, [
+            _c("div", { staticClass: "field" }, [
+              _c("div", { staticClass: "control" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.list.size_t2,
+                      expression: "list.size_t2"
+                    }
+                  ],
+                  staticClass: "input",
+                  class: { "is-danger": _vm.errors.size_t2 },
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.list.size_t2 },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.list, "size_t2", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "icon is-small is-right" }, [
+                  _vm.errors.size_t2
+                    ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                    : _vm._e()
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.size_t2
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.size_t2[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field is-horizontal" }, [
+          _vm._m(7),
+          _vm._v(" "),
+          _c("div", { staticClass: "field-body" }, [
+            _c("div", { staticClass: "field" }, [
+              _c("div", { staticClass: "control" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.list.desired_weight,
+                      expression: "list.desired_weight"
+                    }
+                  ],
+                  staticClass: "input",
+                  class: { "is-danger": _vm.errors.desired_weight },
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.list.desired_weight },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.list, "desired_weight", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "icon is-small is-right" }, [
+                  _vm.errors.desired_weight
+                    ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                    : _vm._e()
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.desired_weight
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.desired_weight[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field is-horizontal" }, [
+          _vm._m(8),
+          _vm._v(" "),
+          _c("div", { staticClass: "field-body" }, [
+            _c("div", { staticClass: "field" }, [
+              _c("div", { staticClass: "control" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.list.mg_normal,
+                      expression: "list.mg_normal"
+                    }
+                  ],
+                  staticClass: "input",
+                  class: { "is-danger": _vm.errors.mg_normal },
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.list.mg_normal },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.list, "mg_normal", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "icon is-small is-right" }, [
+                  _vm.errors.mg_normal
+                    ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                    : _vm._e()
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.mg_normal
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.mg_normal[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field is-horizontal" }, [
+          _vm._m(9),
+          _vm._v(" "),
+          _c("div", { staticClass: "field-body" }, [
+            _c("div", { staticClass: "field" }, [
+              _c("div", { staticClass: "control" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.list.kg_km,
+                      expression: "list.kg_km"
+                    }
+                  ],
+                  staticClass: "input",
+                  class: { "is-danger": _vm.errors.kg_km },
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.list.kg_km },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.list, "kg_km", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "icon is-small is-right" }, [
+                  _vm.errors.kg_km
+                    ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                    : _vm._e()
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.kg_km
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.kg_km[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field is-horizontal" }, [
+          _vm._m(10),
+          _vm._v(" "),
+          _c("div", { staticClass: "field-body" }, [
+            _c("div", { staticClass: "field" }, [
+              _c("div", { staticClass: "control" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.list.projection_treatment,
+                      expression: "list.projection_treatment"
+                    }
+                  ],
+                  staticClass: "input",
+                  class: { "is-danger": _vm.errors.projection_treatment },
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.list.projection_treatment },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.list,
+                        "projection_treatment",
+                        $event.target.value
+                      )
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "icon is-small is-right" }, [
+                  _vm.errors.projection_treatment
+                    ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                    : _vm._e()
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.projection_treatment
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.projection_treatment[0]))
+              ])
+            : _vm._e()
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticStyle: { "background-color": "lightgreen" } }, [
+      _c("div", { staticClass: "tile is-parent" }, [
+        _c("article", { staticClass: "tile is-child notification" }, [
+          _c(
+            "table",
+            {
+              staticClass:
+                "table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
+            },
+            [
+              _vm._m(11),
+              _vm._v(" "),
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.list.se,
+                          expression: "list.se"
+                        }
+                      ],
+                      staticClass: "input",
+                      class: { "is-danger": _vm.errors.se },
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.list.se },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.list, "se", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.list.tri,
+                          expression: "list.tri"
+                        }
+                      ],
+                      staticClass: "input",
+                      class: { "is-danger": _vm.errors.tri },
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.list.tri },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.list, "tri", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.list.bi,
+                          expression: "list.bi"
+                        }
+                      ],
+                      staticClass: "input",
+                      class: { "is-danger": _vm.errors.bi },
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.list.bi },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.list, "bi", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.list.si,
+                          expression: "list.si"
+                        }
+                      ],
+                      staticClass: "input",
+                      class: { "is-danger": _vm.errors.si },
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.list.si },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.list, "si", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(12),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.list.mg,
+                          expression: "list.mg"
+                        }
+                      ],
+                      staticClass: "input",
+                      class: { "is-danger": _vm.errors.mg },
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.list.mg },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.list, "mg", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.list.waist,
+                          expression: "list.waist"
+                        }
+                      ],
+                      staticClass: "input",
+                      class: { "is-danger": _vm.errors.waist },
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.list.waist },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.list, "waist", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.list.hip,
+                          expression: "list.hip"
+                        }
+                      ],
+                      staticClass: "input",
+                      class: { "is-danger": _vm.errors.hip },
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.list.hip },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.list, "hip", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.list.thigh,
+                          expression: "list.thigh"
+                        }
+                      ],
+                      staticClass: "input",
+                      class: { "is-danger": _vm.errors.thigh },
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.list.thigh },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.list, "thigh", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.list.braq,
+                          expression: "list.braq"
+                        }
+                      ],
+                      staticClass: "input",
+                      class: { "is-danger": _vm.errors.braq },
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.list.braq },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.list, "braq", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.list.wrist,
+                          expression: "list.wrist"
+                        }
+                      ],
+                      staticClass: "input",
+                      class: { "is-danger": _vm.errors.wrist },
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.list.wrist },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.list, "wrist", $event.target.value)
+                        }
+                      }
+                    })
+                  ])
+                ])
+              ])
+            ]
+          )
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "field is-grouped is-grouped-centered" }, [
+      _c("p", { staticClass: "control" }, [
+        _c("a", { staticClass: "button is-primary", on: { click: _vm.save } }, [
+          _vm._v("\n        Guardar\n      ")
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "field-label is-normal" }, [
+      _c("label", { staticClass: "label" }, [_vm._v("Peso")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "field-label is-normal" }, [
+      _c("label", { staticClass: "label" }, [_vm._v("IMC")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "field-label is-normal" }, [
+      _c("label", { staticClass: "label" }, [_vm._v("Ansiedad")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "field-label is-normal" }, [
+      _c("label", { staticClass: "label" }, [_vm._v("Digestión")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "field-label is-normal" }, [
+      _c("label", { staticClass: "label" }, [_vm._v("Ejercicio")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "field-label is-normal" }, [
+      _c("label", { staticClass: "label" }, [_vm._v("Liquidos")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "field-label is-normal" }, [
+      _c("label", { staticClass: "label" }, [_vm._v("Talla/T2 ")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "field-label is-normal" }, [
+      _c("label", { staticClass: "label" }, [_vm._v("Peso deseado")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "field-label is-normal" }, [
+      _c("label", { staticClass: "label" }, [_vm._v("Mg normal")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "field-label is-normal" }, [
+      _c("label", { staticClass: "label" }, [_vm._v("Kg/Km")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "field-label is-normal" }, [
+      _c("label", { staticClass: "label" }, [
+        _vm._v("Proyección de tratamiento")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("SE")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("TRI")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("BI")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("SI")]),
+        _vm._v(" "),
+        _c("th", { staticClass: "is-success" }, [_vm._v("Total")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("%Mg")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Cintura")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Cadera")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Muslo")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Braq")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("muñeca")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", { staticClass: "is-success" }, [
+      _c("strong", [_c("p", [_vm._v(" total ")])])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-3ba1f28f", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);
