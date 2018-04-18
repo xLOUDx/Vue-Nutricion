@@ -44,6 +44,7 @@ class BinnacleController extends Controller
     {
         $binnacle = new Binnacle;
 
+        $binnacle->patient_id = $request->patient_id;
         $binnacle->weight = $request->weight;
         $binnacle->imc  = $request->imc;
         $binnacle->anxiety = $request->anxiety;

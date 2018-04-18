@@ -26,15 +26,16 @@
 
     <div class="tabs">
       <ul>
-        <li class="is-active"><a>Evaluación</a></li>
-        <li><a>Observaciones</a></li>
-        <li><a>Otro</a></li>
+        <li @click="prueba(1)" :class="isActive[0]" ><a>Evaluación</a></li>
+        <li @click="prueba(2)" :class="isActive[1]" ><a>Nuevo</a></li>
+        <li @click="prueba(3)" :class="isActive[2]" ><a>Observaciones</a></li>
       </ul>
     </div> <br>
 
     <div id="app">
-      <Mycomponent-1 v-show="FALSE" :iden="this.iden" > </Mycomponent-1>
-      <Mycomponent-2  > </Mycomponent-2>
+      <Mycomponent-1 v-show="isOpen == 1" :iden="this.iden"> </Mycomponent-1>
+      <Mycomponent-2 v-show="isOpen == 2" :iden="this.iden"> </Mycomponent-2>
+      <Mycomponent-3 v-show="isOpen == 3" :iden="this.iden"> </Mycomponent-3>
     </div>
 
   </div>
@@ -46,17 +47,20 @@ export default {
   props:['iden'],
   data(){
     return{
-      AddActive: '',
-      errors:{
+      isOpen: 1,
+      isActive: {
 
       },
+      errors:{
+      },
       patient: {
-
       },
     }
   },
 
   mounted(){
+    this.isActive[0] = 'is-active'
+
     axios.post('/getData', {iden: this.iden})
     .then((response) => this.lists = response.data)
       .catch((error) => this.errors = error.response.data.errors)
@@ -67,12 +71,25 @@ export default {
 
   },
   methods:{
-    close(){
-      this.AddActive = '';
+    prueba(element){
+      if (element == 1) {
+        this.isOpen = 1
+        this.isActive = []
+        this.isActive[0] = 'is-active'
+      }
+      if(element == 2){
+        this.isOpen = 2
+        this.isActive = []
+        this.isActive[1] = 'is-active'
+        // console.log('este es el 2')
+      }
+      if(element == 3){
+        this.isOpen = 3
+        this.isActive = []
+        this.isActive[2] = 'is-active'
+        // console.log('este es el 3')
+      }
     },
   }
 }
 </script>
-
-
-GRAFICO E PROYECCIÓN DE TRATAMIENTO

@@ -2,13 +2,12 @@
 
   <div class="container">
 
+    <h1 class="subtitle is-3" > Observaciones </h1>
+
     <div class="field is-horizontal">
-      <div class="field-label is-normal">
-        <label class="label">Comentario</label>
-      </div> <br>
       <div class="field-body">
         <div class="field">
-          <div class="control">
+          <div class="control ">
             <textarea class="textarea"></textarea>
           </div>
         </div>
@@ -16,9 +15,6 @@
     </div>
 
     <div class="field is-horizontal">
-      <div class="field-label">
-        <!-- Left empty for spacing -->
-      </div>
       <div class="field-body">
         <div class="field">
           <div class="control">

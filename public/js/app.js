@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 137);
+/******/ 	return __webpack_require__(__webpack_require__.s = 136);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1902,7 +1902,7 @@
             try {
                 oldLocale = globalLocale._abbr;
                 var aliasedRequire = require;
-                __webpack_require__(191)("./" + name);
+                __webpack_require__(174)("./" + name);
                 getSetGlobalLocale(oldLocale);
             } catch (e) {}
         }
@@ -4584,7 +4584,7 @@
 
 
 var bind = __webpack_require__(8);
-var isBuffer = __webpack_require__(147);
+var isBuffer = __webpack_require__(146);
 
 /*global toString:true*/
 
@@ -5030,7 +5030,7 @@ module.exports = g;
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(1);
-var normalizeHeaderName = __webpack_require__(149);
+var normalizeHeaderName = __webpack_require__(148);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -16086,7 +16086,7 @@ Vue.compile = compileToFunctions;
 
 module.exports = Vue;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(139).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(138).setImmediate))
 
 /***/ }),
 /* 6 */
@@ -16332,12 +16332,12 @@ module.exports = function bind(fn, thisArg) {
 
 
 var utils = __webpack_require__(1);
-var settle = __webpack_require__(150);
-var buildURL = __webpack_require__(152);
-var parseHeaders = __webpack_require__(153);
-var isURLSameOrigin = __webpack_require__(154);
+var settle = __webpack_require__(149);
+var buildURL = __webpack_require__(151);
+var parseHeaders = __webpack_require__(152);
+var isURLSameOrigin = __webpack_require__(153);
 var createError = __webpack_require__(10);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(155);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(154);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -16434,7 +16434,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(156);
+      var cookies = __webpack_require__(155);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -16518,7 +16518,7 @@ module.exports = function xhrAdapter(config) {
 "use strict";
 
 
-var enhanceError = __webpack_require__(151);
+var enhanceError = __webpack_require__(150);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -16576,53 +16576,6 @@ module.exports = Cancel;
 
 /***/ }),
 /* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(2)
-/* script */
-var __vue_script__ = __webpack_require__(176)
-/* template */
-var __vue_template__ = __webpack_require__(177)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/Mycomment.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-119754e8", Component.options)
-  } else {
-    hotAPI.reload("data-v-119754e8", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16699,7 +16652,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16838,7 +16791,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16901,7 +16854,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16964,7 +16917,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17090,7 +17043,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17153,7 +17106,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17261,7 +17214,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17324,7 +17277,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17433,7 +17386,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17569,7 +17522,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 24 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17663,7 +17616,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 25 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17725,7 +17678,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 26 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17848,7 +17801,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 27 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17971,7 +17924,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 28 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18083,7 +18036,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 29 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18238,7 +18191,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 30 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18330,7 +18283,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 31 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18513,7 +18466,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 32 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18580,7 +18533,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 33 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18664,7 +18617,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 34 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18728,7 +18681,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 35 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18808,7 +18761,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 36 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18888,7 +18841,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 37 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18968,7 +18921,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 38 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19071,7 +19024,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 39 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19175,7 +19128,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 40 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19246,7 +19199,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 41 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19313,7 +19266,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 42 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19384,7 +19337,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 43 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19455,7 +19408,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 44 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19521,7 +19474,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 45 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19592,7 +19545,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 46 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19667,7 +19620,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 47 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19763,7 +19716,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 48 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19859,7 +19812,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 49 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19946,7 +19899,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 50 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20030,7 +19983,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 51 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20100,7 +20053,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 52 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20210,7 +20163,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 53 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20323,7 +20276,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 54 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20387,7 +20340,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 55 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20474,7 +20427,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 56 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20552,7 +20505,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 57 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20634,7 +20587,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 58 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20713,7 +20666,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 59 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20793,7 +20746,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 60 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20874,7 +20827,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 61 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -21001,7 +20954,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 62 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -21129,7 +21082,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 63 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -21230,7 +21183,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 64 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -21358,7 +21311,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 65 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -21516,7 +21469,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 66 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -21630,7 +21583,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 67 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -21729,7 +21682,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 68 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -21815,7 +21768,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 69 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -21951,7 +21904,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 70 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -22024,7 +21977,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 71 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -22120,7 +22073,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 72 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -22206,7 +22159,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 73 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -22299,7 +22252,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 74 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -22390,7 +22343,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 75 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -22504,7 +22457,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 76 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -22634,7 +22587,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 77 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -22719,7 +22672,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 78 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -22810,7 +22763,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 79 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -22950,7 +22903,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 80 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -23024,7 +22977,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 81 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -23146,7 +23099,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 82 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -23247,7 +23200,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 83 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -23363,7 +23316,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 84 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -23431,7 +23384,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 85 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -23525,7 +23478,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 86 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -23610,7 +23563,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 87 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -23718,7 +23671,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 88 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -23882,7 +23835,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 89 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -23968,7 +23921,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 90 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -24054,7 +24007,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 91 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -24118,7 +24071,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 92 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -24215,7 +24168,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 93 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -24281,7 +24234,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 94 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -24408,7 +24361,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 95 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -24499,7 +24452,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 96 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -24590,7 +24543,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 97 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -24654,7 +24607,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 98 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -24782,7 +24735,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 99 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -24912,7 +24865,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 100 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -24981,7 +24934,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 101 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -25046,7 +24999,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 102 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -25125,7 +25078,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 103 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -25311,7 +25264,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 104 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -25413,7 +25366,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 105 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -25477,7 +25430,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 106 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -25552,7 +25505,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 107 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -25712,7 +25665,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 108 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -25889,7 +25842,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 109 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -25961,7 +25914,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 110 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -26076,7 +26029,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 111 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -26191,7 +26144,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 112 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -26283,7 +26236,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 113 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -26356,7 +26309,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 114 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -26419,7 +26372,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 115 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -26552,7 +26505,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 116 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -26645,7 +26598,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 117 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -26716,7 +26669,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 118 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -26836,7 +26789,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 119 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -26907,7 +26860,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 120 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -26973,7 +26926,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 121 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -27099,7 +27052,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 122 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -27197,7 +27150,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 123 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -27292,7 +27245,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 124 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -27354,7 +27307,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 125 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -27416,7 +27369,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 126 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js language configuration
@@ -27539,7 +27492,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 127 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -27694,7 +27647,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 128 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -27796,7 +27749,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 129 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -27858,7 +27811,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 130 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -27920,7 +27873,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 131 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -28003,7 +27956,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 132 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -28075,7 +28028,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 133 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -28139,7 +28092,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 134 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -28253,7 +28206,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 135 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -28360,7 +28313,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 136 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -28467,51 +28420,48 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 137 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(138);
-module.exports = __webpack_require__(202);
+__webpack_require__(137);
+module.exports = __webpack_require__(191);
 
 
 /***/ }),
-/* 138 */
+/* 137 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Mypatients_vue__ = __webpack_require__(189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Mypatients_vue__ = __webpack_require__(182);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Mypatients_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_Mypatients_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Myindex_vue__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Myindex_vue__ = __webpack_require__(185);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Myindex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_Myindex_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Mysearch_vue__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Mysearch_vue__ = __webpack_require__(188);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Mysearch_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_Mysearch_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Mycomment_vue__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Mycomment_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_Mycomment_vue__);
 
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]);
 
-__webpack_require__(142);
+__webpack_require__(141);
 
 window.Vue = __webpack_require__(5);
 
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Myheader', __webpack_require__(164));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Myfooter', __webpack_require__(167));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Add-1', __webpack_require__(170));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Add-2', __webpack_require__(173));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Mycomponent-1', __webpack_require__(206));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Mycomponent-2', __webpack_require__(209));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Myheader', __webpack_require__(163));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Myfooter', __webpack_require__(166));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Add-2', __webpack_require__(169));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Mycomponent-1', __webpack_require__(172));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Mycomponent-2', __webpack_require__(176));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Mycomponent-3', __webpack_require__(179));
 
 
 
 
 
-
-var routes = [{ name: 'MyIndex', path: '/', component: __WEBPACK_IMPORTED_MODULE_3__components_Myindex_vue___default.a }, { name: 'MySearch', path: '/search', component: __WEBPACK_IMPORTED_MODULE_4__components_Mysearch_vue___default.a, props: true }, { name: 'MyPatients', path: '/search/:iden/patients', component: __WEBPACK_IMPORTED_MODULE_2__components_Mypatients_vue___default.a, props: true }, { name: 'Mycomment', path: '/search/patients/comments', component: __WEBPACK_IMPORTED_MODULE_5__components_Mycomment_vue___default.a }];
+var routes = [{ name: 'MyIndex', path: '/', component: __WEBPACK_IMPORTED_MODULE_3__components_Myindex_vue___default.a }, { name: 'MySearch', path: '/search', component: __WEBPACK_IMPORTED_MODULE_4__components_Mysearch_vue___default.a, props: true }, { name: 'MyPatients', path: '/search/:iden/patients', component: __WEBPACK_IMPORTED_MODULE_2__components_Mypatients_vue___default.a, props: true }];
 
 var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
   routes: routes // short for `routes: routes`
@@ -28523,7 +28473,7 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 });
 
 /***/ }),
-/* 139 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var apply = Function.prototype.apply;
@@ -28576,7 +28526,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(140);
+__webpack_require__(139);
 // On some exotic environments, it's not clear which object `setimmeidate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -28590,7 +28540,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 140 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -28783,7 +28733,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(6)))
 
 /***/ }),
-/* 141 */
+/* 140 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -31413,11 +31363,11 @@ if (inBrowser && window.Vue) {
 
 
 /***/ }),
-/* 142 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-window._ = __webpack_require__(143);
+window._ = __webpack_require__(142);
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -31426,7 +31376,7 @@ window._ = __webpack_require__(143);
  */
 
 try {
-  window.$ = window.jQuery = __webpack_require__(144);
+  window.$ = window.jQuery = __webpack_require__(143);
 } catch (e) {}
 
 /**
@@ -31435,7 +31385,7 @@ try {
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(145);
+window.axios = __webpack_require__(144);
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -31471,7 +31421,7 @@ if (token) {
 // });
 
 /***/ }),
-/* 143 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -48576,7 +48526,7 @@ if (token) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(7)(module)))
 
 /***/ }),
-/* 144 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -58947,13 +58897,13 @@ return jQuery;
 
 
 /***/ }),
-/* 145 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(146);
+module.exports = __webpack_require__(145);
 
 /***/ }),
-/* 146 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58961,7 +58911,7 @@ module.exports = __webpack_require__(146);
 
 var utils = __webpack_require__(1);
 var bind = __webpack_require__(8);
-var Axios = __webpack_require__(148);
+var Axios = __webpack_require__(147);
 var defaults = __webpack_require__(4);
 
 /**
@@ -58996,14 +58946,14 @@ axios.create = function create(instanceConfig) {
 
 // Expose Cancel & CancelToken
 axios.Cancel = __webpack_require__(12);
-axios.CancelToken = __webpack_require__(162);
+axios.CancelToken = __webpack_require__(161);
 axios.isCancel = __webpack_require__(11);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(163);
+axios.spread = __webpack_require__(162);
 
 module.exports = axios;
 
@@ -59012,7 +58962,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 147 */
+/* 146 */
 /***/ (function(module, exports) {
 
 /*!
@@ -59039,7 +58989,7 @@ function isSlowBuffer (obj) {
 
 
 /***/ }),
-/* 148 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59047,8 +58997,8 @@ function isSlowBuffer (obj) {
 
 var defaults = __webpack_require__(4);
 var utils = __webpack_require__(1);
-var InterceptorManager = __webpack_require__(157);
-var dispatchRequest = __webpack_require__(158);
+var InterceptorManager = __webpack_require__(156);
+var dispatchRequest = __webpack_require__(157);
 
 /**
  * Create a new instance of Axios
@@ -59125,7 +59075,7 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 149 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59144,7 +59094,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 150 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59177,7 +59127,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 151 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59205,7 +59155,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-/* 152 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59280,7 +59230,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 153 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59340,7 +59290,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 154 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59415,7 +59365,7 @@ module.exports = (
 
 
 /***/ }),
-/* 155 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59458,7 +59408,7 @@ module.exports = btoa;
 
 
 /***/ }),
-/* 156 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59518,7 +59468,7 @@ module.exports = (
 
 
 /***/ }),
-/* 157 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59577,18 +59527,18 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 158 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(1);
-var transformData = __webpack_require__(159);
+var transformData = __webpack_require__(158);
 var isCancel = __webpack_require__(11);
 var defaults = __webpack_require__(4);
-var isAbsoluteURL = __webpack_require__(160);
-var combineURLs = __webpack_require__(161);
+var isAbsoluteURL = __webpack_require__(159);
+var combineURLs = __webpack_require__(160);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -59670,7 +59620,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 159 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59697,7 +59647,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 160 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59718,7 +59668,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 161 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59739,7 +59689,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 162 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59803,7 +59753,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 163 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59837,15 +59787,15 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 164 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(2)
 /* script */
-var __vue_script__ = __webpack_require__(165)
+var __vue_script__ = __webpack_require__(164)
 /* template */
-var __vue_template__ = __webpack_require__(166)
+var __vue_template__ = __webpack_require__(165)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -59884,7 +59834,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 165 */
+/* 164 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59936,7 +59886,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
-/* 166 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -60036,15 +59986,15 @@ if (false) {
 }
 
 /***/ }),
-/* 167 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(2)
 /* script */
-var __vue_script__ = __webpack_require__(168)
+var __vue_script__ = __webpack_require__(167)
 /* template */
-var __vue_template__ = __webpack_require__(169)
+var __vue_template__ = __webpack_require__(168)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -60083,7 +60033,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 168 */
+/* 167 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60109,7 +60059,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
-/* 169 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -60148,1352 +60098,15 @@ if (false) {
 }
 
 /***/ }),
-/* 170 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(2)
 /* script */
-var __vue_script__ = __webpack_require__(171)
+var __vue_script__ = __webpack_require__(170)
 /* template */
-var __vue_template__ = __webpack_require__(172)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/Add-1.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-02dbd7de", Component.options)
-  } else {
-    hotAPI.reload("data-v-02dbd7de", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 171 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['openmodal'],
-  data: function data() {
-    return {
-      list: {
-        weight: '',
-        imc: '',
-        anxiety: '',
-        exercise: '',
-        digestion: '',
-        liquids: '',
-        size_t2: '',
-        desired_weight: '',
-        mg_normal: '',
-        kg_km: '',
-        projection_treatment: '',
-        se: '',
-        tri: '',
-        bi: '',
-        si: '',
-        total: '',
-        mg: '',
-        waist: '',
-        hip: '',
-        thigh: '',
-        braq: '',
-        wrist: ''
-      },
-
-      errors: {}
-    };
-  },
-
-  methods: {
-    close: function close() {
-      this.$emit('closeRequest');
-    },
-    save: function save() {
-      var _this = this;
-
-      axios.post('/search/patients', this.$data.list).then(function (response) {
-        _this.close();
-        _this.$parent.lists.push(_this.$data.list);
-      }).catch(function (error) {
-        return _this.errors = error.response.data.errors;
-      });
-    }
-  }
-});
-
-/***/ }),
-/* 172 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "modal", class: _vm.openmodal }, [
-    _c("div", { staticClass: "modal-background" }),
-    _vm._v(" "),
-    _c("div", { staticClass: "modal-card" }, [
-      _c("header", { staticClass: "modal-card-head" }, [
-        _c("p", { staticClass: "modal-card-title" }, [
-          _vm._v("Formulario de paciente")
-        ]),
-        _vm._v(" "),
-        _c("button", {
-          staticClass: "delete",
-          attrs: { "aria-label": "close" },
-          on: { click: _vm.close }
-        })
-      ]),
-      _vm._v(" "),
-      _c("section", { staticClass: "modal-card-body" }, [
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Peso")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.weight,
-                  expression: "list.weight"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.weight },
-              attrs: { type: "text", placeholder: "Ingrese Peso" },
-              domProps: { value: _vm.list.weight },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "weight", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.weight
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.weight
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.weight[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("IMC")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.imc,
-                  expression: "list.imc"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.imc },
-              attrs: { type: "text", placeholder: "Ingrese IMC" },
-              domProps: { value: _vm.list.imc },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "imc", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.imc
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.imc
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.imc[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Ansiedad")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.anxiety,
-                  expression: "list.anxiety"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.anxiety },
-              attrs: { type: "text", placeholder: "Ingrese Ansiedad" },
-              domProps: { value: _vm.list.anxiety },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "anxiety", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.anxiety
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.anxiety
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.anxiety[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Ejercicio")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.exercise,
-                  expression: "list.exercise"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.exercise },
-              attrs: { type: "email", placeholder: "Ingrese Ejercicio" },
-              domProps: { value: _vm.list.exercise },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "exercise", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.exercise
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.exercise
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.exercise[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Digestión")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.digestion,
-                  expression: "list.digestion"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.digestion },
-              attrs: { type: "text", placeholder: "Ingrese Digestión" },
-              domProps: { value: _vm.list.digestion },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "digestion", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.digestion
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.digestion
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.digestion[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Liquidos")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.liquids,
-                  expression: "list.liquids"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.liquids },
-              attrs: { type: "text", placeholder: "Ingrese Liquidos" },
-              domProps: { value: _vm.list.liquids },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "liquids", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.liquids
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.liquids
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.liquids[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Talla/t2")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.size_t2,
-                  expression: "list.size_t2"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.size_t2 },
-              attrs: { type: "text", placeholder: "Ingrese t2" },
-              domProps: { value: _vm.list.size_t2 },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "size_t2", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.size_t2
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.size_t2
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.size_t2[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.desired_weight,
-                  expression: "list.desired_weight"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.desired_weight },
-              attrs: { type: "text", placeholder: "Ingrese peso deseado" },
-              domProps: { value: _vm.list.desired_weight },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "desired_weight", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.desired_weight
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.desired_weight
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.desired_weight[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("%Mg normal")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.mg_normal,
-                  expression: "list.mg_normal"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.mg_normal },
-              attrs: { type: "text", placeholder: "Ingrese normal" },
-              domProps: { value: _vm.list.mg_normal },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "mg_normal", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.mg_normal
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.mg_normal
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.mg_normal[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Kg/Mg")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.kg_km,
-                  expression: "list.kg_km"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.kg_km },
-              attrs: { type: "text", placeholder: "Ingrese Mg" },
-              domProps: { value: _vm.list.kg_km },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "kg_km", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.kg_km
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.kg_km
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.kg_km[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [
-            _vm._v("Proyección de tratamiento")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.projection_treatment,
-                  expression: "list.projection_treatment"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.projection_treatment },
-              attrs: { type: "text", placeholder: "Ingrese tratamiento" },
-              domProps: { value: _vm.list.projection_treatment },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(
-                    _vm.list,
-                    "projection_treatment",
-                    $event.target.value
-                  )
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.projection_treatment
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.projection_treatment
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.projection_treatment[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("hr"),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Se")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.se,
-                  expression: "list.se"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.se },
-              attrs: { type: "number", placeholder: "Ingrese Se" },
-              domProps: { value: _vm.list.se },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "se", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.se
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.se
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.se[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Tri")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.tri,
-                  expression: "list.tri"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.tri },
-              attrs: { type: "number", placeholder: "Ingrese Tri" },
-              domProps: { value: _vm.list.tri },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "tri", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.tri
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.tri
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.tri[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Bi")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.bi,
-                  expression: "list.bi"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.bi },
-              attrs: { type: "number", placeholder: "Ingrese Bi" },
-              domProps: { value: _vm.list.bi },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "bi", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.bi
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.bi
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.bi[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Si")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.si,
-                  expression: "list.si"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.si },
-              attrs: { type: "number", placeholder: "Ingrese", Si: "" },
-              domProps: { value: _vm.list.si },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "si", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.si
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.si
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.si[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Total")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.total,
-                  expression: "list.total"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.total },
-              attrs: { type: "number", placeholder: "Ingrese Total" },
-              domProps: { value: _vm.list.total },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "total", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.total
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.total
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.total[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Mg")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.mg,
-                  expression: "list.mg"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.mg },
-              attrs: { type: "text", placeholder: "Ingrese Mg" },
-              domProps: { value: _vm.list.mg },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "mg", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.mg
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.mg
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.mg[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Cintura")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.waist,
-                  expression: "list.waist"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.waist },
-              attrs: { type: "text", placeholder: "Ingrese Cintura" },
-              domProps: { value: _vm.list.waist },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "waist", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.waist
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.waist
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.waist[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Cadera")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.hip,
-                  expression: "list.hip"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.hip },
-              attrs: { type: "text", placeholder: "Ingrese Cadera" },
-              domProps: { value: _vm.list.hip },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "hip", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.hip
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.hip
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.hip[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Muslo")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.thigh,
-                  expression: "list.thigh"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.thigh },
-              attrs: { type: "text", placeholder: "Ingrese Muslo" },
-              domProps: { value: _vm.list.thigh },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "thigh", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.thigh
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.thigh
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.thigh[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("BRAQ")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.braq,
-                  expression: "list.braq"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.braq },
-              attrs: { type: "text", placeholder: "Ingrese BRAQ" },
-              domProps: { value: _vm.list.braq },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "braq", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.braq
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.braq
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.braq[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Muñeca")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.wrist,
-                  expression: "list.wrist"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.wrist },
-              attrs: { type: "text", placeholder: "Ingrese Muñeca" },
-              domProps: { value: _vm.list.wrist },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "wrist", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.wrist
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.wrist
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.wrist[0]))
-              ])
-            : _vm._e()
-        ])
-      ]),
-      _vm._v(" "),
-      _c("footer", { staticClass: "modal-card-foot" }, [
-        _c(
-          "button",
-          { staticClass: "button is-success", on: { click: _vm.save } },
-          [_vm._v("Guardar")]
-        ),
-        _vm._v(" "),
-        _c("button", { staticClass: "button", on: { click: _vm.close } }, [
-          _vm._v("Cancelar")
-        ])
-      ])
-    ])
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "label" }, [
-      _vm._v("Peso deseado "),
-      _c("sup", [_vm._v("2")])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-02dbd7de", module.exports)
-  }
-}
-
-/***/ }),
-/* 173 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(2)
-/* script */
-var __vue_script__ = __webpack_require__(174)
-/* template */
-var __vue_template__ = __webpack_require__(175)
+var __vue_template__ = __webpack_require__(171)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -61532,7 +60145,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 174 */
+/* 170 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -61768,7 +60381,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 175 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -62443,1132 +61056,15 @@ if (false) {
 }
 
 /***/ }),
-/* 176 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({});
-
-/***/ }),
-/* 177 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "field is-horizontal" }, [
-        _c("div", { staticClass: "field-label is-normal" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Comentario")])
-        ]),
-        _vm._v(" "),
-        _c("br"),
-        _vm._v(" "),
-        _c("div", { staticClass: "field-body" }, [
-          _c("div", { staticClass: "field" }, [
-            _c("div", { staticClass: "control" }, [
-              _c("textarea", { staticClass: "textarea" })
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "field is-horizontal" }, [
-        _c("div", { staticClass: "field-label" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "field-body" }, [
-          _c("div", { staticClass: "field" }, [
-            _c("div", { staticClass: "control" }, [
-              _c("button", { staticClass: "button is-primary" }, [
-                _vm._v("\n            Guardar\n          ")
-              ])
-            ])
-          ])
-        ])
-      ])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-119754e8", module.exports)
-  }
-}
-
-/***/ }),
-/* 178 */,
-/* 179 */,
-/* 180 */,
-/* 181 */,
-/* 182 */,
-/* 183 */,
-/* 184 */,
-/* 185 */,
-/* 186 */,
-/* 187 */,
-/* 188 */,
-/* 189 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(2)
 /* script */
-var __vue_script__ = __webpack_require__(190)
+var __vue_script__ = __webpack_require__(173)
 /* template */
-var __vue_template__ = __webpack_require__(192)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/Mypatients.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-e1140f9e", Component.options)
-  } else {
-    hotAPI.reload("data-v-e1140f9e", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 190 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['iden'],
-  data: function data() {
-    return {
-      AddActive: '',
-      errors: {},
-      patient: {}
-    };
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    axios.post('/getData', { iden: this.iden }).then(function (response) {
-      return _this.lists = response.data;
-    }).catch(function (error) {
-      return _this.errors = error.response.data.errors;
-    });
-
-    axios.post('/getDataPatient', { iden: this.iden }).then(function (response) {
-      return _this.patient = response.data;
-    }).catch(function (error) {
-      return _this.errors = error.response.data.errors;
-    });
-  },
-
-  methods: {
-    close: function close() {
-      this.AddActive = '';
-    }
-  }
-});
-
-/***/ }),
-/* 191 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var map = {
-	"./af": 14,
-	"./af.js": 14,
-	"./ar": 15,
-	"./ar-dz": 16,
-	"./ar-dz.js": 16,
-	"./ar-kw": 17,
-	"./ar-kw.js": 17,
-	"./ar-ly": 18,
-	"./ar-ly.js": 18,
-	"./ar-ma": 19,
-	"./ar-ma.js": 19,
-	"./ar-sa": 20,
-	"./ar-sa.js": 20,
-	"./ar-tn": 21,
-	"./ar-tn.js": 21,
-	"./ar.js": 15,
-	"./az": 22,
-	"./az.js": 22,
-	"./be": 23,
-	"./be.js": 23,
-	"./bg": 24,
-	"./bg.js": 24,
-	"./bm": 25,
-	"./bm.js": 25,
-	"./bn": 26,
-	"./bn.js": 26,
-	"./bo": 27,
-	"./bo.js": 27,
-	"./br": 28,
-	"./br.js": 28,
-	"./bs": 29,
-	"./bs.js": 29,
-	"./ca": 30,
-	"./ca.js": 30,
-	"./cs": 31,
-	"./cs.js": 31,
-	"./cv": 32,
-	"./cv.js": 32,
-	"./cy": 33,
-	"./cy.js": 33,
-	"./da": 34,
-	"./da.js": 34,
-	"./de": 35,
-	"./de-at": 36,
-	"./de-at.js": 36,
-	"./de-ch": 37,
-	"./de-ch.js": 37,
-	"./de.js": 35,
-	"./dv": 38,
-	"./dv.js": 38,
-	"./el": 39,
-	"./el.js": 39,
-	"./en-au": 40,
-	"./en-au.js": 40,
-	"./en-ca": 41,
-	"./en-ca.js": 41,
-	"./en-gb": 42,
-	"./en-gb.js": 42,
-	"./en-ie": 43,
-	"./en-ie.js": 43,
-	"./en-il": 44,
-	"./en-il.js": 44,
-	"./en-nz": 45,
-	"./en-nz.js": 45,
-	"./eo": 46,
-	"./eo.js": 46,
-	"./es": 47,
-	"./es-do": 48,
-	"./es-do.js": 48,
-	"./es-us": 49,
-	"./es-us.js": 49,
-	"./es.js": 47,
-	"./et": 50,
-	"./et.js": 50,
-	"./eu": 51,
-	"./eu.js": 51,
-	"./fa": 52,
-	"./fa.js": 52,
-	"./fi": 53,
-	"./fi.js": 53,
-	"./fo": 54,
-	"./fo.js": 54,
-	"./fr": 55,
-	"./fr-ca": 56,
-	"./fr-ca.js": 56,
-	"./fr-ch": 57,
-	"./fr-ch.js": 57,
-	"./fr.js": 55,
-	"./fy": 58,
-	"./fy.js": 58,
-	"./gd": 59,
-	"./gd.js": 59,
-	"./gl": 60,
-	"./gl.js": 60,
-	"./gom-latn": 61,
-	"./gom-latn.js": 61,
-	"./gu": 62,
-	"./gu.js": 62,
-	"./he": 63,
-	"./he.js": 63,
-	"./hi": 64,
-	"./hi.js": 64,
-	"./hr": 65,
-	"./hr.js": 65,
-	"./hu": 66,
-	"./hu.js": 66,
-	"./hy-am": 67,
-	"./hy-am.js": 67,
-	"./id": 68,
-	"./id.js": 68,
-	"./is": 69,
-	"./is.js": 69,
-	"./it": 70,
-	"./it.js": 70,
-	"./ja": 71,
-	"./ja.js": 71,
-	"./jv": 72,
-	"./jv.js": 72,
-	"./ka": 73,
-	"./ka.js": 73,
-	"./kk": 74,
-	"./kk.js": 74,
-	"./km": 75,
-	"./km.js": 75,
-	"./kn": 76,
-	"./kn.js": 76,
-	"./ko": 77,
-	"./ko.js": 77,
-	"./ky": 78,
-	"./ky.js": 78,
-	"./lb": 79,
-	"./lb.js": 79,
-	"./lo": 80,
-	"./lo.js": 80,
-	"./lt": 81,
-	"./lt.js": 81,
-	"./lv": 82,
-	"./lv.js": 82,
-	"./me": 83,
-	"./me.js": 83,
-	"./mi": 84,
-	"./mi.js": 84,
-	"./mk": 85,
-	"./mk.js": 85,
-	"./ml": 86,
-	"./ml.js": 86,
-	"./mn": 87,
-	"./mn.js": 87,
-	"./mr": 88,
-	"./mr.js": 88,
-	"./ms": 89,
-	"./ms-my": 90,
-	"./ms-my.js": 90,
-	"./ms.js": 89,
-	"./mt": 91,
-	"./mt.js": 91,
-	"./my": 92,
-	"./my.js": 92,
-	"./nb": 93,
-	"./nb.js": 93,
-	"./ne": 94,
-	"./ne.js": 94,
-	"./nl": 95,
-	"./nl-be": 96,
-	"./nl-be.js": 96,
-	"./nl.js": 95,
-	"./nn": 97,
-	"./nn.js": 97,
-	"./pa-in": 98,
-	"./pa-in.js": 98,
-	"./pl": 99,
-	"./pl.js": 99,
-	"./pt": 100,
-	"./pt-br": 101,
-	"./pt-br.js": 101,
-	"./pt.js": 100,
-	"./ro": 102,
-	"./ro.js": 102,
-	"./ru": 103,
-	"./ru.js": 103,
-	"./sd": 104,
-	"./sd.js": 104,
-	"./se": 105,
-	"./se.js": 105,
-	"./si": 106,
-	"./si.js": 106,
-	"./sk": 107,
-	"./sk.js": 107,
-	"./sl": 108,
-	"./sl.js": 108,
-	"./sq": 109,
-	"./sq.js": 109,
-	"./sr": 110,
-	"./sr-cyrl": 111,
-	"./sr-cyrl.js": 111,
-	"./sr.js": 110,
-	"./ss": 112,
-	"./ss.js": 112,
-	"./sv": 113,
-	"./sv.js": 113,
-	"./sw": 114,
-	"./sw.js": 114,
-	"./ta": 115,
-	"./ta.js": 115,
-	"./te": 116,
-	"./te.js": 116,
-	"./tet": 117,
-	"./tet.js": 117,
-	"./tg": 118,
-	"./tg.js": 118,
-	"./th": 119,
-	"./th.js": 119,
-	"./tl-ph": 120,
-	"./tl-ph.js": 120,
-	"./tlh": 121,
-	"./tlh.js": 121,
-	"./tr": 122,
-	"./tr.js": 122,
-	"./tzl": 123,
-	"./tzl.js": 123,
-	"./tzm": 124,
-	"./tzm-latn": 125,
-	"./tzm-latn.js": 125,
-	"./tzm.js": 124,
-	"./ug-cn": 126,
-	"./ug-cn.js": 126,
-	"./uk": 127,
-	"./uk.js": 127,
-	"./ur": 128,
-	"./ur.js": 128,
-	"./uz": 129,
-	"./uz-latn": 130,
-	"./uz-latn.js": 130,
-	"./uz.js": 129,
-	"./vi": 131,
-	"./vi.js": 131,
-	"./x-pseudo": 132,
-	"./x-pseudo.js": 132,
-	"./yo": 133,
-	"./yo.js": 133,
-	"./zh-cn": 134,
-	"./zh-cn.js": 134,
-	"./zh-hk": 135,
-	"./zh-hk.js": 135,
-	"./zh-tw": 136,
-	"./zh-tw.js": 136
-};
-function webpackContext(req) {
-	return __webpack_require__(webpackContextResolve(req));
-};
-function webpackContextResolve(req) {
-	var id = map[req];
-	if(!(id + 1)) // check for number or string
-		throw new Error("Cannot find module '" + req + "'.");
-	return id;
-};
-webpackContext.keys = function webpackContextKeys() {
-	return Object.keys(map);
-};
-webpackContext.resolve = webpackContextResolve;
-module.exports = webpackContext;
-webpackContext.id = 191;
-
-/***/ }),
-/* 192 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "container" },
-    [
-      _c("hr"),
-      _vm._v(" "),
-      _vm._l(_vm.patient, function(item, key) {
-        return _c("p", { staticClass: "subtitle is-2" }, [
-          _c("strong", [
-            _vm._v(
-              "\n       " +
-                _vm._s(item.name) +
-                " " +
-                _vm._s(item.last_name_pat) +
-                " " +
-                _vm._s(item.last_name_mat) +
-                "\n     "
-            )
-          ])
-        ])
-      }),
-      _vm._v(" "),
-      _vm._l(_vm.patient, function(item, key) {
-        return _c("div", { staticClass: "notification columns" }, [
-          _c("div", { staticClass: "column is-two-fifths is-horizontal" }, [
-            _c("h6", { staticClass: "is-pulled-left" }, [
-              _c("strong", [_vm._v("Fono: ")]),
-              _vm._v(" " + _vm._s(item.phone) + " ")
-            ]),
-            _vm._v(" "),
-            _c("br"),
-            _vm._v(" "),
-            _c("h6", { staticClass: "is-pulled-left" }, [
-              _c("strong", [_vm._v("Previsión: ")]),
-              _vm._v(" " + _vm._s(item.prevision) + " ")
-            ]),
-            _vm._v(" "),
-            _c("br"),
-            _vm._v(" "),
-            _c("h6", { staticClass: "is-pulled-left" }, [
-              _c("strong", [_vm._v("Mail: ")]),
-              _vm._v(" " + _vm._s(item.email) + " ")
-            ]),
-            _vm._v(" "),
-            _c("br"),
-            _vm._v(" "),
-            _c("br"),
-            _vm._v(" "),
-            _c("p"),
-            _c("h6", { staticClass: "is-pulled-left" }, [
-              _c("strong", [_vm._v("Sra: ")]),
-              _vm._v(" " + _vm._s(item.sra))
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "column is-horizontal" }, [
-            _c("h6", { staticClass: "is-pulled-left" }, [
-              _c("strong", [_vm._v("Run: ")]),
-              _vm._v(" " + _vm._s(item.run) + " ")
-            ]),
-            _vm._v(" "),
-            _c("br"),
-            _vm._v(" "),
-            _c("h6", { staticClass: "is-pulled-left" }, [
-              _c("strong", [_vm._v("Dirección:")]),
-              _vm._v(" " + _vm._s(item.phone) + " ")
-            ]),
-            _vm._v(" "),
-            _c("br"),
-            _vm._v(" "),
-            _c("h6", { staticClass: "is-pulled-left" }, [
-              _c("strong", [_vm._v(" Ocupación: ")]),
-              _vm._v(" " + _vm._s(item.job) + " ")
-            ]),
-            _vm._v(" "),
-            _c("br")
-          ])
-        ])
-      }),
-      _vm._v(" "),
-      _vm._m(0),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c(
-        "div",
-        { attrs: { id: "app" } },
-        [
-          _c("Mycomponent-1", {
-            directives: [
-              {
-                name: "show",
-                rawName: "v-show",
-                value: _vm.FALSE,
-                expression: "FALSE"
-              }
-            ],
-            attrs: { iden: this.iden }
-          }),
-          _vm._v(" "),
-          _c("Mycomponent-2")
-        ],
-        1
-      )
-    ],
-    2
-  )
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "tabs" }, [
-      _c("ul", [
-        _c("li", { staticClass: "is-active" }, [
-          _c("a", [_vm._v("Evaluación")])
-        ]),
-        _vm._v(" "),
-        _c("li", [_c("a", [_vm._v("Observaciones")])]),
-        _vm._v(" "),
-        _c("li", [_c("a", [_vm._v("Otro")])])
-      ])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-e1140f9e", module.exports)
-  }
-}
-
-/***/ }),
-/* 193 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(2)
-/* script */
-var __vue_script__ = __webpack_require__(194)
-/* template */
-var __vue_template__ = __webpack_require__(195)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/Myindex.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2589c082", Component.options)
-  } else {
-    hotAPI.reload("data-v-2589c082", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 194 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({});
-
-/***/ }),
-/* 195 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "tile is-ancestor" }, [
-        _c("div", { staticClass: "tile is-vertical is-8" }, [
-          _c("div", { staticClass: "tile" }, [
-            _c("div", { staticClass: "tile is-parent is-vertical" }, [
-              _c(
-                "article",
-                { staticClass: "tile is-child notification is-primary" },
-                [
-                  _c("p", { staticClass: "title" }, [_vm._v("Vertical...")]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "subtitle" }, [_vm._v("Top tile")])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "article",
-                { staticClass: "tile is-child notification is-warning" },
-                [
-                  _c("p", { staticClass: "title" }, [_vm._v("...tiles")]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "subtitle" }, [_vm._v("Bottom tile")])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "tile is-parent" }, [
-              _c(
-                "article",
-                { staticClass: "tile is-child notification is-info" },
-                [
-                  _c("p", { staticClass: "title" }, [_vm._v("Middle tile")]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "subtitle" }, [
-                    _vm._v("With an image")
-                  ]),
-                  _vm._v(" "),
-                  _c("figure", { staticClass: "image is-4by3" }, [
-                    _c("img", {
-                      attrs: {
-                        src: "https://bulma.io/images/placeholders/640x480.png"
-                      }
-                    })
-                  ])
-                ]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "tile is-parent" }, [
-            _c(
-              "article",
-              { staticClass: "tile is-child notification is-danger" },
-              [
-                _c("p", { staticClass: "title" }, [_vm._v("Wide tile")]),
-                _vm._v(" "),
-                _c("p", { staticClass: "subtitle" }, [
-                  _vm._v("Aligned with the right tile")
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "content" })
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "tile is-parent" }, [
-          _c(
-            "article",
-            { staticClass: "tile is-child notification is-success" },
-            [
-              _c("div", { staticClass: "content" }, [
-                _c("p", { staticClass: "title" }, [_vm._v("Tall tile")]),
-                _vm._v(" "),
-                _c("p", { staticClass: "subtitle" }, [
-                  _vm._v("With even more content")
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "content" })
-              ])
-            ]
-          )
-        ])
-      ])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-2589c082", module.exports)
-  }
-}
-
-/***/ }),
-/* 196 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(2)
-/* script */
-var __vue_script__ = __webpack_require__(197)
-/* template */
-var __vue_template__ = __webpack_require__(198)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/Mysearch.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-65e7b18b", Component.options)
-  } else {
-    hotAPI.reload("data-v-65e7b18b", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 197 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      AddActive: '',
-      lists: {},
-      errors: {},
-      patient: {}
-    };
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    axios.post('/getDataPatient').then(function (response) {
-      return _this.patient = response.data;
-    }).catch(function (error) {
-      return _this.errors = error.response.data.errors;
-    });
-  },
-
-  methods: {
-    openAdd: function openAdd() {
-      this.AddActive = 'is-active';
-    },
-    close: function close() {
-      this.AddActive = '';
-    },
-    details: function details(iden) {
-      this.$router.push({ name: 'MyPatients', params: { iden: iden } });
-    }
-  }
-});
-
-/***/ }),
-/* 198 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "nav",
-    { staticClass: "panel column is-offset-2 is-8" },
-    [
-      _c(
-        "p",
-        { staticClass: "panel-heading field is-grouped is-grouped-centered" },
-        [_vm._v("\n    Busqueda de pacientes\n  ")]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "panel-heading" }, [
-        _c(
-          "button",
-          {
-            staticClass: "button is-link is-outlined",
-            on: { click: _vm.openAdd }
-          },
-          [_vm._v("\n      Agregar nuevo\n    ")]
-        )
-      ]),
-      _vm._v(" "),
-      _vm._m(0),
-      _vm._v(" "),
-      _vm._l(_vm.patient, function(item, key) {
-        return _c(
-          "a",
-          {
-            staticClass: "panel-block is-active",
-            on: {
-              click: function($event) {
-                _vm.details(item.id)
-              }
-            }
-          },
-          [_vm._m(1, true), _vm._v("\n    " + _vm._s(item.name) + "\n  ")]
-        )
-      }),
-      _vm._v(" "),
-      _vm._m(2),
-      _vm._v(" "),
-      _c("Add-2", {
-        attrs: { openmodal: _vm.AddActive },
-        on: { closeRequest: _vm.close }
-      })
-    ],
-    2
-  )
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "panel-block" }, [
-      _c("p", { staticClass: "control has-icons-left" }, [
-        _c("input", {
-          staticClass: "input",
-          attrs: { type: "text", placeholder: "Buscar" }
-        }),
-        _vm._v(" "),
-        _c("span", { staticClass: "icon is-small is-left" }, [
-          _c("i", { staticClass: "fas fa-search" })
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("span", { staticClass: "panel-icon" }, [
-      _c("i", { staticClass: "fas fa-address-card fa-1x" })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "panel-block" }, [
-      _c("button", { staticClass: "button is-link is-fullwidth" }, [
-        _c(
-          "h1",
-          { staticClass: "subtitle is-5", staticStyle: { color: "white" } },
-          [_vm._v("Buscar")]
-        )
-      ])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-65e7b18b", module.exports)
-  }
-}
-
-/***/ }),
-/* 199 */,
-/* 200 */,
-/* 201 */,
-/* 202 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 203 */,
-/* 204 */,
-/* 205 */,
-/* 206 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(2)
-/* script */
-var __vue_script__ = __webpack_require__(207)
-/* template */
-var __vue_template__ = __webpack_require__(208)
+var __vue_template__ = __webpack_require__(175)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -63607,7 +61103,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 207 */
+/* 173 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -63787,7 +61283,275 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 208 */
+/* 174 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": 13,
+	"./af.js": 13,
+	"./ar": 14,
+	"./ar-dz": 15,
+	"./ar-dz.js": 15,
+	"./ar-kw": 16,
+	"./ar-kw.js": 16,
+	"./ar-ly": 17,
+	"./ar-ly.js": 17,
+	"./ar-ma": 18,
+	"./ar-ma.js": 18,
+	"./ar-sa": 19,
+	"./ar-sa.js": 19,
+	"./ar-tn": 20,
+	"./ar-tn.js": 20,
+	"./ar.js": 14,
+	"./az": 21,
+	"./az.js": 21,
+	"./be": 22,
+	"./be.js": 22,
+	"./bg": 23,
+	"./bg.js": 23,
+	"./bm": 24,
+	"./bm.js": 24,
+	"./bn": 25,
+	"./bn.js": 25,
+	"./bo": 26,
+	"./bo.js": 26,
+	"./br": 27,
+	"./br.js": 27,
+	"./bs": 28,
+	"./bs.js": 28,
+	"./ca": 29,
+	"./ca.js": 29,
+	"./cs": 30,
+	"./cs.js": 30,
+	"./cv": 31,
+	"./cv.js": 31,
+	"./cy": 32,
+	"./cy.js": 32,
+	"./da": 33,
+	"./da.js": 33,
+	"./de": 34,
+	"./de-at": 35,
+	"./de-at.js": 35,
+	"./de-ch": 36,
+	"./de-ch.js": 36,
+	"./de.js": 34,
+	"./dv": 37,
+	"./dv.js": 37,
+	"./el": 38,
+	"./el.js": 38,
+	"./en-au": 39,
+	"./en-au.js": 39,
+	"./en-ca": 40,
+	"./en-ca.js": 40,
+	"./en-gb": 41,
+	"./en-gb.js": 41,
+	"./en-ie": 42,
+	"./en-ie.js": 42,
+	"./en-il": 43,
+	"./en-il.js": 43,
+	"./en-nz": 44,
+	"./en-nz.js": 44,
+	"./eo": 45,
+	"./eo.js": 45,
+	"./es": 46,
+	"./es-do": 47,
+	"./es-do.js": 47,
+	"./es-us": 48,
+	"./es-us.js": 48,
+	"./es.js": 46,
+	"./et": 49,
+	"./et.js": 49,
+	"./eu": 50,
+	"./eu.js": 50,
+	"./fa": 51,
+	"./fa.js": 51,
+	"./fi": 52,
+	"./fi.js": 52,
+	"./fo": 53,
+	"./fo.js": 53,
+	"./fr": 54,
+	"./fr-ca": 55,
+	"./fr-ca.js": 55,
+	"./fr-ch": 56,
+	"./fr-ch.js": 56,
+	"./fr.js": 54,
+	"./fy": 57,
+	"./fy.js": 57,
+	"./gd": 58,
+	"./gd.js": 58,
+	"./gl": 59,
+	"./gl.js": 59,
+	"./gom-latn": 60,
+	"./gom-latn.js": 60,
+	"./gu": 61,
+	"./gu.js": 61,
+	"./he": 62,
+	"./he.js": 62,
+	"./hi": 63,
+	"./hi.js": 63,
+	"./hr": 64,
+	"./hr.js": 64,
+	"./hu": 65,
+	"./hu.js": 65,
+	"./hy-am": 66,
+	"./hy-am.js": 66,
+	"./id": 67,
+	"./id.js": 67,
+	"./is": 68,
+	"./is.js": 68,
+	"./it": 69,
+	"./it.js": 69,
+	"./ja": 70,
+	"./ja.js": 70,
+	"./jv": 71,
+	"./jv.js": 71,
+	"./ka": 72,
+	"./ka.js": 72,
+	"./kk": 73,
+	"./kk.js": 73,
+	"./km": 74,
+	"./km.js": 74,
+	"./kn": 75,
+	"./kn.js": 75,
+	"./ko": 76,
+	"./ko.js": 76,
+	"./ky": 77,
+	"./ky.js": 77,
+	"./lb": 78,
+	"./lb.js": 78,
+	"./lo": 79,
+	"./lo.js": 79,
+	"./lt": 80,
+	"./lt.js": 80,
+	"./lv": 81,
+	"./lv.js": 81,
+	"./me": 82,
+	"./me.js": 82,
+	"./mi": 83,
+	"./mi.js": 83,
+	"./mk": 84,
+	"./mk.js": 84,
+	"./ml": 85,
+	"./ml.js": 85,
+	"./mn": 86,
+	"./mn.js": 86,
+	"./mr": 87,
+	"./mr.js": 87,
+	"./ms": 88,
+	"./ms-my": 89,
+	"./ms-my.js": 89,
+	"./ms.js": 88,
+	"./mt": 90,
+	"./mt.js": 90,
+	"./my": 91,
+	"./my.js": 91,
+	"./nb": 92,
+	"./nb.js": 92,
+	"./ne": 93,
+	"./ne.js": 93,
+	"./nl": 94,
+	"./nl-be": 95,
+	"./nl-be.js": 95,
+	"./nl.js": 94,
+	"./nn": 96,
+	"./nn.js": 96,
+	"./pa-in": 97,
+	"./pa-in.js": 97,
+	"./pl": 98,
+	"./pl.js": 98,
+	"./pt": 99,
+	"./pt-br": 100,
+	"./pt-br.js": 100,
+	"./pt.js": 99,
+	"./ro": 101,
+	"./ro.js": 101,
+	"./ru": 102,
+	"./ru.js": 102,
+	"./sd": 103,
+	"./sd.js": 103,
+	"./se": 104,
+	"./se.js": 104,
+	"./si": 105,
+	"./si.js": 105,
+	"./sk": 106,
+	"./sk.js": 106,
+	"./sl": 107,
+	"./sl.js": 107,
+	"./sq": 108,
+	"./sq.js": 108,
+	"./sr": 109,
+	"./sr-cyrl": 110,
+	"./sr-cyrl.js": 110,
+	"./sr.js": 109,
+	"./ss": 111,
+	"./ss.js": 111,
+	"./sv": 112,
+	"./sv.js": 112,
+	"./sw": 113,
+	"./sw.js": 113,
+	"./ta": 114,
+	"./ta.js": 114,
+	"./te": 115,
+	"./te.js": 115,
+	"./tet": 116,
+	"./tet.js": 116,
+	"./tg": 117,
+	"./tg.js": 117,
+	"./th": 118,
+	"./th.js": 118,
+	"./tl-ph": 119,
+	"./tl-ph.js": 119,
+	"./tlh": 120,
+	"./tlh.js": 120,
+	"./tr": 121,
+	"./tr.js": 121,
+	"./tzl": 122,
+	"./tzl.js": 122,
+	"./tzm": 123,
+	"./tzm-latn": 124,
+	"./tzm-latn.js": 124,
+	"./tzm.js": 123,
+	"./ug-cn": 125,
+	"./ug-cn.js": 125,
+	"./uk": 126,
+	"./uk.js": 126,
+	"./ur": 127,
+	"./ur.js": 127,
+	"./uz": 128,
+	"./uz-latn": 129,
+	"./uz-latn.js": 129,
+	"./uz.js": 128,
+	"./vi": 130,
+	"./vi.js": 130,
+	"./x-pseudo": 131,
+	"./x-pseudo.js": 131,
+	"./yo": 132,
+	"./yo.js": 132,
+	"./zh-cn": 133,
+	"./zh-cn.js": 133,
+	"./zh-hk": 134,
+	"./zh-hk.js": 134,
+	"./zh-tw": 135,
+	"./zh-tw.js": 135
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number or string
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 174;
+
+/***/ }),
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -64072,15 +61836,15 @@ if (false) {
 }
 
 /***/ }),
-/* 209 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(2)
 /* script */
-var __vue_script__ = __webpack_require__(212)
+var __vue_script__ = __webpack_require__(177)
 /* template */
-var __vue_template__ = __webpack_require__(213)
+var __vue_template__ = __webpack_require__(178)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -64119,9 +61883,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 210 */,
-/* 211 */,
-/* 212 */
+/* 177 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -64335,56 +62097,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['openmodal'],
+  props: ['iden'],
   data: function data() {
     return {
+      sum: '',
       list: {
+        patient_id: this.iden,
         weight: '',
         imc: '',
         anxiety: '',
@@ -64417,18 +62137,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     save: function save() {
       var _this = this;
 
-      axios.post('/search/patients', this.$data.list).then(function (response) {
-        _this.close();
-        _this.$parent.lists.push(_this.$data.list);
-      }).catch(function (error) {
+      axios.post('/search/patients', this.$data.list).then(function (response) {}).catch(function (error) {
         return _this.errors = error.response.data.errors;
-      });
+      }, alert('Los datos ingresados no son validos.'));
+    },
+    IMC: function IMC() {
+      this.sum = parseInt(this.list.weight) * (parseInt(this.list.size_t2) * parseInt(this.list.size_t2));
+
+      console.log('multip: ' + this.sum);
     }
   }
 });
 
 /***/ }),
-/* 213 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -64458,6 +62180,9 @@ var render = function() {
                   attrs: { type: "text" },
                   domProps: { value: _vm.list.weight },
                   on: {
+                    blur: function($event) {
+                      _vm.IMC()
+                    },
                     input: function($event) {
                       if ($event.target.composing) {
                         return
@@ -64465,22 +62190,10 @@ var render = function() {
                       _vm.$set(_vm.list, "weight", $event.target.value)
                     }
                   }
-                }),
-                _vm._v(" "),
-                _c("span", { staticClass: "icon is-small is-right" }, [
-                  _vm.errors.weight
-                    ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                    : _vm._e()
-                ])
+                })
               ])
             ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.weight
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.weight[0]))
-              ])
-            : _vm._e()
+          ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "field is-horizontal" }, [
@@ -64494,38 +62207,29 @@ var render = function() {
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.list.imc,
-                      expression: "list.imc"
+                      value: _vm.list.size_t2,
+                      expression: "list.size_t2"
                     }
                   ],
                   staticClass: "input",
-                  class: { "is-danger": _vm.errors.imc },
+                  class: { "is-danger": _vm.errors.size_t2 },
                   attrs: { type: "text" },
-                  domProps: { value: _vm.list.imc },
+                  domProps: { value: _vm.list.size_t2 },
                   on: {
+                    blur: function($event) {
+                      _vm.IMC()
+                    },
                     input: function($event) {
                       if ($event.target.composing) {
                         return
                       }
-                      _vm.$set(_vm.list, "imc", $event.target.value)
+                      _vm.$set(_vm.list, "size_t2", $event.target.value)
                     }
                   }
-                }),
-                _vm._v(" "),
-                _c("span", { staticClass: "icon is-small is-right" }, [
-                  _vm.errors.imc
-                    ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                    : _vm._e()
-                ])
+                })
               ])
             ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.imc
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.imc[0]))
-              ])
-            : _vm._e()
+          ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "field is-horizontal" }, [
@@ -64539,40 +62243,28 @@ var render = function() {
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.list.anxiety,
-                      expression: "list.anxiety"
+                      value: this.imc,
+                      expression: "this.imc "
                     }
                   ],
                   staticClass: "input",
-                  class: { "is-danger": _vm.errors.anxiety },
+                  class: { "is-danger": _vm.errors.imc },
                   attrs: { type: "text" },
-                  domProps: { value: _vm.list.anxiety },
+                  domProps: { value: this.imc },
                   on: {
                     input: function($event) {
                       if ($event.target.composing) {
                         return
                       }
-                      _vm.$set(_vm.list, "anxiety", $event.target.value)
+                      _vm.$set(this, "imc", $event.target.value)
                     }
                   }
-                }),
-                _vm._v(" "),
-                _c("span", { staticClass: "icon is-small is-right" }, [
-                  _vm.errors.anxiety
-                    ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                    : _vm._e()
-                ])
+                })
               ])
             ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.anxiety
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.anxiety[0]))
-              ])
-            : _vm._e()
+          ])
         ]),
-        _vm._v(" "),
+        _vm._v(": 'this.sum'\n\n      "),
         _c("div", { staticClass: "field is-horizontal" }, [
           _vm._m(3),
           _vm._v(" "),
@@ -64589,7 +62281,7 @@ var render = function() {
                     }
                   ],
                   staticClass: "input",
-                  class: { "is-danger": _vm.errors.digestion },
+                  class: { "is-danger": _vm.errors.anxiety },
                   attrs: { type: "text" },
                   domProps: { value: _vm.list.digestion },
                   on: {
@@ -64600,22 +62292,10 @@ var render = function() {
                       _vm.$set(_vm.list, "digestion", $event.target.value)
                     }
                   }
-                }),
-                _vm._v(" "),
-                _c("span", { staticClass: "icon is-small is-right" }, [
-                  _vm.errors.digestion
-                    ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                    : _vm._e()
-                ])
+                })
               ])
             ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.digestion
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.digestion[0]))
-              ])
-            : _vm._e()
+          ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "field is-horizontal" }, [
@@ -64645,22 +62325,10 @@ var render = function() {
                       _vm.$set(_vm.list, "exercise", $event.target.value)
                     }
                   }
-                }),
-                _vm._v(" "),
-                _c("span", { staticClass: "icon is-small is-right" }, [
-                  _vm.errors.exercise
-                    ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                    : _vm._e()
-                ])
+                })
               ])
             ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.exercise
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.exercise[0]))
-              ])
-            : _vm._e()
+          ])
         ])
       ]),
       _vm._v(" "),
@@ -64692,22 +62360,10 @@ var render = function() {
                       _vm.$set(_vm.list, "liquids", $event.target.value)
                     }
                   }
-                }),
-                _vm._v(" "),
-                _c("span", { staticClass: "icon is-small is-right" }, [
-                  _vm.errors.liquids
-                    ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                    : _vm._e()
-                ])
+                })
               ])
             ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.liquids
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.liquids[0]))
-              ])
-            : _vm._e()
+          ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "field is-horizontal" }, [
@@ -64721,38 +62377,26 @@ var render = function() {
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.list.size_t2,
-                      expression: "list.size_t2"
+                      value: _vm.list.anxiety,
+                      expression: "list.anxiety"
                     }
                   ],
                   staticClass: "input",
-                  class: { "is-danger": _vm.errors.size_t2 },
+                  class: { "is-danger": _vm.errors.anxiety },
                   attrs: { type: "text" },
-                  domProps: { value: _vm.list.size_t2 },
+                  domProps: { value: _vm.list.anxiety },
                   on: {
                     input: function($event) {
                       if ($event.target.composing) {
                         return
                       }
-                      _vm.$set(_vm.list, "size_t2", $event.target.value)
+                      _vm.$set(_vm.list, "anxiety", $event.target.value)
                     }
                   }
-                }),
-                _vm._v(" "),
-                _c("span", { staticClass: "icon is-small is-right" }, [
-                  _vm.errors.size_t2
-                    ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                    : _vm._e()
-                ])
+                })
               ])
             ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.size_t2
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.size_t2[0]))
-              ])
-            : _vm._e()
+          ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "field is-horizontal" }, [
@@ -64782,22 +62426,10 @@ var render = function() {
                       _vm.$set(_vm.list, "desired_weight", $event.target.value)
                     }
                   }
-                }),
-                _vm._v(" "),
-                _c("span", { staticClass: "icon is-small is-right" }, [
-                  _vm.errors.desired_weight
-                    ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                    : _vm._e()
-                ])
+                })
               ])
             ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.desired_weight
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.desired_weight[0]))
-              ])
-            : _vm._e()
+          ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "field is-horizontal" }, [
@@ -64827,22 +62459,10 @@ var render = function() {
                       _vm.$set(_vm.list, "mg_normal", $event.target.value)
                     }
                   }
-                }),
-                _vm._v(" "),
-                _c("span", { staticClass: "icon is-small is-right" }, [
-                  _vm.errors.mg_normal
-                    ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                    : _vm._e()
-                ])
+                })
               ])
             ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.mg_normal
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.mg_normal[0]))
-              ])
-            : _vm._e()
+          ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "field is-horizontal" }, [
@@ -64872,22 +62492,10 @@ var render = function() {
                       _vm.$set(_vm.list, "kg_km", $event.target.value)
                     }
                   }
-                }),
-                _vm._v(" "),
-                _c("span", { staticClass: "icon is-small is-right" }, [
-                  _vm.errors.kg_km
-                    ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                    : _vm._e()
-                ])
+                })
               ])
             ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.kg_km
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.kg_km[0]))
-              ])
-            : _vm._e()
+          ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "field is-horizontal" }, [
@@ -64921,22 +62529,10 @@ var render = function() {
                       )
                     }
                   }
-                }),
-                _vm._v(" "),
-                _c("span", { staticClass: "icon is-small is-right" }, [
-                  _vm.errors.projection_treatment
-                    ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                    : _vm._e()
-                ])
+                })
               ])
             ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.projection_treatment
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.projection_treatment[0]))
-              ])
-            : _vm._e()
+          ])
         ])
       ])
     ]),
@@ -65055,7 +62651,34 @@ var render = function() {
                     })
                   ]),
                   _vm._v(" "),
-                  _vm._m(12),
+                  _c("td", { staticClass: "is-success" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: (_vm.list.total, "123"),
+                          expression: "list.total, '123' "
+                        }
+                      ],
+                      staticClass: "input",
+                      class: { "is-danger": _vm.errors.total },
+                      attrs: { type: "text", "data-value": "asd" },
+                      domProps: { value: (_vm.list.total, "123") },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.list,
+                            "total, '123'",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    })
+                  ]),
                   _vm._v(" "),
                   _c("td", [
                     _c("input", {
@@ -65237,7 +62860,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "field-label is-normal" }, [
-      _c("label", { staticClass: "label" }, [_vm._v("IMC")])
+      _c("label", { staticClass: "label" }, [_vm._v("Talla/T2 ")])
     ])
   },
   function() {
@@ -65245,7 +62868,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "field-label is-normal" }, [
-      _c("label", { staticClass: "label" }, [_vm._v("Ansiedad")])
+      _c("label", { staticClass: "label" }, [_vm._v("IMC")])
     ])
   },
   function() {
@@ -65277,7 +62900,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "field-label is-normal" }, [
-      _c("label", { staticClass: "label" }, [_vm._v("Talla/T2 ")])
+      _c("label", { staticClass: "label" }, [_vm._v("Ansiedad")])
     ])
   },
   function() {
@@ -65343,14 +62966,6 @@ var staticRenderFns = [
         _c("th", [_vm._v("muñeca")])
       ])
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", { staticClass: "is-success" }, [
-      _c("strong", [_c("p", [_vm._v(" total ")])])
-    ])
   }
 ]
 render._withStripped = true
@@ -65361,6 +62976,941 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-3ba1f28f", module.exports)
   }
 }
+
+/***/ }),
+/* 179 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(2)
+/* script */
+var __vue_script__ = __webpack_require__(180)
+/* template */
+var __vue_template__ = __webpack_require__(181)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Mycomponent-3.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-3bb00a10", Component.options)
+  } else {
+    hotAPI.reload("data-v-3bb00a10", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 180 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+/* 181 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
+      _c("h1", { staticClass: "subtitle is-3" }, [_vm._v(" Observaciones ")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "field is-horizontal" }, [
+        _c("div", { staticClass: "field-body" }, [
+          _c("div", { staticClass: "field" }, [
+            _c("div", { staticClass: "control " }, [
+              _c("textarea", { staticClass: "textarea" })
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "field is-horizontal" }, [
+        _c("div", { staticClass: "field-body" }, [
+          _c("div", { staticClass: "field" }, [
+            _c("div", { staticClass: "control" }, [
+              _c("button", { staticClass: "button is-primary" }, [
+                _vm._v("\n            Guardar\n          ")
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-3bb00a10", module.exports)
+  }
+}
+
+/***/ }),
+/* 182 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(2)
+/* script */
+var __vue_script__ = __webpack_require__(183)
+/* template */
+var __vue_template__ = __webpack_require__(184)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Mypatients.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-e1140f9e", Component.options)
+  } else {
+    hotAPI.reload("data-v-e1140f9e", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 183 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['iden'],
+  data: function data() {
+    return {
+      isOpen: 1,
+      isActive: {},
+      errors: {},
+      patient: {}
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    this.isActive[0] = 'is-active';
+
+    axios.post('/getData', { iden: this.iden }).then(function (response) {
+      return _this.lists = response.data;
+    }).catch(function (error) {
+      return _this.errors = error.response.data.errors;
+    });
+
+    axios.post('/getDataPatient', { iden: this.iden }).then(function (response) {
+      return _this.patient = response.data;
+    }).catch(function (error) {
+      return _this.errors = error.response.data.errors;
+    });
+  },
+
+  methods: {
+    prueba: function prueba(element) {
+      if (element == 1) {
+        this.isOpen = 1;
+        this.isActive = [];
+        this.isActive[0] = 'is-active';
+      }
+      if (element == 2) {
+        this.isOpen = 2;
+        this.isActive = [];
+        this.isActive[1] = 'is-active';
+        // console.log('este es el 2')
+      }
+      if (element == 3) {
+        this.isOpen = 3;
+        this.isActive = [];
+        this.isActive[2] = 'is-active';
+        // console.log('este es el 3')
+      }
+    }
+  }
+});
+
+/***/ }),
+/* 184 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "container" },
+    [
+      _c("hr"),
+      _vm._v(" "),
+      _vm._l(_vm.patient, function(item, key) {
+        return _c("p", { staticClass: "subtitle is-2" }, [
+          _c("strong", [
+            _vm._v(
+              "\n       " +
+                _vm._s(item.name) +
+                " " +
+                _vm._s(item.last_name_pat) +
+                " " +
+                _vm._s(item.last_name_mat) +
+                "\n     "
+            )
+          ])
+        ])
+      }),
+      _vm._v(" "),
+      _vm._l(_vm.patient, function(item, key) {
+        return _c("div", { staticClass: "notification columns" }, [
+          _c("div", { staticClass: "column is-two-fifths is-horizontal" }, [
+            _c("h6", { staticClass: "is-pulled-left" }, [
+              _c("strong", [_vm._v("Fono: ")]),
+              _vm._v(" " + _vm._s(item.phone) + " ")
+            ]),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c("h6", { staticClass: "is-pulled-left" }, [
+              _c("strong", [_vm._v("Previsión: ")]),
+              _vm._v(" " + _vm._s(item.prevision) + " ")
+            ]),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c("h6", { staticClass: "is-pulled-left" }, [
+              _c("strong", [_vm._v("Mail: ")]),
+              _vm._v(" " + _vm._s(item.email) + " ")
+            ]),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c("p"),
+            _c("h6", { staticClass: "is-pulled-left" }, [
+              _c("strong", [_vm._v("Sra: ")]),
+              _vm._v(" " + _vm._s(item.sra))
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "column is-horizontal" }, [
+            _c("h6", { staticClass: "is-pulled-left" }, [
+              _c("strong", [_vm._v("Run: ")]),
+              _vm._v(" " + _vm._s(item.run) + " ")
+            ]),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c("h6", { staticClass: "is-pulled-left" }, [
+              _c("strong", [_vm._v("Dirección:")]),
+              _vm._v(" " + _vm._s(item.phone) + " ")
+            ]),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c("h6", { staticClass: "is-pulled-left" }, [
+              _c("strong", [_vm._v(" Ocupación: ")]),
+              _vm._v(" " + _vm._s(item.job) + " ")
+            ]),
+            _vm._v(" "),
+            _c("br")
+          ])
+        ])
+      }),
+      _vm._v(" "),
+      _c("div", { staticClass: "tabs" }, [
+        _c("ul", [
+          _c(
+            "li",
+            {
+              class: _vm.isActive[0],
+              on: {
+                click: function($event) {
+                  _vm.prueba(1)
+                }
+              }
+            },
+            [_c("a", [_vm._v("Evaluación")])]
+          ),
+          _vm._v(" "),
+          _c(
+            "li",
+            {
+              class: _vm.isActive[1],
+              on: {
+                click: function($event) {
+                  _vm.prueba(2)
+                }
+              }
+            },
+            [_c("a", [_vm._v("Nuevo")])]
+          ),
+          _vm._v(" "),
+          _c(
+            "li",
+            {
+              class: _vm.isActive[2],
+              on: {
+                click: function($event) {
+                  _vm.prueba(3)
+                }
+              }
+            },
+            [_c("a", [_vm._v("Observaciones")])]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c(
+        "div",
+        { attrs: { id: "app" } },
+        [
+          _c("Mycomponent-1", {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.isOpen == 1,
+                expression: "isOpen == 1"
+              }
+            ],
+            attrs: { iden: this.iden }
+          }),
+          _vm._v(" "),
+          _c("Mycomponent-2", {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.isOpen == 2,
+                expression: "isOpen == 2"
+              }
+            ],
+            attrs: { iden: this.iden }
+          }),
+          _vm._v(" "),
+          _c("Mycomponent-3", {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.isOpen == 3,
+                expression: "isOpen == 3"
+              }
+            ],
+            attrs: { iden: this.iden }
+          })
+        ],
+        1
+      )
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-e1140f9e", module.exports)
+  }
+}
+
+/***/ }),
+/* 185 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(2)
+/* script */
+var __vue_script__ = __webpack_require__(186)
+/* template */
+var __vue_template__ = __webpack_require__(187)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Myindex.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2589c082", Component.options)
+  } else {
+    hotAPI.reload("data-v-2589c082", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 186 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+/* 187 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "tile is-ancestor" }, [
+        _c("div", { staticClass: "tile is-vertical is-8" }, [
+          _c("div", { staticClass: "tile" }, [
+            _c("div", { staticClass: "tile is-parent is-vertical" }, [
+              _c(
+                "article",
+                { staticClass: "tile is-child notification is-primary" },
+                [
+                  _c("p", { staticClass: "title" }, [_vm._v("Vertical...")]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "subtitle" }, [_vm._v("Top tile")])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "article",
+                { staticClass: "tile is-child notification is-warning" },
+                [
+                  _c("p", { staticClass: "title" }, [_vm._v("...tiles")]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "subtitle" }, [_vm._v("Bottom tile")])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "tile is-parent" }, [
+              _c(
+                "article",
+                { staticClass: "tile is-child notification is-info" },
+                [
+                  _c("p", { staticClass: "title" }, [_vm._v("Middle tile")]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "subtitle" }, [
+                    _vm._v("With an image")
+                  ]),
+                  _vm._v(" "),
+                  _c("figure", { staticClass: "image is-4by3" }, [
+                    _c("img", {
+                      attrs: {
+                        src: "https://bulma.io/images/placeholders/640x480.png"
+                      }
+                    })
+                  ])
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "tile is-parent" }, [
+            _c(
+              "article",
+              { staticClass: "tile is-child notification is-danger" },
+              [
+                _c("p", { staticClass: "title" }, [_vm._v("Wide tile")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "subtitle" }, [
+                  _vm._v("Aligned with the right tile")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "content" })
+              ]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "tile is-parent" }, [
+          _c(
+            "article",
+            { staticClass: "tile is-child notification is-success" },
+            [
+              _c("div", { staticClass: "content" }, [
+                _c("p", { staticClass: "title" }, [_vm._v("Tall tile")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "subtitle" }, [
+                  _vm._v("With even more content")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "content" })
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-2589c082", module.exports)
+  }
+}
+
+/***/ }),
+/* 188 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(2)
+/* script */
+var __vue_script__ = __webpack_require__(189)
+/* template */
+var __vue_template__ = __webpack_require__(190)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Mysearch.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-65e7b18b", Component.options)
+  } else {
+    hotAPI.reload("data-v-65e7b18b", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 189 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      AddActive: '',
+      lists: {},
+      errors: {},
+      patient: {}
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    axios.post('/getDataPatient').then(function (response) {
+      return _this.patient = response.data;
+    }).catch(function (error) {
+      return _this.errors = error.response.data.errors;
+    });
+  },
+
+  methods: {
+    openAdd: function openAdd() {
+      this.AddActive = 'is-active';
+    },
+    close: function close() {
+      this.AddActive = '';
+    },
+    details: function details(iden) {
+      this.$router.push({ name: 'MyPatients', params: { iden: iden } });
+    }
+  }
+});
+
+/***/ }),
+/* 190 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "nav",
+    { staticClass: "panel column is-offset-2 is-8" },
+    [
+      _c(
+        "p",
+        { staticClass: "panel-heading field is-grouped is-grouped-centered" },
+        [_vm._v("\n    Busqueda de pacientes\n  ")]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "panel-heading" }, [
+        _c(
+          "button",
+          {
+            staticClass: "button is-link is-outlined",
+            on: { click: _vm.openAdd }
+          },
+          [_vm._v("\n      Agregar nuevo\n    ")]
+        )
+      ]),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _vm._l(_vm.patient, function(item, key) {
+        return _c(
+          "a",
+          {
+            staticClass: "panel-block is-active",
+            on: {
+              click: function($event) {
+                _vm.details(item.id)
+              }
+            }
+          },
+          [_vm._m(1, true), _vm._v("\n    " + _vm._s(item.name) + "\n  ")]
+        )
+      }),
+      _vm._v(" "),
+      _vm._m(2),
+      _vm._v(" "),
+      _c("Add-2", {
+        attrs: { openmodal: _vm.AddActive },
+        on: { closeRequest: _vm.close }
+      })
+    ],
+    2
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "panel-block" }, [
+      _c("p", { staticClass: "control has-icons-left" }, [
+        _c("input", {
+          staticClass: "input",
+          attrs: { type: "text", placeholder: "Buscar" }
+        }),
+        _vm._v(" "),
+        _c("span", { staticClass: "icon is-small is-left" }, [
+          _c("i", { staticClass: "fas fa-search" })
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "panel-icon" }, [
+      _c("i", { staticClass: "fas fa-address-card fa-1x" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "panel-block" }, [
+      _c("button", { staticClass: "button is-link is-fullwidth" }, [
+        _c(
+          "h1",
+          { staticClass: "subtitle is-5", staticStyle: { color: "white" } },
+          [_vm._v("Buscar")]
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-65e7b18b", module.exports)
+  }
+}
+
+/***/ }),
+/* 191 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
