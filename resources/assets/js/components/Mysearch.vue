@@ -59,6 +59,7 @@ export default {
     axios.post('/getDataPatient')
     .then((response) => this.patient = response.data)
       .catch((error) => this.errors = error.response.data.errors)
+
   },
   methods:{
     openAdd(){

@@ -16,6 +16,8 @@ class CreateBinnaclesTable extends Migration
         Schema::create('binnacles', function (Blueprint $table) {
             $table->increments('id')->unique();
 
+            $table->integer('binnacle_id')->unsigned()->nullable();
+
             $table->string('weight', 25);
             $table->string('imc', 25);
             $table->string('anxiety', 25);

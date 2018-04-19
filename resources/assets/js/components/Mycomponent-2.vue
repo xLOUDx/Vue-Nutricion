@@ -37,11 +37,11 @@
           <div class="field-body">
             <div class="field">
               <div class="control">
-                <input :class="{'is-danger':errors.imc}" v-model="this.imc " class="input" type="text">
+                <input :class="{'is-danger':errors.imc}" v-model="list.imc" class="input" type="text">
               </div>
             </div>
           </div>
-        </div>: 'this.sum'
+        </div>
 
         <div class="field is-horizontal">
           <div class="field-label is-normal">
@@ -177,11 +177,11 @@
             </thead>
             <tbody>
               <tr>
-                <td> <input :class="{'is-danger':errors.se}" v-model="list.se" class="input" type="text"> </td>
-                <td> <input :class="{'is-danger':errors.tri}" v-model="list.tri" class="input" type="text"> </td>
-                <td> <input :class="{'is-danger':errors.bi}" v-model="list.bi" class="input" type="text"> </td>
-                <td> <input :class="{'is-danger':errors.si}" v-model="list.si" class="input" type="text"> </td>
-                <td class="is-success" > <input :class="{'is-danger':errors.total}" v-model="list.total, '123' " class="input" type="text" data-value="asd"> </td>
+                <td> <input :class="{'is-danger':errors.se}" v-on:blur="TOTAL()" v-model="list.se" class="input" type="text"> </td>
+                <td> <input :class="{'is-danger':errors.tri}" v-on:blur="TOTAL()" v-model="list.tri" class="input" type="text"> </td>
+                <td> <input :class="{'is-danger':errors.bi}" v-on:blur="TOTAL()" v-model="list.bi" class="input" type="text"> </td>
+                <td> <input :class="{'is-danger':errors.si}" v-on:blur="TOTAL()" v-model="list.si" class="input" type="text"> </td>
+                <td class="is-success" > <input :class="{'is-danger':errors.total}" v-model="list.total" class="input" type="text" data-value="asd"> </td>
                 <td> <input :class="{'is-danger':errors.mg}" v-model="list.mg" class="input" type="text"> </td>
                 <td> <input :class="{'is-danger':errors.waist}" v-model="list.waist" class="input" type="text"> </td>
                 <td> <input :class="{'is-danger':errors.hip}" v-model="list.hip" class="input" type="text"> </td>
@@ -212,7 +212,6 @@
     props:['iden'],
     data(){
       return{
-        sum: '',
         list: {
           patient_id: this.iden,
           weight: '',
@@ -247,18 +246,28 @@
     methods:{
       save(){
         axios.post('/search/patients', this.$data.list).then((response) => {
-
+          alert('Datos ingresados correctamente')
+          this.list = [];
         })
-          .catch((error) =>
-          this.errors = error.response.data.errors,
-          alert('Los datos ingresados no son validos.')
-        )
+          .catch((error) => {
+            this.errors = error.response.data.errors
+            alert('Datos incorrectos.')
+          })
+
       },
       IMC(){
-          this.sum = parseInt(this.list.weight)
-           * (parseInt(this.list.size_t2) * parseInt(this.list.size_t2))
-
-          console.log('multip: ' + this.sum )
+        //ARREGLAR
+          this.list.imc = parseInt(this.list.weight)
+           * (parseInt(this.list.size_t2)
+          //  * parseInt(this.list.size_t2)
+         )
+      },
+      TOTAL(){
+        this.list.total =
+          parseInt(this.list.se) +
+          parseInt(this.list.tri) +
+          parseInt(this.list.bi) +
+          parseInt(this.list.si)
       }
     }
   }

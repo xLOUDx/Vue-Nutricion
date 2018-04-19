@@ -60372,7 +60372,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
       axios.post('/search', this.$data.list).then(function (response) {
         _this.close();
-        _this.$parent.patient.push(_this.$data.list);
+        _this.$parent.patient.push(response.data);
       }).catch(function (error) {
         return _this.errors = error.response.data.errors;
       });
@@ -62102,7 +62102,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   props: ['iden'],
   data: function data() {
     return {
-      sum: '',
       list: {
         patient_id: this.iden,
         weight: '',
@@ -62137,14 +62136,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     save: function save() {
       var _this = this;
 
-      axios.post('/search/patients', this.$data.list).then(function (response) {}).catch(function (error) {
-        return _this.errors = error.response.data.errors;
-      }, alert('Los datos ingresados no son validos.'));
+      axios.post('/search/patients', this.$data.list).then(function (response) {
+        alert('Datos ingresados correctamente');
+        _this.list = [];
+      }).catch(function (error) {
+        _this.errors = error.response.data.errors;
+        alert('Datos incorrectos.');
+      });
     },
     IMC: function IMC() {
-      this.sum = parseInt(this.list.weight) * (parseInt(this.list.size_t2) * parseInt(this.list.size_t2));
-
-      console.log('multip: ' + this.sum);
+      //ARREGLAR
+      this.list.imc = parseInt(this.list.weight) * parseInt(this.list.size_t2)
+      //  * parseInt(this.list.size_t2)
+      ;
+    },
+    TOTAL: function TOTAL() {
+      this.list.total = parseInt(this.list.se) + parseInt(this.list.tri) + parseInt(this.list.bi) + parseInt(this.list.si);
     }
   }
 });
@@ -62243,20 +62250,20 @@ var render = function() {
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: this.imc,
-                      expression: "this.imc "
+                      value: _vm.list.imc,
+                      expression: "list.imc"
                     }
                   ],
                   staticClass: "input",
                   class: { "is-danger": _vm.errors.imc },
                   attrs: { type: "text" },
-                  domProps: { value: this.imc },
+                  domProps: { value: _vm.list.imc },
                   on: {
                     input: function($event) {
                       if ($event.target.composing) {
                         return
                       }
-                      _vm.$set(this, "imc", $event.target.value)
+                      _vm.$set(_vm.list, "imc", $event.target.value)
                     }
                   }
                 })
@@ -62264,7 +62271,7 @@ var render = function() {
             ])
           ])
         ]),
-        _vm._v(": 'this.sum'\n\n      "),
+        _vm._v(" "),
         _c("div", { staticClass: "field is-horizontal" }, [
           _vm._m(3),
           _vm._v(" "),
@@ -62566,6 +62573,9 @@ var render = function() {
                       attrs: { type: "text" },
                       domProps: { value: _vm.list.se },
                       on: {
+                        blur: function($event) {
+                          _vm.TOTAL()
+                        },
                         input: function($event) {
                           if ($event.target.composing) {
                             return
@@ -62591,6 +62601,9 @@ var render = function() {
                       attrs: { type: "text" },
                       domProps: { value: _vm.list.tri },
                       on: {
+                        blur: function($event) {
+                          _vm.TOTAL()
+                        },
                         input: function($event) {
                           if ($event.target.composing) {
                             return
@@ -62616,6 +62629,9 @@ var render = function() {
                       attrs: { type: "text" },
                       domProps: { value: _vm.list.bi },
                       on: {
+                        blur: function($event) {
+                          _vm.TOTAL()
+                        },
                         input: function($event) {
                           if ($event.target.composing) {
                             return
@@ -62641,6 +62657,9 @@ var render = function() {
                       attrs: { type: "text" },
                       domProps: { value: _vm.list.si },
                       on: {
+                        blur: function($event) {
+                          _vm.TOTAL()
+                        },
                         input: function($event) {
                           if ($event.target.composing) {
                             return
@@ -62657,24 +62676,20 @@ var render = function() {
                         {
                           name: "model",
                           rawName: "v-model",
-                          value: (_vm.list.total, "123"),
-                          expression: "list.total, '123' "
+                          value: _vm.list.total,
+                          expression: "list.total"
                         }
                       ],
                       staticClass: "input",
                       class: { "is-danger": _vm.errors.total },
                       attrs: { type: "text", "data-value": "asd" },
-                      domProps: { value: (_vm.list.total, "123") },
+                      domProps: { value: _vm.list.total },
                       on: {
                         input: function($event) {
                           if ($event.target.composing) {
                             return
                           }
-                          _vm.$set(
-                            _vm.list,
-                            "total, '123'",
-                            $event.target.value
-                          )
+                          _vm.$set(_vm.list, "total", $event.target.value)
                         }
                       }
                     })

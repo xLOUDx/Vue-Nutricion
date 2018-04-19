@@ -219,7 +219,7 @@
       save(){
         axios.post('/search', this.$data.list).then((response) => {
           this.close()
-          this.$parent.patient.push(this.$data.list)
+          this.$parent.patient.push(response.data)
         })
           .catch((error) => this.errors = error.response.data.errors)
       }

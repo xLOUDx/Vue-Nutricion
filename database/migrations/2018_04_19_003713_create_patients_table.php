@@ -15,7 +15,7 @@ class CreatePatientsTable extends Migration
     {
         Schema::create('patients', function (Blueprint $table) {
             $table->increments('id')->unique();
-            $table->integer('binnacle_id')->unsigned()->nullable();
+
             $table->string('name', 25);
             $table->string('last_name_pat', 25);
             $table->string('last_name_mat', 25);
@@ -38,6 +38,7 @@ class CreatePatientsTable extends Migration
 
         Schema::table('patients', function($table) {
           $table->foreign('binnacle_id')->references('id')->on('binnacles');
+          $table->foreign('comments_id')->references('id')->on('comments');
         });
 
     }
