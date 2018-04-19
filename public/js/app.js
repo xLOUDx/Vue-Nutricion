@@ -28442,6 +28442,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Myindex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_Myindex_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Mysearch_vue__ = __webpack_require__(188);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Mysearch_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_Mysearch_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_charts_Activitygraph_vue__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_charts_Activitygraph_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_charts_Activitygraph_vue__);
 
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]);
@@ -28456,6 +28458,9 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Add-2', __webpack_require
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Mycomponent-1', __webpack_require__(172));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Mycomponent-2', __webpack_require__(176));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Mycomponent-3', __webpack_require__(179));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Mycomponent-4', __webpack_require__(202));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Mychart', __webpack_require__(209));
+
 
 
 
@@ -63078,7 +63083,32 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['iden'],
+  data: function data() {
+    return {
+      list: {
+        patient_id: this.iden,
+        body: ''
+      },
+      errors: {}
+    };
+  },
+
+  methods: {
+    save: function save() {
+      var _this = this;
+
+      axios.post('/search/patients/comment', this.$data.list).then(function (response) {
+        alert('Datos ingresados correctamente');
+        _this.list = [];
+      }).catch(function (error) {
+        _this.errors = error.response.data.errors;
+        alert('Datos incorrectos.');
+      });
+    }
+  }
+});
 
 /***/ }),
 /* 181 */
@@ -63088,40 +63118,54 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("h1", { staticClass: "subtitle is-3" }, [_vm._v(" Observaciones ")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "field is-horizontal" }, [
-        _c("div", { staticClass: "field-body" }, [
-          _c("div", { staticClass: "field" }, [
-            _c("div", { staticClass: "control " }, [
-              _c("textarea", { staticClass: "textarea" })
-            ])
+  return _c("div", { staticClass: "container" }, [
+    _c("h1", { staticClass: "subtitle is-3" }, [_vm._v(" Observaciones ")]),
+    _vm._v(" "),
+    _c("div", { staticClass: "field is-horizontal" }, [
+      _c("div", { staticClass: "field-body" }, [
+        _c("div", { staticClass: "field" }, [
+          _c("div", { staticClass: "control " }, [
+            _c("textarea", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.list.body,
+                  expression: "list.body"
+                }
+              ],
+              staticClass: "textarea",
+              domProps: { value: _vm.list.body },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.list, "body", $event.target.value)
+                }
+              }
+            })
           ])
         ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "field is-horizontal" }, [
-        _c("div", { staticClass: "field-body" }, [
-          _c("div", { staticClass: "field" }, [
-            _c("div", { staticClass: "control" }, [
-              _c("button", { staticClass: "button is-primary" }, [
-                _vm._v("\n            Guardar\n          ")
-              ])
-            ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "field is-horizontal" }, [
+      _c("div", { staticClass: "field-body" }, [
+        _c("div", { staticClass: "field" }, [
+          _c("div", { staticClass: "control" }, [
+            _c(
+              "button",
+              { staticClass: "button is-primary", on: { click: _vm.save } },
+              [_vm._v("\n            Guardar\n          ")]
+            )
           ])
         ])
       ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -63228,12 +63272,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['iden'],
   data: function data() {
     return {
       isOpen: 1,
+      active: 'Mycomponent-1',
       isActive: {},
       errors: {},
       patient: {}
@@ -63260,20 +63308,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   methods: {
     prueba: function prueba(element) {
       if (element == 1) {
-        this.isOpen = 1;
+        this.active = 'Mycomponent-1';
         this.isActive = [];
         this.isActive[0] = 'is-active';
       }
       if (element == 2) {
-        this.isOpen = 2;
+        this.active = 'Mycomponent-2';
         this.isActive = [];
         this.isActive[1] = 'is-active';
         // console.log('este es el 2')
       }
       if (element == 3) {
-        this.isOpen = 3;
+        this.active = 'Mycomponent-3';
         this.isActive = [];
         this.isActive[2] = 'is-active';
+        // console.log('este es el 3')
+      }
+      if (element == 4) {
+        this.active = 'Mycomponent-4';
+        this.isActive = [];
+        this.isActive[3] = 'is-active';
         // console.log('este es el 3')
       }
     }
@@ -63407,6 +63461,19 @@ var render = function() {
               }
             },
             [_c("a", [_vm._v("Observaciones")])]
+          ),
+          _vm._v(" "),
+          _c(
+            "li",
+            {
+              class: _vm.isActive[3],
+              on: {
+                click: function($event) {
+                  _vm.prueba(4)
+                }
+              }
+            },
+            [_c("a", [_vm._v("Gráfico")])]
           )
         ])
       ]),
@@ -63416,43 +63483,7 @@ var render = function() {
       _c(
         "div",
         { attrs: { id: "app" } },
-        [
-          _c("Mycomponent-1", {
-            directives: [
-              {
-                name: "show",
-                rawName: "v-show",
-                value: _vm.isOpen == 1,
-                expression: "isOpen == 1"
-              }
-            ],
-            attrs: { iden: this.iden }
-          }),
-          _vm._v(" "),
-          _c("Mycomponent-2", {
-            directives: [
-              {
-                name: "show",
-                rawName: "v-show",
-                value: _vm.isOpen == 2,
-                expression: "isOpen == 2"
-              }
-            ],
-            attrs: { iden: this.iden }
-          }),
-          _vm._v(" "),
-          _c("Mycomponent-3", {
-            directives: [
-              {
-                name: "show",
-                rawName: "v-show",
-                value: _vm.isOpen == 3,
-                expression: "isOpen == 3"
-              }
-            ],
-            attrs: { iden: this.iden }
-          })
-        ],
+        [_c(_vm.active, { tag: "component", attrs: { iden: this.iden } })],
         1
       )
     ],
@@ -63926,6 +63957,190 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 192 */,
+/* 193 */,
+/* 194 */,
+/* 195 */,
+/* 196 */,
+/* 197 */,
+/* 198 */,
+/* 199 */,
+/* 200 */,
+/* 201 */,
+/* 202 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(2)
+/* script */
+var __vue_script__ = __webpack_require__(207)
+/* template */
+var __vue_template__ = __webpack_require__(208)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Mycomponent-4.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-3bbe2191", Component.options)
+  } else {
+    hotAPI.reload("data-v-3bbe2191", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 203 */,
+/* 204 */,
+/* 205 */,
+/* 206 */,
+/* 207 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+/* 208 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("h1", [_vm._v(" hola mensh ")])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-3bbe2191", module.exports)
+  }
+}
+
+/***/ }),
+/* 209 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(2)
+/* script */
+var __vue_script__ = __webpack_require__(212)
+/* template */
+var __vue_template__ = __webpack_require__(213)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/charts/Activitygraph.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-c73b9948", Component.options)
+  } else {
+    hotAPI.reload("data-v-c73b9948", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 210 */,
+/* 211 */,
+/* 212 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+/* 213 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "Activitygraph__weaper" }, [
+      _c("p", [_vm._v("test")])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-c73b9948", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

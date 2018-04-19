@@ -29,13 +29,16 @@
         <li @click="prueba(1)" :class="isActive[0]" ><a>Evaluación</a></li>
         <li @click="prueba(2)" :class="isActive[1]" ><a>Nuevo</a></li>
         <li @click="prueba(3)" :class="isActive[2]" ><a>Observaciones</a></li>
+        <li @click="prueba(4)" :class="isActive[3]" ><a>Gráfico</a></li>
       </ul>
     </div> <br>
 
     <div id="app">
-      <Mycomponent-1 v-show="isOpen == 1" :iden="this.iden"> </Mycomponent-1>
-      <Mycomponent-2 v-show="isOpen == 2" :iden="this.iden"> </Mycomponent-2>
-      <Mycomponent-3 v-show="isOpen == 3" :iden="this.iden"> </Mycomponent-3>
+
+      <!-- <keep-alive> -->
+        <component :is="active" :iden="this.iden"> </component>
+      <!-- </keep-alive> -->
+
     </div>
 
   </div>
@@ -48,6 +51,7 @@ export default {
   data(){
     return{
       isOpen: 1,
+      active: 'Mycomponent-1',
       isActive: {
 
       },
@@ -73,20 +77,26 @@ export default {
   methods:{
     prueba(element){
       if (element == 1) {
-        this.isOpen = 1
+        this.active = 'Mycomponent-1'
         this.isActive = []
         this.isActive[0] = 'is-active'
       }
       if(element == 2){
-        this.isOpen = 2
+        this.active = 'Mycomponent-2'
         this.isActive = []
         this.isActive[1] = 'is-active'
         // console.log('este es el 2')
       }
       if(element == 3){
-        this.isOpen = 3
+        this.active = 'Mycomponent-3'
         this.isActive = []
         this.isActive[2] = 'is-active'
+        // console.log('este es el 3')
+      }
+      if(element == 4){
+        this.active = 'Mycomponent-4'
+        this.isActive = []
+        this.isActive[3] = 'is-active'
         // console.log('este es el 3')
       }
     },

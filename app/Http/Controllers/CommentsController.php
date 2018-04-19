@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Comments;
 use Illuminate\Http\Request;
 
+
 class CommentsController extends Controller
 {
     /**
@@ -35,7 +36,10 @@ class CommentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $comment = new Comments;
+      $comment->patient_id = $request->patient_id;
+      $comment->body = $request->body;
+      $comment->save();
     }
 
     /**

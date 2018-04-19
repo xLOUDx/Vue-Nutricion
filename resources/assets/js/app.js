@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
+
 require('./bootstrap');
 
 window.Vue = require('vue');
@@ -12,12 +13,16 @@ Vue.component('Add-2', require('./components/Add-2.vue'));
 Vue.component('Mycomponent-1', require('./components/Mycomponent-1.vue'));
 Vue.component('Mycomponent-2', require('./components/Mycomponent-2.vue'));
 Vue.component('Mycomponent-3', require('./components/Mycomponent-3.vue'));
+Vue.component('Mycomponent-4', require('./components/Mycomponent-4.vue'));
+Vue.component('Mychart', require('./components/charts/Activitygraph.vue'));
 
 
 
 import MyPatients from './components/Mypatients.vue'
 import MyIndex from './components/Myindex.vue'
 import MySearch from './components/Mysearch.vue'
+import ActivityGraph from './components/charts/Activitygraph.vue'
+
 
 const routes = [
   { name:'MyIndex', path: '/', component: MyIndex },
