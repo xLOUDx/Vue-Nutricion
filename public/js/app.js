@@ -64070,7 +64070,7 @@ if (false) {
 /* unused harmony reexport Radar */
 /* unused harmony reexport Bubble */
 /* unused harmony reexport Scatter */
-/* unused harmony reexport mixins */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__mixins_index_js__["a"]; });
 /* unused harmony reexport generateChart */
 
 
@@ -95639,27 +95639,47 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__ = __webpack_require__(215);
 
 
+var reactiveProp = __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__["b" /* mixins */].reactiveProp;
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
    props: ['iden'],
+   mixins: [reactiveProp],
    extends: __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__["a" /* Line */],
    mounted: function mounted() {
       var _this = this;
 
       var weight = new Array();
+      var imc = new Array();
+      var date = new Array();
       axios.post('getData', { iden: this.iden }).then(function (response) {
          var data = response.data;
          if (data) {
             data.forEach(function (element) {
                weight.push(element.weight);
+               imc.push(element.imc);
+               date.push(element.date);
             });
             _this.renderChart({
-               labels: weight,
+               labels: date,
                datasets: [{
-                  label: 'Bitcoin',
-                  backgroundColor: '#FC2525',
+                  lineTension: 0,
+                  borderWidth: 3,
+                  borderColor: '#3CF705',
+                  pointBackgroundColor: '#229954',
+                  backgroundColor: 'transparent',
+                  label: 'Peso',
                   data: weight
+               }, {
+                  lineTension: 0,
+                  borderWidth: 3,
+                  borderColor: '#05A6F7',
+                  pointBackgroundColor: '#229954',
+                  backgroundColor: 'transparent',
+                  label: 'asd',
+                  data: imc
                }]
+
             }, { responsive: true, maintainAspectRatio: false });
          } else {
             console.log('No data');
