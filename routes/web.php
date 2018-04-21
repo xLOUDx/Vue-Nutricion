@@ -1,6 +1,5 @@
 <?php
 
-
 Route::get('/', 'PatientsController@index');
 
 Route::resource('/search', 'PatientsController');

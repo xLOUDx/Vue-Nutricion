@@ -143,8 +143,6 @@ export default {
   },
   mounted(){
 
-    // console.log('holaaa  ' + this.iden)
-
     axios.post('/getData', {iden: this.iden})
     .then((response) => this.lists = response.data)
       .catch((error) => this.errors = error.response.data.errors)

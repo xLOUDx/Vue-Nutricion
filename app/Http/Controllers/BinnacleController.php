@@ -19,7 +19,6 @@ class BinnacleController extends Controller
     }
 
     public function getData(Request $request){
-      // return Binnacle::all();
       return Binnacle::where('patient_id', $request->iden)->get();
     }
 

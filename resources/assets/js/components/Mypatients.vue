@@ -94,7 +94,7 @@ export default {
         // console.log('este es el 3')
       }
       if(element == 4){
-        this.active = 'Mycomponent-4'
+        this.active = 'RandomChart'
         this.isActive = []
         this.isActive[3] = 'is-active'
         // console.log('este es el 3')
