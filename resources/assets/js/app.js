@@ -13,8 +13,7 @@ Vue.component('Add-2', require('./components/Add-2.vue'));
 Vue.component('Mycomponent-1', require('./components/Mycomponent-1.vue'));
 Vue.component('Mycomponent-2', require('./components/Mycomponent-2.vue'));
 Vue.component('Mycomponent-3', require('./components/Mycomponent-3.vue'));
-Vue.component('Mycomponent-4', require('./components/Mycomponent-4.vue'));
-Vue.component('RandomChart', require('./components/RandomChart.vue'));
+Vue.component('MycomponentChart', require('./components/MycomponentChart.vue'));
 
 
 

@@ -1,23 +1,24 @@
-<script>
+vue<script>
 import { Line, mixins } from 'vue-chartjs';
-const { reactiveProp } = mixins
+import moment from 'moment'
+// const { reactiveProp } = mixins
 
 
 export default {
    props: ['iden'],
-   mixins: [reactiveProp],
+  //  mixins: [reactiveProp],
    extends: Line,
    mounted() {
          let weight = new Array();
-         let imc = new Array();
+         let projection_treatment = new Array();
          let date = new Array();
          axios.post('getData', {iden: this.iden}).then((response) => {
             let data = response.data;
             if(data) {
                data.forEach(element => {
                weight.push(element.weight);
-               imc.push(element.imc);
-               date.push(element.date)
+               projection_treatment.push(element.projection_treatment);
+               date.push(moment(element.date).format('MMMM Do YYYY'))
                });
                this.renderChart({
                labels: date,
@@ -27,7 +28,6 @@ export default {
                   borderWidth:3,
                   borderColor: '#3CF705',
                   pointBackgroundColor: '#229954',
-                  backgroundColor: 'transparent',
                   label: 'Peso',
                   data: weight
                 },{
@@ -35,9 +35,8 @@ export default {
                   borderWidth:3,
                   borderColor: '#05A6F7',
                   pointBackgroundColor: '#229954',
-                  backgroundColor: 'transparent',
-                  label: 'asd',
-                  data: imc
+                  label: 'Proyección',
+                  data: projection_treatment
                 } ]
 
          }, {responsive: true, maintainAspectRatio: false})
@@ -46,6 +45,12 @@ export default {
           console.log('No data');
        }
       });
+   },
+   methods: {
+     moment(date) {
+       moment.locale('es');
+       return moment(date);
+     }
    }
 }
 </script>

@@ -14,24 +14,19 @@
 
     <div class="panel-block">
       <p class="control has-icons-left">
-        <input class="input" type="text" placeholder="Buscar">
+        <input class="input" type="text" placeholder="Buscar" v-model="search">
         <span class="icon is-small is-left">
           <i class="fas fa-search"></i>
         </span>
       </p>
     </div>
-    <a class="panel-block is-active" v-for="item, key in patient" @click="details(item.id)" >
+    <a class="panel-block is-active" v-for="item, key in temp.slice(0, 10)"  @click="details(item.id)" >
       <span class="panel-icon">
         <i class="fas fa-address-card fa-1x"></i>
       </span>
       {{ item.name }}
     </a>
 
-    <div class="panel-block">
-      <button class="button is-link is-fullwidth">
-        <h1 class="subtitle is-5" style="color:white;" >Buscar</h1>
-      </button>
-    </div>
 
     <Add-2 :openmodal='AddActive' @closeRequest='close'> </Add-2>
 
@@ -44,21 +39,38 @@ export default {
   data(){
     return{
       AddActive: '',
-      lists: {
-
-      },
       errors:{
 
       },
       patient: {
 
       },
+      search: '',
+      temp: '',
+
     }
   },
   mounted(){
     axios.post('/getDataPatient')
-    .then((response) => this.patient = response.data)
+    .then((response) => this.patient = this.temp = response.data)
       .catch((error) => this.errors = error.response.data.errors)
+  },
+
+  watch: {
+    search(){
+      if(this.search.length > 0){
+        this.temp = this.patient.filter((item)=>{
+          return Object.keys(item).some((key)=>{
+            let string = String(item[key])
+            return string.toLowerCase().indexOf(this.search.toLowerCase())>-1
+
+          })
+        });
+      }
+      else{
+        this.temp = this.patient
+      }
+    }
 
   },
   methods:{

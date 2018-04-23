@@ -10,4 +10,8 @@ Route::resource('/search/patients', 'BinnacleController');
 
 Route::resource('/search/patients/comment', 'CommentsController');
 
+Route::resource('/items', 'CommentsController');
+
+Route::post('/getDataComment', 'CommentsController@getDataComment');
+
 Route::post('/getData', 'BinnacleController@getData');

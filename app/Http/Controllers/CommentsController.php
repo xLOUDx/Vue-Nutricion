@@ -18,6 +18,11 @@ class CommentsController extends Controller
         //
     }
 
+    public function getDataComment(Request $request){
+        return Comments::where('patient_id', $request->iden)->get();
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -40,7 +45,14 @@ class CommentsController extends Controller
       $comment->patient_id = $request->patient_id;
       $comment->body = $request->body;
       $comment->save();
+
+      return $comment;
     }
+
+
+    // public function destroyComent(Request $request){
+    //   return Comments::where('patient_id', $request->iden)->delete(); // $request->id MUST be an array
+    // }
 
     /**
      * Display the specified resource.
@@ -82,8 +94,11 @@ class CommentsController extends Controller
      * @param  \App\Comments  $comments
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comments $comments)
+    public function destroy($id)
     {
-        //
+      $comment = Comments::find($id);
+      $comment->delete();
+
+      return response()->json('Successfully Deleted');
     }
 }
