@@ -14,7 +14,7 @@
        <h6 class="is-pulled-left" > <strong>Fono: </strong> {{ item.phone }} </h6> <br>
        <h6 class="is-pulled-left" > <strong>Previsión: </strong> {{ item.prevision }} </h6> <br>
        <h6 class="is-pulled-left" > <strong>Mail: </strong> {{ item.email }} </h6> <br> <br>
-       <p> <h6 class="is-pulled-left" > <strong>Sra: </strong> {{ item.sra }}</h6>
+       <p> <h6 class="is-pulled-left" > <strong>Acompañante: </strong> {{ item.sra }}</h6>
       </div>
 
       <div class="column is-horizontal">

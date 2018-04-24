@@ -1,10 +1,14 @@
 <template lang="html">
 
-  <div class="container">
+  <div class="container" id="toPdf">
 
     <div class="columns notification" v-for="item in patient" >
 
-      <button @click="pidief" type="button" name="button">jeeeeeeeeee</button>
+      <button
+        @click="makePdf(item.name, item.last_name_pat)"
+        class="button is-warning" type="button" name="button">
+        Generar PDF
+      </button> 
 
       <div class="column is-three-quarters ">
         <p class="subtitle is-4">Evaluación periodica</p>
@@ -56,7 +60,7 @@
       </article>
     </div>
 
-    <div class="tile is-parent">
+    <div id="prueba" class="tile is-parent">
       <article class="tile is-child notification">
         <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" >
           <thead>
@@ -166,28 +170,21 @@ export default {
       moment.locale('es');
       return moment(date);
     },
-    pidief() {
-      var doc = new jsPDF();
+    makePdf(name, lastname) {
+      var specialElementHandlers = {
+                 '#toPdf': function(element, renderer){
+                     return true;
+                 },
+             };
 
-      let a = this.patient
-      let b = this.lists
-
-      var text = []
-      for (var i in a){
-          text.push(a[i]['name'] + '  ' + a[i]['last_name_pat'])
-      }
-
-      var text2 = []
-      for (var i in b){
-          text.push(b[i]['weight'] + '  ' + b[i]['imc'])
-      }
-
-      doc.text(text, 10, 10)
-      doc.text(text2, 10, 10)
-
-
-      let pdfName = 'Prueba';
-      doc.save(pdfName + '.pdf');
+             let doc = new jsPDF('p', 'pt', 'ledger');
+             var source = document.getElementById('toPdf'); //$('#HTMLtoPDF')[0];
+             doc.fromHTML(
+                 source, 100, 15, {
+                   'elementHandlers': specialElementHandlers
+                 }
+             );
+             doc.save( name + ' ' + lastname + '.pdf');
     }
   }
 }

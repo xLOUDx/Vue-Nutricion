@@ -1,6 +1,6 @@
 <template lang="html">
 
-  <div class="container">
+  <div class="container" id="toPdf">
 
     <h1 class="subtitle is-3" > Observaciones </h1>
 
@@ -26,11 +26,25 @@
       </div>
     </div> <hr> <br>
 
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <button
+              @click="makePdf"
+              class="button is-warning" type="button" name="button">
+              Generar PDF
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> <br>
+
     <article class="media notification" v-for="item, key in comments" >
       <div class="media-content">
         <div class="content">
           <p>
-            <strong>{{ item.id }}</strong> <br>
+            <strong>{{ key + 1 }}</strong> <br>
             <small>{{ moment(item.created_at).format('MMMM Do YYYY') }}</small> <small>31m</small>
             <br>
             {{ item.body }}
@@ -49,6 +63,8 @@
 
 <script>
 import moment from 'moment'
+import jsPDF from 'jspdf'
+
 export default {
   props:['iden'],
   data(){
@@ -93,6 +109,22 @@ export default {
       moment.locale('es');
       return moment(date);
     },
+    makePdf() {
+      var specialElementHandlers = {
+                 '#toPdf': function(element, renderer){
+                     return true;
+                 },
+             };
+
+             let doc = new jsPDF('p', 'pt', 'ledger');
+             var source = document.getElementById('toPdf'); //$('#HTMLtoPDF')[0];
+             doc.fromHTML(
+                 source, 100, 15, {
+                   'elementHandlers': specialElementHandlers
+                 }
+             );
+             doc.save('Comentario.pdf');
+    }
   }
 }
 </script>
