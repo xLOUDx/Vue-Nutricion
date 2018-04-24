@@ -1,4 +1,6 @@
-vue<script>
+
+
+<script>
 import { Line, mixins } from 'vue-chartjs';
 import moment from 'moment'
 // const { reactiveProp } = mixins

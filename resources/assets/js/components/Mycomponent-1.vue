@@ -4,6 +4,8 @@
 
     <div class="columns notification" v-for="item in patient" >
 
+      <button @click="pidief" type="button" name="button">jeeeeeeeeee</button>
+
       <div class="column is-three-quarters ">
         <p class="subtitle is-4">Evaluación periodica</p>
         <h6> <strong> Referencia: </strong> </h6>
@@ -127,6 +129,7 @@
 </template>
 
 <script>
+import jsPDF from 'jspdf'
 import moment from 'moment'
 export default {
   props:['iden'],
@@ -163,6 +166,29 @@ export default {
       moment.locale('es');
       return moment(date);
     },
+    pidief() {
+      var doc = new jsPDF();
+
+      let a = this.patient
+      let b = this.lists
+
+      var text = []
+      for (var i in a){
+          text.push(a[i]['name'] + '  ' + a[i]['last_name_pat'])
+      }
+
+      var text2 = []
+      for (var i in b){
+          text.push(b[i]['weight'] + '  ' + b[i]['imc'])
+      }
+
+      doc.text(text, 10, 10)
+      doc.text(text2, 10, 10)
+
+
+      let pdfName = 'Prueba';
+      doc.save(pdfName + '.pdf');
+    }
   }
 }
 </script>
