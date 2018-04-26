@@ -18,6 +18,7 @@
               <router-link to="/" class="navbar-item">Inicio</router-link>
               <router-link to="/search" class="navbar-item">Pacientes</router-link>
               <router-link to="/config" class="navbar-item">Config</router-link>
+              <a class="navbar-item" href="#" @click.prevent="logout">Salir</a>
             </div>
           </div>
         </div>
@@ -43,6 +44,15 @@
 
 <script>
 export default {
+  methods:{
+    logout(){
+    				axios.post('/logout').then(response => {
+    					location.reload();
+    				}).catch(error => {
+    					location.reload();
+    				});
+    			}
+  }
 
 }
 </script>

@@ -15,3 +15,7 @@ Route::resource('/items', 'CommentsController');
 Route::post('/getDataComment', 'CommentsController@getDataComment');
 
 Route::post('/getData', 'BinnacleController@getData');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

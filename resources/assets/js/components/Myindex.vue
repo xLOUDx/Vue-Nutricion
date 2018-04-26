@@ -30,6 +30,7 @@
           <p class="subtitle">Aligned with the right tile</p>
           <div class="content">
             <!-- Content -->
+
           </div>
         </article>
       </div>
