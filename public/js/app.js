@@ -47318,7 +47318,8 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('MycomponentChart', __webp
 var routes = [{ name: 'MyIndex', path: '/', component: __WEBPACK_IMPORTED_MODULE_3__components_Myindex_vue___default.a }, { name: 'MySearch', path: '/search', component: __WEBPACK_IMPORTED_MODULE_4__components_Mysearch_vue___default.a, props: true }, { name: 'MyPatients', path: '/search/:iden/patients', component: __WEBPACK_IMPORTED_MODULE_2__components_Mypatients_vue___default.a, props: true }];
 
 var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
-  routes: routes // short for `routes: routes`
+  routes: routes, // short for `routes: routes`
+  mode: 'history'
 });
 
 var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
@@ -78776,20 +78777,8 @@ var render = function() {
                   [
                     _c(
                       "router-link",
-                      { staticClass: "navbar-item", attrs: { to: "/" } },
-                      [_vm._v("Inicio")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "router-link",
                       { staticClass: "navbar-item", attrs: { to: "/search" } },
                       [_vm._v("Pacientes")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "router-link",
-                      { staticClass: "navbar-item", attrs: { to: "/config" } },
-                      [_vm._v("Config")]
                     ),
                     _vm._v(" "),
                     _c(

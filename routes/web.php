@@ -1,6 +1,13 @@
 <?php
 
-Route::get('/', 'PatientsController@index');
+Route::group(['middleware'=>['auth']], function(){
+  Route::get('/', function () {
+    return view('/home');
+  });
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+// Route::get('/', 'PatientsController@index');
 
 Route::resource('/search', 'PatientsController');
 
@@ -19,3 +26,7 @@ Route::post('/getData', 'BinnacleController@getData');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+});
+
+Auth::routes();
