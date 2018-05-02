@@ -46,6 +46,7 @@
 export default {
   methods:{
     logout(){
+      alert('Sesión terminada');
     				axios.post('/logout').then(response => {
     					location.reload();
     				}).catch(error => {

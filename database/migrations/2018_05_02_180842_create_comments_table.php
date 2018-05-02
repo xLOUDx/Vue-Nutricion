@@ -17,6 +17,13 @@ class CreateCommentsTable extends Migration
             $table->increments('id');
             $table->string('body');
             $table->timestamps();
+
+            $table->integer('patient_id')->unsigned()->nullable();
+
+        });
+
+        Schema::table('comments', function($table) {
+          $table->foreign('patient_id')->references('id')->on('patients');
         });
     }
 

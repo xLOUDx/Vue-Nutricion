@@ -78742,6 +78742,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
   methods: {
     logout: function logout() {
+      alert('Sesión terminada');
       axios.post('/logout').then(function (response) {
         location.reload();
       }).catch(function (error) {
@@ -79206,12 +79207,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['openmodal'],
   data: function data() {
     return {
       list: {
+        reference: '',
         name: '',
         last_name_pat: '',
         last_name_mat: '',
@@ -79275,6 +79288,47 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("section", { staticClass: "modal-card-body" }, [
+        _c("div", { staticClass: "field" }, [
+          _c("label", { staticClass: "label" }, [_vm._v("Referencia")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "control has-icons-right" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.list.reference,
+                  expression: "list.reference"
+                }
+              ],
+              staticClass: "input",
+              class: { "is-danger": _vm.errors.reference },
+              attrs: { type: "text", placeholder: "Ingrese nombre" },
+              domProps: { value: _vm.list.reference },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.list, "reference", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "icon is-small is-right" }, [
+              _vm.errors.reference
+                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.reference
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.reference[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
         _c("div", { staticClass: "field" }, [
           _c("label", { staticClass: "label" }, [_vm._v("Nombre")]),
           _vm._v(" "),
@@ -80116,6 +80170,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -80487,7 +80542,17 @@ var render = function() {
             [_vm._v("\n      Generar PDF\n    ")]
           ),
           _vm._v(" "),
-          _vm._m(0, true),
+          _c("div", { staticClass: "column is-three-quarters " }, [
+            _c("p", { staticClass: "subtitle is-4" }, [
+              _vm._v("Evaluación periodica")
+            ]),
+            _vm._v(" "),
+            _vm._m(0, true),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c("p", [_vm._v(" " + _vm._s(item.reference) + " ")])
+          ]),
           _vm._v(" "),
           _c("div", [
             _c("p", [
@@ -80517,8 +80582,6 @@ var render = function() {
       _vm._v(" "),
       _c("hr"),
       _vm._v(" "),
-      _vm._m(1),
-      _vm._v(" "),
       _c("div", { staticClass: "tile is-parent", attrs: { id: "prueba" } }, [
         _c("article", { staticClass: "tile is-child notification" }, [
           _c(
@@ -80528,7 +80591,7 @@ var render = function() {
                 "table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
             },
             [
-              _vm._m(2),
+              _vm._m(1),
               _vm._v(" "),
               _vm._l(_vm.lists, function(item, key) {
                 return _c("tbody", [
@@ -80570,7 +80633,7 @@ var render = function() {
                 "table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
             },
             [
-              _vm._m(3),
+              _vm._m(2),
               _vm._v(" "),
               _vm._l(_vm.lists, function(item, key) {
                 return _c("tbody", [
@@ -80623,76 +80686,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "column is-three-quarters " }, [
-      _c("p", { staticClass: "subtitle is-4" }, [
-        _vm._v("Evaluación periodica")
-      ]),
-      _vm._v(" "),
-      _c("h6", [_c("strong", [_vm._v(" Referencia: ")])])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "tile is-parent" }, [
-      _c("article", { staticClass: "tile is-child notification" }, [
-        _c(
-          "table",
-          {
-            staticClass:
-              "table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
-          },
-          [
-            _c("thead", [
-              _c("tr", [
-                _c("th", [_vm._v("Edad")]),
-                _vm._v(" "),
-                _c("th", [_vm._v("Talla/T2 ")]),
-                _vm._v(" "),
-                _c("th", [_vm._v("Peso deseado")]),
-                _vm._v(" "),
-                _c("th", [_vm._v("%Mg normal")]),
-                _vm._v(" "),
-                _c("th", [_vm._v("Kg/ Km")]),
-                _vm._v(" "),
-                _c("th", [_vm._v("Proyección de tratamiento")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("tbody", [
-              _c("tr", [
-                _c("th", [_vm._v("1")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("aksdfjasdf")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("aksdfjasdf")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("aksdfjasdf")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("aksdfjasdf")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("aksdfjasdf")])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("th", [_vm._v("2")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("aksdfjasdf")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("aksdfjasdf")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("aksdfjasdf")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("aksdfjasdf")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("aksdfjasdf")])
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
+    return _c("h6", [_c("strong", [_vm._v(" Referencia: ")])])
   },
   function() {
     var _vm = this
@@ -81406,39 +81400,6 @@ var render = function() {
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.list.kg_km,
-                      expression: "list.kg_km"
-                    }
-                  ],
-                  staticClass: "input",
-                  class: { "is-danger": _vm.errors.kg_km },
-                  attrs: { type: "text" },
-                  domProps: { value: _vm.list.kg_km },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.list, "kg_km", $event.target.value)
-                    }
-                  }
-                })
-              ])
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field is-horizontal" }, [
-          _vm._m(10),
-          _vm._v(" "),
-          _c("div", { staticClass: "field-body" }, [
-            _c("div", { staticClass: "field" }, [
-              _c("div", { staticClass: "control" }, [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
                       value: _vm.list.projection_treatment,
                       expression: "list.projection_treatment"
                     }
@@ -81477,7 +81438,7 @@ var render = function() {
                 "table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
             },
             [
-              _vm._m(11),
+              _vm._m(10),
               _vm._v(" "),
               _c("tbody", [
                 _c("tr", [
@@ -81778,7 +81739,7 @@ var render = function() {
     _c("div", { staticClass: "field is-grouped is-grouped-centered" }, [
       _c("p", { staticClass: "control" }, [
         _c("a", { staticClass: "button is-primary", on: { click: _vm.save } }, [
-          _vm._v("\n        Guardar\n      ")
+          _vm._v("\n          Guardar\n        ")
         ])
       ])
     ])
@@ -81798,7 +81759,10 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "field-label is-normal" }, [
-      _c("label", { staticClass: "label" }, [_vm._v("Talla/T2 ")])
+      _c("label", { staticClass: "label" }, [
+        _vm._v("T "),
+        _c("sup", [_vm._v("2")])
+      ])
     ])
   },
   function() {
@@ -81855,14 +81819,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "field-label is-normal" }, [
       _c("label", { staticClass: "label" }, [_vm._v("Mg normal")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "field-label is-normal" }, [
-      _c("label", { staticClass: "label" }, [_vm._v("Kg/Km")])
     ])
   },
   function() {
@@ -82302,14 +82258,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     var _this = this;
 
     var weight = new Array();
+    var thigh = new Array();
+    var calq = new Array();
     var projection_treatment = new Array();
     var date = new Array();
-    axios.post('getData', { iden: this.iden }).then(function (response) {
+    axios.post('/getData', { iden: this.iden }).then(function (response) {
       var data = response.data;
       if (data) {
         data.forEach(function (element) {
           weight.push(element.weight);
-          projection_treatment.push(element.projection_treatment);
+          thigh.push(element.thigh);
+          calq.push(parseInt(element.hip) / parseInt(element.waist));
+          projection_treatment.push(parseInt(element.weight) - parseInt(element.projection_treatment));
           date.push(__WEBPACK_IMPORTED_MODULE_1_moment___default()(element.date).format('MMMM Do YYYY'));
         });
         _this.renderChart({
@@ -82317,17 +82277,31 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
           datasets: [{
             lineTension: 0,
             borderWidth: 3,
-            borderColor: '#3CF705',
+            borderColor: '#CD6155',
             pointBackgroundColor: '#229954',
             label: 'Peso',
             data: weight
           }, {
             lineTension: 0,
             borderWidth: 3,
-            borderColor: '#05A6F7',
+            borderColor: '#A569BD',
             pointBackgroundColor: '#229954',
             label: 'Proyección',
             data: projection_treatment
+          }, {
+            lineTension: 0,
+            borderWidth: 3,
+            borderColor: '#5DADE2',
+            pointBackgroundColor: '#229954',
+            label: 'Muslo',
+            data: thigh
+          }, {
+            lineTension: 0,
+            borderWidth: 3,
+            borderColor: '#45B39D',
+            pointBackgroundColor: '#229954',
+            label: 'Perimetro',
+            data: calq
           }]
 
         }, { responsive: true, maintainAspectRatio: false });

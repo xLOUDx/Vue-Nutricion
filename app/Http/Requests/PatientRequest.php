@@ -27,10 +27,11 @@ class PatientRequest extends FormRequest
     public function rules(Request $request)
     {
         return [
+            'reference' => '',
             'name' => 'required|max:100',
             'last_name_pat' => 'required|max:100',
             'last_name_mat' => 'required|max:100',
-            'email' => 'required|max:100',
+            'email' => 'max:100',
             'run' => 'required|max:100',
             'prevision' => 'required|max:100',
             'address' => 'required|max:100',

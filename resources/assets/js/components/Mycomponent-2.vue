@@ -19,7 +19,7 @@
 
         <div class="field is-horizontal">
           <div class="field-label is-normal">
-            <label class="label">Talla/T2 </label>
+            <label class="label">T <sup>2</sup> </label>
           </div>
           <div class="field-body">
             <div class="field">
@@ -124,7 +124,7 @@
             </div>
           </div>
         </div>
-
+<!--
         <div class="field is-horizontal">
           <div class="field-label is-normal">
             <label class="label">Kg/Km</label>
@@ -136,7 +136,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="field is-horizontal">
           <div class="field-label is-normal">

@@ -8,11 +8,12 @@
         @click="makePdf(item.name, item.last_name_pat)"
         class="button is-warning" type="button" name="button">
         Generar PDF
-      </button> 
+      </button>
 
       <div class="column is-three-quarters ">
         <p class="subtitle is-4">Evaluación periodica</p>
-        <h6> <strong> Referencia: </strong> </h6>
+        <h6> <strong> Referencia: </strong> </h6> <br>
+        <p> {{ item.reference }} </p>
       </div>
 
       <div>
@@ -24,7 +25,7 @@
   </div>
   <hr>
 
-    <div class="tile is-parent">
+    <!-- <div class="tile is-parent">
       <article class="tile is-child notification">
         <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
           <thead>
@@ -58,7 +59,7 @@
           </tbody>
         </table>
       </article>
-    </div>
+    </div> -->
 
     <div id="prueba" class="tile is-parent">
       <article class="tile is-child notification">

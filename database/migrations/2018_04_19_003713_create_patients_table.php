@@ -17,6 +17,7 @@ class CreatePatientsTable extends Migration
             $table->increments('id')->unique();
 
             $table->string('name', 25);
+            $table->string('reference', 25);
             $table->string('last_name_pat', 25);
             $table->string('last_name_mat', 25);
             $table->string('email', 25);
@@ -34,11 +35,6 @@ class CreatePatientsTable extends Migration
 
             $table->timestamp('updated_at')->useCurrent();
             $table->timestamp('created_at')->useCurrent();
-        });
-
-        Schema::table('patients', function($table) {
-          $table->foreign('binnacle_id')->references('id')->on('binnacles');
-          $table->foreign('comments_id')->references('id')->on('comments');
         });
 
     }

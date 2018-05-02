@@ -9,6 +9,17 @@
     <section class="modal-card-body">
 
       <div class="field">
+        <label class="label">Referencia</label>
+        <div class="control has-icons-right">
+          <input :class="{'is-danger':errors.reference}" class="input" type="text" placeholder="Ingrese nombre" v-model="list.reference" >
+        <span class="icon is-small is-right">
+          <i v-if="errors.reference" class="fas fa-exclamation-triangle"></i>
+        </span>
+      </div>
+        <small v-if="errors.reference" class="has-text-danger">{{ errors.reference[0] }}</small>
+      </div>
+
+      <div class="field">
         <label class="label">Nombre</label>
         <div class="control has-icons-right">
           <input :class="{'is-danger':errors.name}" class="input" type="text" placeholder="Ingrese nombre" v-model="list.name" >
@@ -190,6 +201,7 @@
     data(){
       return{
         list: {
+          reference: '',
           name: '',
           last_name_pat: '',
           last_name_mat: '',

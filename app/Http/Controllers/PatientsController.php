@@ -50,6 +50,7 @@ class PatientsController extends Controller
     {
       $patient = new Patients;
 
+      $patient->reference = $request->reference;
       $patient->name = $request->name;
       $patient->last_name_pat = $request->last_name_pat;
       $patient->last_name_mat = $request->last_name_mat;
