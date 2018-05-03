@@ -53,7 +53,6 @@ class BinnacleController extends Controller
         $binnacle->size_t2  = $request->size_t2;
         $binnacle->desired_weight  = $request->desired_weight;
         $binnacle->mg_normal  = $request->mg_normal;
-        $binnacle->kg_km  = $request->kg_km;
         $binnacle->projection_treatment  = $request->projection_treatment;
         $binnacle->se  = $request->se;
         $binnacle->tri  = $request->tri;

@@ -134,7 +134,7 @@
       <div class="field">
         <label class="label">Talla</label>
         <div class="control has-icons-right">
-          <input :class="{'is-danger':errors.name}" class="input" type="text" placeholder="Ingrese talla" v-model="list.size">
+          <input :class="{'is-danger':errors.name}" class="input" v-on:blur="t2()" type="text" placeholder="Ingrese talla" v-model="list.size">
           <span class="icon is-small is-right">
             <i v-if="errors.name" class="fas fa-exclamation-triangle"></i>
           </span>
@@ -143,7 +143,7 @@
       </div>
 
       <div class="field">
-        <label class="label">Talla deseada</label>
+        <label class="label">Peso deseado</label>
         <div class="control has-icons-right">
           <input :class="{'is-danger':errors.name}" class="input" type="text" placeholder="Ingrese talla deseada" v-model="list.acept_size">
           <span class="icon is-small is-right">
@@ -156,7 +156,7 @@
       <div class="field">
         <label class="label">T <sup>2</sup></label>
         <div class="control has-icons-right">
-          <input :class="{'is-danger':errors.name}" class="input" type="text" placeholder="Ingrese T2​"  v-model="list.t2">
+          <input :class="{'is-danger':errors.name}" class="input" v-on:blur="IMC()" type="text" placeholder="Ingrese T2​"  v-model="list.t2">
           <span class="icon is-small is-right">
             <i v-if="errors.name" class="fas fa-exclamation-triangle"></i>
           </span>
@@ -165,7 +165,7 @@
       </div>
 
       <div class="field">
-        <label class="label">IMC 25</label>
+        <label class="label">IMC</label>
         <div class="control has-icons-right">
           <input :class="{'is-danger':errors.name}" class="input" type="text" placeholder="Ingrese IMC 25" v-model="list.imc_25">
           <span class="icon is-small is-right">
@@ -234,6 +234,12 @@
           this.$parent.patient.push(response.data)
         })
           .catch((error) => this.errors = error.response.data.errors)
+      },
+      t2(){
+        this.list.t2 = Math.pow(parseInt(this.list.size), 2)
+      },
+      IMC(){
+        this.list.imc_25 = parseInt(this.list.size) / parseInt(this.list.t2)
       }
     }
   }

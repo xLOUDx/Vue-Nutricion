@@ -10,17 +10,18 @@
         Generar PDF
       </button>
 
-      <div class="column is-three-quarters ">
+      <div class="column is-two-quarters ">
         <p class="subtitle is-4">Evaluación periodica</p>
-        <h6> <strong> Referencia: </strong> </h6> <br>
+        <h6> <strong> Referencia: </strong> </h6>
         <p> {{ item.reference }} </p>
       </div>
 
       <div>
         <p> <strong> Edad: </strong> {{ item.age }} </p>
-        <p> <strong> Talla: </strong>  {{ item.size }}  t<sup>2</sup>: {{ item.t2 }} </p>
+        <p> <strong> Talla: </strong>  {{ item.size }} </p>
+        <p> <strong> T<sup>2</sup>:</strong> {{ item.t2 }} </p>
         <p> <strong> Peso aceptable: </strong> {{ item.acept_size }}</p>
-        <p> <strong> IMC 25: </strong> {{ item.imc_25 }} </p>
+        <p> <strong> IMC </strong> {{ item.imc_25 }} </p>
       </div>
   </div>
   <hr>
@@ -75,7 +76,7 @@
               <th>Liquidos</th>
             </tr>
           </thead>
-          <tbody v-for="item, key in lists" >
+          <tbody v-for="item, key in bin" >
             <tr>
               <th>{{ moment(item.created_at).format('MMMM Do YYYY') }}</th>
               <td>{{ item.weight }}</td>
@@ -109,7 +110,7 @@
               <th>muñeca</th>
             </tr>
           </thead>
-          <tbody v-for="item, key in lists">
+          <tbody v-for="item, key in bin">
             <tr>
               <th>{{ moment(item.created_at).format('MMMM Do YYYY') }}</th>
               <td>{{ item.se }}</td>
@@ -137,12 +138,12 @@
 import jsPDF from 'jspdf'
 import moment from 'moment'
 export default {
-  props:['iden'],
+  props:['iden', 'bin'],
   data(){
     return{
       AddActive: '',
-      lists: {
-      },
+      // lists: {
+      // },
       errors:{
       },
       patient: {
@@ -150,10 +151,10 @@ export default {
     }
   },
   mounted(){
-
-    axios.post('/getData', {iden: this.iden})
-    .then((response) => this.lists = response.data)
-      .catch((error) => this.errors = error.response.data.errors)
+    //
+    // axios.post('/getData', {iden: this.iden})
+    // .then((response) => this.lists = response.data)
+    //   .catch((error) => this.errors = error.response.data.errors)
 
       axios.post('/getDataPatient', {iden: this.iden})
       .then((response) => this.patient = response.data)

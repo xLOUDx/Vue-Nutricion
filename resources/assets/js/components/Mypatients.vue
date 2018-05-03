@@ -1,8 +1,6 @@
 <template lang="html">
 
   <div class="container">
-    <hr>
-
     <p class="subtitle is-2" v-for="item, key in patient" >
        <strong>
          {{ item.name }} {{ item.last_name_pat }} {{ item.last_name_mat }}
@@ -36,7 +34,12 @@
     <div id="app">
 
       <!-- <keep-alive> -->
-        <component :is="active" :iden="this.iden"> </component>
+        <component
+          :is="active"
+          :iden="this.iden"
+          :bin="this.lists"
+          :pat="this.patient" >
+        </component>
       <!-- </keep-alive> -->
 
     </div>
@@ -53,6 +56,8 @@ export default {
       isOpen: 1,
       active: 'Mycomponent-1',
       isActive: {
+      },
+      lists: {
 
       },
       errors:{
@@ -85,19 +90,16 @@ export default {
         this.active = 'Mycomponent-2'
         this.isActive = []
         this.isActive[1] = 'is-active'
-        // console.log('este es el 2')
       }
       if(element == 3){
         this.active = 'Mycomponent-3'
         this.isActive = []
         this.isActive[2] = 'is-active'
-        // console.log('este es el 3')
       }
       if(element == 4){
         this.active = 'MycomponentChart'
         this.isActive = []
         this.isActive[3] = 'is-active'
-        // console.log('este es el 3')
       }
     },
   }

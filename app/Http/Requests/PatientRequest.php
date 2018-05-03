@@ -40,8 +40,8 @@ class PatientRequest extends FormRequest
             'age' => 'required|numeric|max:150',
             'size' => 'required|max:1000|numeric',
             'acept_size' => 'required|max:1000|numeric',
-            't2' => 'required|max:1000|numeric',
-            'imc_25' => 'required|max:1000|numeric',
+            't2' => 'required|numeric',
+            'imc_25' => 'required|numeric',
             'sra' => 'max:1000'. $request->id
         ];
     }

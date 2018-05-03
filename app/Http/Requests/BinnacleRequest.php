@@ -36,7 +36,6 @@ class BinnacleRequest extends FormRequest
           'size_t2' => 'required|numeric',
           'desired_weight' => 'required|max:1000|numeric',
           'mg_normal' => 'required|max:1000|numeric',
-          'kg_km' => 'required|max:1000|numeric',
           'projection_treatment' => 'required',
           'se' => 'required|max:1000|numeric',
           'tri' => 'required|max:1000|numeric',

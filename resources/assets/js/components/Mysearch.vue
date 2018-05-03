@@ -28,7 +28,7 @@
     </a>
 
 
-    <Add-2 :openmodal='AddActive' @closeRequest='close'> </Add-2>
+    <Mycomponent-0 :openmodal='AddActive' @closeRequest='close'> </Mycomponent-0>
 
   </nav>
 

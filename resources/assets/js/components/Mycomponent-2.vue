@@ -114,7 +114,7 @@
 
         <div class="field is-horizontal">
           <div class="field-label is-normal">
-            <label class="label">Mg normal</label>
+            <label class="label">% Mg normal</label>
           </div>
           <div class="field-body">
             <div class="field">
@@ -155,7 +155,7 @@
 
 
     </div>
-    <div style="background-color:lightgreen;">
+    <div style="background-color:#6B0AAF;">
 
       <div class="tile is-parent">
         <article class="tile is-child notification">
@@ -181,7 +181,7 @@
                 <td> <input :class="{'is-danger':errors.tri}" v-on:blur="TOTAL()" v-model="list.tri" class="input" type="text"> </td>
                 <td> <input :class="{'is-danger':errors.bi}" v-on:blur="TOTAL()" v-model="list.bi" class="input" type="text"> </td>
                 <td> <input :class="{'is-danger':errors.si}" v-on:blur="TOTAL()" v-model="list.si" class="input" type="text"> </td>
-                <td class="is-success" > <input :class="{'is-danger':errors.total}" v-model="list.total" class="input" type="text" data-value="asd"> </td>
+                <td class="is-success" > <input :class="{'is-danger':errors.total}" v-model="list.total" class="input" type="text"> </td>
                 <td> <input :class="{'is-danger':errors.mg}" v-model="list.mg" class="input" type="text"> </td>
                 <td> <input :class="{'is-danger':errors.waist}" v-model="list.waist" class="input" type="text"> </td>
                 <td> <input :class="{'is-danger':errors.hip}" v-model="list.hip" class="input" type="text"> </td>
@@ -209,7 +209,7 @@
 
 <script>
   export default {
-    props:['iden'],
+    props:['iden', 'bin', 'pat'],
     data(){
       return{
         list: {
@@ -220,11 +220,10 @@
           exercise: '',
           digestion: '',
           liquids: '',
-          size_t2: '',
-          desired_weight: '',
+          size_t2: this.pat[0].t2,
+          desired_weight: this.pat[0].acept_size,
           mg_normal: '',
-          kg_km: '',
-          projection_treatment: '',
+          projection_treatment: 1,
           se: '',
           tri: '',
           bi: '',
@@ -256,11 +255,7 @@
 
       },
       IMC(){
-        //ARREGLAR
-          this.list.imc = parseInt(this.list.weight)
-           * (parseInt(this.list.size_t2)
-          //  * parseInt(this.list.size_t2)
-         )
+        this.list.imc = parseInt(this.list.weight) / parseInt(this.list.size_t2)
       },
       TOTAL(){
         this.list.total =

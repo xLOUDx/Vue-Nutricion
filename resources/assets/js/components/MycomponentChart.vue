@@ -22,8 +22,8 @@ export default {
                data.forEach(element => {
                weight.push(element.weight);
                thigh.push(element.thigh);
-               calq.push( parseInt(element.hip) / parseInt(element.waist));
-               projection_treatment.push( parseInt(element.weight) - parseInt(element.projection_treatment) );
+               calq.push(parseInt(element.hip) / parseInt(element.waist));
+               projection_treatment.push(parseInt(element.weight) - parseInt(element.projection_treatment) );
                date.push(moment(element.date).format('MMMM Do YYYY'))
                });
                this.renderChart({

@@ -47305,7 +47305,7 @@ window.Vue = __webpack_require__(14);
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Myheader', __webpack_require__(299));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Myfooter', __webpack_require__(302));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Add-2', __webpack_require__(305));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Mycomponent-0', __webpack_require__(386));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Mycomponent-1', __webpack_require__(308));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Mycomponent-2', __webpack_require__(314));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Mycomponent-3', __webpack_require__(317));
@@ -78969,1017 +78969,9 @@ if (false) {
 }
 
 /***/ }),
-/* 305 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(5)
-/* script */
-var __vue_script__ = __webpack_require__(306)
-/* template */
-var __vue_template__ = __webpack_require__(307)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/Add-2.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-02e9ef5f", Component.options)
-  } else {
-    hotAPI.reload("data-v-02e9ef5f", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 306 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['openmodal'],
-  data: function data() {
-    return {
-      list: {
-        reference: '',
-        name: '',
-        last_name_pat: '',
-        last_name_mat: '',
-        email: '',
-        run: '',
-        prevision: '',
-        address: '',
-        job: '',
-        phone: '',
-        age: '',
-        size: '',
-        acept_size: '',
-        t2: '',
-        imc_25: '',
-        sra: ''
-      },
-
-      errors: {}
-    };
-  },
-
-  methods: {
-    close: function close() {
-      this.$emit('closeRequest');
-    },
-    save: function save() {
-      var _this = this;
-
-      axios.post('/search', this.$data.list).then(function (response) {
-        _this.close();
-        _this.$parent.patient.push(response.data);
-      }).catch(function (error) {
-        return _this.errors = error.response.data.errors;
-      });
-    }
-  }
-});
-
-/***/ }),
-/* 307 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "modal", class: _vm.openmodal }, [
-    _c("div", { staticClass: "modal-background" }),
-    _vm._v(" "),
-    _c("div", { staticClass: "modal-card" }, [
-      _c("header", { staticClass: "modal-card-head" }, [
-        _c("p", { staticClass: "modal-card-title" }, [
-          _vm._v("Formulario de paciente")
-        ]),
-        _vm._v(" "),
-        _c("button", {
-          staticClass: "delete",
-          attrs: { "aria-label": "close" },
-          on: { click: _vm.close }
-        })
-      ]),
-      _vm._v(" "),
-      _c("section", { staticClass: "modal-card-body" }, [
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Referencia")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.reference,
-                  expression: "list.reference"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.reference },
-              attrs: { type: "text", placeholder: "Ingrese nombre" },
-              domProps: { value: _vm.list.reference },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "reference", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.reference
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.reference
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.reference[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Nombre")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.name,
-                  expression: "list.name"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.name },
-              attrs: { type: "text", placeholder: "Ingrese nombre" },
-              domProps: { value: _vm.list.name },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "name", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.name
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.name
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.name[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Apellido paterno")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.last_name_pat,
-                  expression: "list.last_name_pat"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.name },
-              attrs: { type: "text", placeholder: "Ingrese apellido paterno" },
-              domProps: { value: _vm.list.last_name_pat },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "last_name_pat", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.name
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.last_name_pat
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.last_name_pat[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Apellido materno")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.last_name_mat,
-                  expression: "list.last_name_mat"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.name },
-              attrs: { type: "text", placeholder: "Ingrese apellido materno" },
-              domProps: { value: _vm.list.last_name_mat },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "last_name_mat", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.name
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.last_name_mat
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.last_name_mat[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Email")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.email,
-                  expression: "list.email"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.name },
-              attrs: { type: "email", placeholder: "Ingrese email" },
-              domProps: { value: _vm.list.email },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "email", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.name
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.email
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.email[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Run")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.run,
-                  expression: "list.run"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.name },
-              attrs: { type: "text", placeholder: "Ingrese run" },
-              domProps: { value: _vm.list.run },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "run", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.name
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.run
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.run[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Previsión")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.prevision,
-                  expression: "list.prevision"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.name },
-              attrs: { type: "text", placeholder: "Ingrese previsión" },
-              domProps: { value: _vm.list.prevision },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "prevision", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.name
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.prevision
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.prevision[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Dirección")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.address,
-                  expression: "list.address"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.name },
-              attrs: { type: "text", placeholder: "Ingrese dirección" },
-              domProps: { value: _vm.list.address },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "address", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.name
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.address
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.address[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Ocupación")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.job,
-                  expression: "list.job"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.name },
-              attrs: { type: "text", placeholder: "Ingrese ocupación" },
-              domProps: { value: _vm.list.job },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "job", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.name
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.job
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.job[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Teléfono")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.phone,
-                  expression: "list.phone"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.name },
-              attrs: { type: "text", placeholder: "Ingrese telefono" },
-              domProps: { value: _vm.list.phone },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "phone", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.name
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.phone
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.phone[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Edad")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.age,
-                  expression: "list.age"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.name },
-              attrs: { type: "number", placeholder: "Ingrese edad" },
-              domProps: { value: _vm.list.age },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "age", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.name
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.age
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.age[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Talla")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.size,
-                  expression: "list.size"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.name },
-              attrs: { type: "text", placeholder: "Ingrese talla" },
-              domProps: { value: _vm.list.size },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "size", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.name
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.size
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.size[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Talla deseada")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.acept_size,
-                  expression: "list.acept_size"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.name },
-              attrs: { type: "text", placeholder: "Ingrese talla deseada" },
-              domProps: { value: _vm.list.acept_size },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "acept_size", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.name
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.acept_size
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.acept_size[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.t2,
-                  expression: "list.t2"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.name },
-              attrs: { type: "text", placeholder: "Ingrese T2​" },
-              domProps: { value: _vm.list.t2 },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "t2", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.name
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.t2
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.t2[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("IMC 25")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.imc_25,
-                  expression: "list.imc_25"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.name },
-              attrs: { type: "text", placeholder: "Ingrese IMC 25" },
-              domProps: { value: _vm.list.imc_25 },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "imc_25", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.name
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.imc_25
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.imc_25[0]))
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Acompañante")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control has-icons-right" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.list.sra,
-                  expression: "list.sra"
-                }
-              ],
-              staticClass: "input",
-              class: { "is-danger": _vm.errors.name },
-              attrs: { type: "text", placeholder: "Ingrese acompañante" },
-              domProps: { value: _vm.list.sra },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.list, "sra", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "icon is-small is-right" }, [
-              _vm.errors.name
-                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.errors.sra
-            ? _c("small", { staticClass: "has-text-danger" }, [
-                _vm._v(_vm._s(_vm.errors.imc_25[0]))
-              ])
-            : _vm._e()
-        ])
-      ]),
-      _vm._v(" "),
-      _c("footer", { staticClass: "modal-card-foot" }, [
-        _c(
-          "button",
-          { staticClass: "button is-success", on: { click: _vm.save } },
-          [_vm._v("Guardar")]
-        ),
-        _vm._v(" "),
-        _c("button", { staticClass: "button", on: { click: _vm.close } }, [
-          _vm._v("Cancelar")
-        ])
-      ])
-    ])
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "label" }, [
-      _vm._v("T "),
-      _c("sup", [_vm._v("2")])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-02e9ef5f", module.exports)
-  }
-}
-
-/***/ }),
+/* 305 */,
+/* 306 */,
+/* 307 */,
 /* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -80171,15 +79163,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['iden'],
+  props: ['iden', 'bin'],
   data: function data() {
     return {
       AddActive: '',
-      lists: {},
+      // lists: {
+      // },
       errors: {},
       patient: {}
     };
@@ -80187,11 +79181,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   mounted: function mounted() {
     var _this = this;
 
-    axios.post('/getData', { iden: this.iden }).then(function (response) {
-      return _this.lists = response.data;
-    }).catch(function (error) {
-      return _this.errors = error.response.data.errors;
-    });
+    //
+    // axios.post('/getData', {iden: this.iden})
+    // .then((response) => this.lists = response.data)
+    //   .catch((error) => this.errors = error.response.data.errors)
 
     axios.post('/getDataPatient', { iden: this.iden }).then(function (response) {
       return _this.patient = response.data;
@@ -80542,14 +79535,12 @@ var render = function() {
             [_vm._v("\n      Generar PDF\n    ")]
           ),
           _vm._v(" "),
-          _c("div", { staticClass: "column is-three-quarters " }, [
+          _c("div", { staticClass: "column is-two-quarters " }, [
             _c("p", { staticClass: "subtitle is-4" }, [
               _vm._v("Evaluación periodica")
             ]),
             _vm._v(" "),
             _vm._m(0, true),
-            _vm._v(" "),
-            _c("br"),
             _vm._v(" "),
             _c("p", [_vm._v(" " + _vm._s(item.reference) + " ")])
           ]),
@@ -80562,10 +79553,10 @@ var render = function() {
             _vm._v(" "),
             _c("p", [
               _c("strong", [_vm._v(" Talla: ")]),
-              _vm._v("  " + _vm._s(item.size) + "  t"),
-              _c("sup", [_vm._v("2")]),
-              _vm._v(": " + _vm._s(item.t2) + " ")
+              _vm._v("  " + _vm._s(item.size) + " ")
             ]),
+            _vm._v(" "),
+            _c("p", [_vm._m(1, true), _vm._v(" " + _vm._s(item.t2) + " ")]),
             _vm._v(" "),
             _c("p", [
               _c("strong", [_vm._v(" Peso aceptable: ")]),
@@ -80573,7 +79564,7 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("p", [
-              _c("strong", [_vm._v(" IMC 25: ")]),
+              _c("strong", [_vm._v(" IMC ")]),
               _vm._v(" " + _vm._s(item.imc_25) + " ")
             ])
           ])
@@ -80591,9 +79582,9 @@ var render = function() {
                 "table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
             },
             [
-              _vm._m(1),
+              _vm._m(2),
               _vm._v(" "),
-              _vm._l(_vm.lists, function(item, key) {
+              _vm._l(_vm.bin, function(item, key) {
                 return _c("tbody", [
                   _c("tr", [
                     _c("th", [
@@ -80633,9 +79624,9 @@ var render = function() {
                 "table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
             },
             [
-              _vm._m(2),
+              _vm._m(3),
               _vm._v(" "),
-              _vm._l(_vm.lists, function(item, key) {
+              _vm._l(_vm.bin, function(item, key) {
                 return _c("tbody", [
                   _c("tr", [
                     _c("th", [
@@ -80687,6 +79678,12 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("h6", [_c("strong", [_vm._v(" Referencia: ")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("strong", [_vm._v(" T"), _c("sup", [_vm._v("2")]), _vm._v(":")])
   },
   function() {
     var _vm = this
@@ -81016,7 +80013,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['iden'],
+  props: ['iden', 'bin', 'pat'],
   data: function data() {
     return {
       list: {
@@ -81027,11 +80024,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         exercise: '',
         digestion: '',
         liquids: '',
-        size_t2: '',
-        desired_weight: '',
+        size_t2: this.pat[0].t2,
+        desired_weight: this.pat[0].acept_size,
         mg_normal: '',
-        kg_km: '',
-        projection_treatment: '',
+        projection_treatment: 1,
         se: '',
         tri: '',
         bi: '',
@@ -81062,10 +80058,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       });
     },
     IMC: function IMC() {
-      //ARREGLAR
-      this.list.imc = parseInt(this.list.weight) * parseInt(this.list.size_t2)
-      //  * parseInt(this.list.size_t2)
-      ;
+      this.list.imc = parseInt(this.list.weight) / parseInt(this.list.size_t2);
     },
     TOTAL: function TOTAL() {
       this.list.total = parseInt(this.list.se) + parseInt(this.list.tri) + parseInt(this.list.bi) + parseInt(this.list.si);
@@ -81428,7 +80421,7 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _c("div", { staticStyle: { "background-color": "lightgreen" } }, [
+    _c("div", { staticStyle: { "background-color": "#6B0AAF" } }, [
       _c("div", { staticClass: "tile is-parent" }, [
         _c("article", { staticClass: "tile is-child notification" }, [
           _c(
@@ -81566,7 +80559,7 @@ var render = function() {
                       ],
                       staticClass: "input",
                       class: { "is-danger": _vm.errors.total },
-                      attrs: { type: "text", "data-value": "asd" },
+                      attrs: { type: "text" },
                       domProps: { value: _vm.list.total },
                       on: {
                         input: function($event) {
@@ -81818,7 +80811,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "field-label is-normal" }, [
-      _c("label", { staticClass: "label" }, [_vm._v("Mg normal")])
+      _c("label", { staticClass: "label" }, [_vm._v("% Mg normal")])
     ])
   },
   function() {
@@ -95254,6 +94247,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['iden'],
@@ -95262,6 +94258,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       isOpen: 1,
       active: 'Mycomponent-1',
       isActive: {},
+      lists: {},
       errors: {},
       patient: {}
     };
@@ -95295,19 +94292,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         this.active = 'Mycomponent-2';
         this.isActive = [];
         this.isActive[1] = 'is-active';
-        // console.log('este es el 2')
       }
       if (element == 3) {
         this.active = 'Mycomponent-3';
         this.isActive = [];
         this.isActive[2] = 'is-active';
-        // console.log('este es el 3')
       }
       if (element == 4) {
         this.active = 'MycomponentChart';
         this.isActive = [];
         this.isActive[3] = 'is-active';
-        // console.log('este es el 3')
       }
     }
   }
@@ -95325,8 +94319,6 @@ var render = function() {
     "div",
     { staticClass: "container" },
     [
-      _c("hr"),
-      _vm._v(" "),
       _vm._l(_vm.patient, function(item, key) {
         return _c("p", { staticClass: "subtitle is-2" }, [
           _c("strong", [
@@ -95462,7 +94454,12 @@ var render = function() {
       _c(
         "div",
         { attrs: { id: "app" } },
-        [_c(_vm.active, { tag: "component", attrs: { iden: this.iden } })],
+        [
+          _c(_vm.active, {
+            tag: "component",
+            attrs: { iden: this.iden, bin: this.lists, pat: this.patient }
+          })
+        ],
         1
       )
     ],
@@ -95912,7 +94909,7 @@ var render = function() {
         )
       }),
       _vm._v(" "),
-      _c("Add-2", {
+      _c("Mycomponent-0", {
         attrs: { openmodal: _vm.AddActive },
         on: { closeRequest: _vm.close }
       })
@@ -95952,6 +94949,1033 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 382 */,
+/* 383 */,
+/* 384 */,
+/* 385 */,
+/* 386 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(5)
+/* script */
+var __vue_script__ = __webpack_require__(387)
+/* template */
+var __vue_template__ = __webpack_require__(388)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Mycomponent-0.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-3b85c38d", Component.options)
+  } else {
+    hotAPI.reload("data-v-3b85c38d", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 387 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['openmodal'],
+  data: function data() {
+    return {
+      list: {
+        reference: '',
+        name: '',
+        last_name_pat: '',
+        last_name_mat: '',
+        email: '',
+        run: '',
+        prevision: '',
+        address: '',
+        job: '',
+        phone: '',
+        age: '',
+        size: '',
+        acept_size: '',
+        t2: '',
+        imc_25: '',
+        sra: ''
+      },
+
+      errors: {}
+    };
+  },
+
+  methods: {
+    close: function close() {
+      this.$emit('closeRequest');
+    },
+    save: function save() {
+      var _this = this;
+
+      axios.post('/search', this.$data.list).then(function (response) {
+        _this.close();
+        _this.$parent.patient.push(response.data);
+      }).catch(function (error) {
+        return _this.errors = error.response.data.errors;
+      });
+    },
+    t2: function t2() {
+      this.list.t2 = Math.pow(parseInt(this.list.size), 2);
+    },
+    IMC: function IMC() {
+      this.list.imc_25 = parseInt(this.list.size) / parseInt(this.list.t2);
+    }
+  }
+});
+
+/***/ }),
+/* 388 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "modal", class: _vm.openmodal }, [
+    _c("div", { staticClass: "modal-background" }),
+    _vm._v(" "),
+    _c("div", { staticClass: "modal-card" }, [
+      _c("header", { staticClass: "modal-card-head" }, [
+        _c("p", { staticClass: "modal-card-title" }, [
+          _vm._v("Formulario de paciente")
+        ]),
+        _vm._v(" "),
+        _c("button", {
+          staticClass: "delete",
+          attrs: { "aria-label": "close" },
+          on: { click: _vm.close }
+        })
+      ]),
+      _vm._v(" "),
+      _c("section", { staticClass: "modal-card-body" }, [
+        _c("div", { staticClass: "field" }, [
+          _c("label", { staticClass: "label" }, [_vm._v("Referencia")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "control has-icons-right" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.list.reference,
+                  expression: "list.reference"
+                }
+              ],
+              staticClass: "input",
+              class: { "is-danger": _vm.errors.reference },
+              attrs: { type: "text", placeholder: "Ingrese nombre" },
+              domProps: { value: _vm.list.reference },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.list, "reference", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "icon is-small is-right" }, [
+              _vm.errors.reference
+                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.reference
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.reference[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field" }, [
+          _c("label", { staticClass: "label" }, [_vm._v("Nombre")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "control has-icons-right" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.list.name,
+                  expression: "list.name"
+                }
+              ],
+              staticClass: "input",
+              class: { "is-danger": _vm.errors.name },
+              attrs: { type: "text", placeholder: "Ingrese nombre" },
+              domProps: { value: _vm.list.name },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.list, "name", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "icon is-small is-right" }, [
+              _vm.errors.name
+                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.name
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.name[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field" }, [
+          _c("label", { staticClass: "label" }, [_vm._v("Apellido paterno")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "control has-icons-right" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.list.last_name_pat,
+                  expression: "list.last_name_pat"
+                }
+              ],
+              staticClass: "input",
+              class: { "is-danger": _vm.errors.name },
+              attrs: { type: "text", placeholder: "Ingrese apellido paterno" },
+              domProps: { value: _vm.list.last_name_pat },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.list, "last_name_pat", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "icon is-small is-right" }, [
+              _vm.errors.name
+                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.last_name_pat
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.last_name_pat[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field" }, [
+          _c("label", { staticClass: "label" }, [_vm._v("Apellido materno")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "control has-icons-right" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.list.last_name_mat,
+                  expression: "list.last_name_mat"
+                }
+              ],
+              staticClass: "input",
+              class: { "is-danger": _vm.errors.name },
+              attrs: { type: "text", placeholder: "Ingrese apellido materno" },
+              domProps: { value: _vm.list.last_name_mat },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.list, "last_name_mat", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "icon is-small is-right" }, [
+              _vm.errors.name
+                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.last_name_mat
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.last_name_mat[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field" }, [
+          _c("label", { staticClass: "label" }, [_vm._v("Email")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "control has-icons-right" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.list.email,
+                  expression: "list.email"
+                }
+              ],
+              staticClass: "input",
+              class: { "is-danger": _vm.errors.name },
+              attrs: { type: "email", placeholder: "Ingrese email" },
+              domProps: { value: _vm.list.email },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.list, "email", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "icon is-small is-right" }, [
+              _vm.errors.name
+                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.email
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.email[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field" }, [
+          _c("label", { staticClass: "label" }, [_vm._v("Run")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "control has-icons-right" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.list.run,
+                  expression: "list.run"
+                }
+              ],
+              staticClass: "input",
+              class: { "is-danger": _vm.errors.name },
+              attrs: { type: "text", placeholder: "Ingrese run" },
+              domProps: { value: _vm.list.run },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.list, "run", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "icon is-small is-right" }, [
+              _vm.errors.name
+                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.run
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.run[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field" }, [
+          _c("label", { staticClass: "label" }, [_vm._v("Previsión")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "control has-icons-right" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.list.prevision,
+                  expression: "list.prevision"
+                }
+              ],
+              staticClass: "input",
+              class: { "is-danger": _vm.errors.name },
+              attrs: { type: "text", placeholder: "Ingrese previsión" },
+              domProps: { value: _vm.list.prevision },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.list, "prevision", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "icon is-small is-right" }, [
+              _vm.errors.name
+                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.prevision
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.prevision[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field" }, [
+          _c("label", { staticClass: "label" }, [_vm._v("Dirección")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "control has-icons-right" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.list.address,
+                  expression: "list.address"
+                }
+              ],
+              staticClass: "input",
+              class: { "is-danger": _vm.errors.name },
+              attrs: { type: "text", placeholder: "Ingrese dirección" },
+              domProps: { value: _vm.list.address },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.list, "address", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "icon is-small is-right" }, [
+              _vm.errors.name
+                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.address
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.address[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field" }, [
+          _c("label", { staticClass: "label" }, [_vm._v("Ocupación")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "control has-icons-right" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.list.job,
+                  expression: "list.job"
+                }
+              ],
+              staticClass: "input",
+              class: { "is-danger": _vm.errors.name },
+              attrs: { type: "text", placeholder: "Ingrese ocupación" },
+              domProps: { value: _vm.list.job },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.list, "job", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "icon is-small is-right" }, [
+              _vm.errors.name
+                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.job
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.job[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field" }, [
+          _c("label", { staticClass: "label" }, [_vm._v("Teléfono")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "control has-icons-right" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.list.phone,
+                  expression: "list.phone"
+                }
+              ],
+              staticClass: "input",
+              class: { "is-danger": _vm.errors.name },
+              attrs: { type: "text", placeholder: "Ingrese telefono" },
+              domProps: { value: _vm.list.phone },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.list, "phone", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "icon is-small is-right" }, [
+              _vm.errors.name
+                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.phone
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.phone[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field" }, [
+          _c("label", { staticClass: "label" }, [_vm._v("Edad")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "control has-icons-right" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.list.age,
+                  expression: "list.age"
+                }
+              ],
+              staticClass: "input",
+              class: { "is-danger": _vm.errors.name },
+              attrs: { type: "number", placeholder: "Ingrese edad" },
+              domProps: { value: _vm.list.age },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.list, "age", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "icon is-small is-right" }, [
+              _vm.errors.name
+                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.age
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.age[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field" }, [
+          _c("label", { staticClass: "label" }, [_vm._v("Talla")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "control has-icons-right" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.list.size,
+                  expression: "list.size"
+                }
+              ],
+              staticClass: "input",
+              class: { "is-danger": _vm.errors.name },
+              attrs: { type: "text", placeholder: "Ingrese talla" },
+              domProps: { value: _vm.list.size },
+              on: {
+                blur: function($event) {
+                  _vm.t2()
+                },
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.list, "size", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "icon is-small is-right" }, [
+              _vm.errors.name
+                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.size
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.size[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field" }, [
+          _c("label", { staticClass: "label" }, [_vm._v("Peso deseado")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "control has-icons-right" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.list.acept_size,
+                  expression: "list.acept_size"
+                }
+              ],
+              staticClass: "input",
+              class: { "is-danger": _vm.errors.name },
+              attrs: { type: "text", placeholder: "Ingrese talla deseada" },
+              domProps: { value: _vm.list.acept_size },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.list, "acept_size", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "icon is-small is-right" }, [
+              _vm.errors.name
+                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.acept_size
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.acept_size[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "control has-icons-right" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.list.t2,
+                  expression: "list.t2"
+                }
+              ],
+              staticClass: "input",
+              class: { "is-danger": _vm.errors.name },
+              attrs: { type: "text", placeholder: "Ingrese T2​" },
+              domProps: { value: _vm.list.t2 },
+              on: {
+                blur: function($event) {
+                  _vm.IMC()
+                },
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.list, "t2", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "icon is-small is-right" }, [
+              _vm.errors.name
+                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.t2
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.t2[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field" }, [
+          _c("label", { staticClass: "label" }, [_vm._v("IMC")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "control has-icons-right" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.list.imc_25,
+                  expression: "list.imc_25"
+                }
+              ],
+              staticClass: "input",
+              class: { "is-danger": _vm.errors.name },
+              attrs: { type: "text", placeholder: "Ingrese IMC 25" },
+              domProps: { value: _vm.list.imc_25 },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.list, "imc_25", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "icon is-small is-right" }, [
+              _vm.errors.name
+                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.imc_25
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.imc_25[0]))
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field" }, [
+          _c("label", { staticClass: "label" }, [_vm._v("Acompañante")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "control has-icons-right" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.list.sra,
+                  expression: "list.sra"
+                }
+              ],
+              staticClass: "input",
+              class: { "is-danger": _vm.errors.name },
+              attrs: { type: "text", placeholder: "Ingrese acompañante" },
+              domProps: { value: _vm.list.sra },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.list, "sra", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "icon is-small is-right" }, [
+              _vm.errors.name
+                ? _c("i", { staticClass: "fas fa-exclamation-triangle" })
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.errors.sra
+            ? _c("small", { staticClass: "has-text-danger" }, [
+                _vm._v(_vm._s(_vm.errors.imc_25[0]))
+              ])
+            : _vm._e()
+        ])
+      ]),
+      _vm._v(" "),
+      _c("footer", { staticClass: "modal-card-foot" }, [
+        _c(
+          "button",
+          { staticClass: "button is-success", on: { click: _vm.save } },
+          [_vm._v("Guardar")]
+        ),
+        _vm._v(" "),
+        _c("button", { staticClass: "button", on: { click: _vm.close } }, [
+          _vm._v("Cancelar")
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "label" }, [
+      _vm._v("T "),
+      _c("sup", [_vm._v("2")])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-3b85c38d", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);
