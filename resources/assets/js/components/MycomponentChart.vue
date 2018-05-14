@@ -23,7 +23,7 @@ export default {
                weight.push(element.weight);
                thigh.push(element.thigh);
                calq.push(parseInt(element.hip) / parseInt(element.waist));
-               projection_treatment.push(parseInt(element.weight) - parseInt(element.projection_treatment) );
+               projection_treatment.push(parseInt(element.weight[0]) - parseInt(element.projection_treatment) );
                date.push(moment(element.date).format('MMMM Do YYYY'))
                });
                this.renderChart({
@@ -32,28 +32,28 @@ export default {
                  {
                   lineTension: 0,
                   borderWidth:3,
-                  borderColor: '#CD6155',
+                  borderColor: '#A357D9',
                   pointBackgroundColor: '#229954',
                   label: 'Peso',
                   data: weight
                 },{
                   lineTension: 0,
                   borderWidth:3,
-                  borderColor: '#A569BD',
+                  borderColor: '#35CC85',
                   pointBackgroundColor: '#229954',
                   label: 'Proyección',
                   data: projection_treatment
                 },{
                   lineTension: 0,
                   borderWidth:3,
-                  borderColor: '#5DADE2',
+                  borderColor: '#FE9321',
                   pointBackgroundColor: '#229954',
                   label: 'Muslo',
                   data: thigh
                 },{
                   lineTension: 0,
                   borderWidth:3,
-                  borderColor: '#45B39D',
+                  borderColor: '#21FE38',
                   pointBackgroundColor: '#229954',
                   label: 'Perimetro',
                   data: calq

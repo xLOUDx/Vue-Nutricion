@@ -17,6 +17,10 @@ Route::resource('/search/patients', 'BinnacleController');
 
 Route::resource('/search/patients/comment', 'CommentsController');
 
+Route::resource('/newblog', 'PostController');
+
+Route::post('/getDataPost', 'PostController@getData');
+
 Route::resource('/items', 'CommentsController');
 
 Route::post('/getDataComment', 'CommentsController@getDataComment');
@@ -30,3 +34,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 // });
 
 Auth::routes();
+
+Route::get('/blog', 'BinnacleController@index')->name('blog');

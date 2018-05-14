@@ -11,7 +11,7 @@
       <div class="field">
         <label class="label">Referencia</label>
         <div class="control has-icons-right">
-          <input :class="{'is-danger':errors.reference}" class="input" type="text" placeholder="Ingrese nombre" v-model="list.reference" >
+          <input :class="{'is-danger':errors.name}" class="input" type="text" placeholder="Indique la referencia" v-model="list.reference" >
         <span class="icon is-small is-right">
           <i v-if="errors.reference" class="fas fa-exclamation-triangle"></i>
         </span>

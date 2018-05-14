@@ -63,7 +63,6 @@ export default {
           return Object.keys(item).some((key)=>{
             let string = String(item[key])
             return string.toLowerCase().indexOf(this.search.toLowerCase())>-1
-
           })
         });
       }

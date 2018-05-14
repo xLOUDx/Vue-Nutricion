@@ -17,6 +17,7 @@
             <div class="navbar-menu is-active">
               <!-- <router-link to="/" class="navbar-item">Inicio</router-link> -->
               <router-link to="/search" class="navbar-item">Pacientes</router-link>
+              <a class="navbar-item" @click="openAdd"> Nuevo blog </a>
               <!-- <router-link to="/config" class="navbar-item">Config</router-link> -->
               <a class="navbar-item" href="#" @click.prevent="logout">Salir</a>
             </div>
@@ -38,12 +39,22 @@
     </div>
   </div>
 
+  <Newblog :openmodal='AddActive' @closeRequest='close'> </Newblog>
+
 </section>
+
 
 </template>
 
 <script>
 export default {
+  data(){
+    return{
+      AddActive: '',
+      errors:{
+      },
+    }
+  },
   methods:{
     logout(){
       alert('Sesión terminada');
@@ -52,7 +63,13 @@ export default {
     				}).catch(error => {
     					location.reload();
     				});
-    			}
+    			},
+    openAdd(){
+      this.AddActive = 'is-active';
+    },
+    close(){
+      this.AddActive = '';
+    },
   }
 
 }

@@ -15,7 +15,7 @@ class BinnacleController extends Controller
      */
     public function index()
     {
-        //
+        return view('/blog');
     }
 
     public function getData(Request $request){

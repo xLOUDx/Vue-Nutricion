@@ -14,8 +14,8 @@ Vue.component('Mycomponent-1', require('./components/Mycomponent-1.vue'));
 Vue.component('Mycomponent-2', require('./components/Mycomponent-2.vue'));
 Vue.component('Mycomponent-3', require('./components/Mycomponent-3.vue'));
 Vue.component('MycomponentChart', require('./components/MycomponentChart.vue'));
-
-
+Vue.component('Myblog', require('./components/Myblog.vue'));
+Vue.component('Newblog', require('./components/Newblog.vue'));
 
 
 
