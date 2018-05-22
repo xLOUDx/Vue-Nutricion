@@ -12,11 +12,11 @@
             </div>
           </article>
         </div>
-        <div class="tile is-parent is-8">
+
+        <div class="tile is-parent column is-eight-fifths" style="word-wrap:break-word;overflow-x:hidden;">
           <article class="tile is-child box">
-            <p class="subtitle">Diapositiva</p>
-            <div class="content">
-                <iframe src="https://drive.google.com/file/d/1g_jMe5cMRFEgIXQhoduBZVwWegfZQ39d/view?usp=sharing" width="" height=""></iframe>
+            <div class="content" v-html="item.ppt" >
+             {{ item.ppt }}
             </div>
           </article>
        </div>

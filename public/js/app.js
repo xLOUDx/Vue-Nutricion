@@ -95383,7 +95383,32 @@ var render = function() {
                 ]
               ),
               _vm._v(" "),
-              _vm._m(0, true)
+              _c(
+                "div",
+                {
+                  staticClass: "tile is-parent column is-eight-fifths",
+                  staticStyle: {
+                    "word-wrap": "break-word",
+                    "overflow-x": "hidden"
+                  }
+                },
+                [
+                  _c("article", { staticClass: "tile is-child box" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "content",
+                        domProps: { innerHTML: _vm._s(item.ppt) }
+                      },
+                      [
+                        _vm._v(
+                          "\n           " + _vm._s(item.ppt) + "\n          "
+                        )
+                      ]
+                    )
+                  ])
+                ]
+              )
             ]
           ),
           _vm._v(" "),
@@ -95398,29 +95423,7 @@ var render = function() {
     2
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "tile is-parent is-8" }, [
-      _c("article", { staticClass: "tile is-child box" }, [
-        _c("p", { staticClass: "subtitle" }, [_vm._v("Diapositiva")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "content" }, [
-          _c("iframe", {
-            attrs: {
-              src:
-                "https://drive.google.com/file/d/1g_jMe5cMRFEgIXQhoduBZVwWegfZQ39d/view?usp=sharing",
-              width: "",
-              height: ""
-            }
-          })
-        ])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
