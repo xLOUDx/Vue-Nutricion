@@ -245,17 +245,18 @@
     methods:{
       save(){
         axios.post('/search/patients', this.$data.list).then((response) => {
-          alert('Datos ingresados correctamente')
+          alert('Datos ingresados correctamente');
           this.list = [];
+         // this.active = 'Mycomponent-1'
         })
           .catch((error) => {
             this.errors = error.response.data.errors
             alert('Datos incorrectos.')
-          })
-
+          }) 
+       //   this.$pare.push({name: 'Mycomponent-1'});
       },
       IMC(){
-        this.list.imc = parseInt(this.list.weight) / parseInt(this.list.size_t2)
+        this.list.imc = (parseInt(this.list.weight) / parseInt(this.list.size_t2)).toFixed(2);
       },
       TOTAL(){
         this.list.total =

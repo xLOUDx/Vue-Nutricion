@@ -70,9 +70,7 @@ export default {
   mounted(){
     this.isActive[0] = 'is-active'
 
-    axios.post('/getData', {iden: this.iden})
-    .then((response) => this.lists = response.data)
-      .catch((error) => this.errors = error.response.data.errors)
+      this.getData();
 
       axios.post('/getDataPatient', {iden: this.iden})
       .then((response) => this.patient = response.data)
@@ -85,6 +83,7 @@ export default {
         this.active = 'Mycomponent-1'
         this.isActive = []
         this.isActive[0] = 'is-active'
+        this.getData();
       }
       if(element == 2){
         this.active = 'Mycomponent-2'
@@ -102,6 +101,11 @@ export default {
         this.isActive[3] = 'is-active'
       }
     },
+    getData(){
+    axios.post('/getData', {iden: this.iden})
+    .then((response) => this.lists = response.data)
+      .catch((error) => this.errors = error.response.data.errors)
+    }
   }
 }
 </script>

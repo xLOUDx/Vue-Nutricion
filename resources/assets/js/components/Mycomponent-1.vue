@@ -162,12 +162,6 @@ export default {
 
   },
   methods:{
-    openAdd(){
-      this.AddActive = 'is-active';
-    },
-    close(){
-      this.AddActive = '';
-    },
     moment(date) {
       moment.locale('es');
       return moment(date);

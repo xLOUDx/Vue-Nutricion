@@ -239,7 +239,7 @@
         this.list.t2 = Math.pow(parseInt(this.list.size), 2)
       },
       IMC(){
-        this.list.imc_25 = parseInt(this.list.size) / parseInt(this.list.t2)
+        this.list.imc_25 = (parseInt(this.list.size) / parseInt(this.list.t2)).toFixed(2);
       }
     }
   }
