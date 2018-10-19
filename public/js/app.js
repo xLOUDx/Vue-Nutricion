@@ -81212,14 +81212,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         liquids: '',
         size_t2: this.pat[0].t2,
         desired_weight: this.pat[0].acept_size,
-        mg_normal: '',
+        mg_normal: '', //agregar
         projection_treatment: 1,
         se: '',
         tri: '',
         bi: '',
         si: '',
         total: '',
-        mg: '',
+        mg: '', //agregar
         waist: '',
         hip: '',
         thigh: '',
